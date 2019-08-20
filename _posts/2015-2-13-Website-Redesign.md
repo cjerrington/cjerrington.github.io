@@ -4,7 +4,7 @@ excerpt_separator: "<!--more-->"
 categories:
   - Blog
 tags:
-  - Webdesign
+  - Web Design
 ---
 
 At [Word Publications](http://wordpub.com/) they wanted to have a website that empasised the advertisers on the printed map. 
