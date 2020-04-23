@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Clayton Errington – Web Developer from Lubbock, TX
+title: Clayton Errington – Web & Software Developer
 email:
-description: Web Developer from Lubbock, TX
+description: Specialized web designer and software developer
 twitter_username: cjerrington
 github_username: cjerrington
 minimal_mistakes_skin: dark
@@ -57,7 +57,7 @@ plugins:
 author:
   name   : "Clayton Errington"
   avatar : "../images/avatar2.jpg"
-  bio    : "Web Developer from Lubbock, TX"
+  bio    : "Specialized web designer and software developer"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
