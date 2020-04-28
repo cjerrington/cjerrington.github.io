@@ -1,12 +1,15 @@
 ---
-title:  "Python Random Passwords"
-categories: blog
-tags: python
+title: "Python Random Password"
+excerpt_separator: "<!--more-->"
+categories: Blog
+tags: Python
 ---
 
 ## Setting up the basics
 
 For the first item in our beginner series we'd like to talk about random password generating. This will allow us to see how to import modules, use functions, and generate some arguments for our script. All common things we'd like to use when creating then distributing the script to others and allow a fluid option in the script.
+
+<!--more-->
 
 To begin, what we need:
 - random
