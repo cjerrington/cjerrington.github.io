@@ -13,6 +13,7 @@ Project | Description
 [MoneyCounter](https://github.com/cjerrington/MoneyCounter) | Simple VueJS app to count your change and bills
 
 ### Projects I have contributed to
+
 Project | Description
 --------|------------
 [privacy.sexy](https://privacy.sexy/) | Open-source tool to enforce privacy & security best-practices on Windows
