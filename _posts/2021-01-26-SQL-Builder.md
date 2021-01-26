@@ -22,3 +22,7 @@ You may also export the generated SQL Query to a SQL file for later use. It will
 ## Screenshot
 
 ![SQLBuilder](https://raw.githubusercontent.com/cjerrington/SQLBuilder/main/SQLBuilder.png)
+
+## Download
+
+Check out the [latest releases](https://github.com/cjerrington/SQLBuilder/releases/latest) to download. 
