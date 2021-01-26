@@ -7,6 +7,7 @@ title: "Projects"
 
 Project | Description
 --------|------------
+[SQLBuilder](https://github.com/cjerrington/SQLBuilder/blob/main/README.md) | Simple SQL Attach Script Generator
 [net-check](https://claytonerrington.com/net-check/) | NodeJS & Electron application to check the status of remote ports if a connection can be made
 [Wakey](https://github.com/cjerrington/wakey) | Simple Python app to keep a computer awake
 [netutil](https://pypi.org/project/netutil/) | Python module to check the staus of ports for local and remote connections
