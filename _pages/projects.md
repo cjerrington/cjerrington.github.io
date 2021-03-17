@@ -26,3 +26,4 @@ Project | Description
 
 - [Kidsfishlubbock](https://kidsfishlubbock.com/) - Local yearly event to bring awareness of outdoor activities and fun to children.
 - [Useful Scripting Network](http://usefulscripting.network/) - A website geared to showing examples of various programming skills to others.
+- [AlbionUO](https://albionuo.github.io/) - Self hosted game based on Microsoft .NET/C# and maintaining website documentation while playing with the game and customizations. 
