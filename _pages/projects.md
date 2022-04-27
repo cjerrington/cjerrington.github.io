@@ -1,6 +1,7 @@
 ---
 permalink: /projects/
 title: "Projects"
+classes: wide
 ---
 
 ### Projects I have created
