@@ -77,6 +77,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/cjerrington"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mstdn.social/@cjerrington"
 
 defaults:
   # _posts
