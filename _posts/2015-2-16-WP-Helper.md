@@ -9,7 +9,7 @@ tags:
   - Plugins
 ---
 
-This is a WordPress Plugin that I developed that disables, enables, and enhances WP and other settings. 
+This is a WordPress Plugin that I developed that disables, enables, and enhances WP and other settings.
 
 This plugin is hosted at [WordPress.org](https://wordpress.org/plugins/wp-helper-master/) and [GitHub.com](https://github.com/cjerrington/WP-Helper). More information can be found [here](http://claytonerrington.com/WP-Helper/)
 
@@ -61,19 +61,19 @@ This plugin is hosted at [WordPress.org](https://wordpress.org/plugins/wp-helper
 
 <?php
 // ++++++++++++++++ WP CLEANUP +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
- 	
+  
 if (get_option( 'wphm_cononical_links' )){remove_action ('wp_head', 'rsd_link');}
 if (get_option( 'wphm_manifest_file' )){remove_action( 'wp_head', 'wlwmanifest_link');}
 if (get_option( 'wphm_short_link' )){remove_action( 'wp_head', 'wp_shortlink_wp_head');}
 if (get_option( 'wphm_wp_generator' )){remove_action( 'wp_head', 'wp_generator');}
 if (get_option( 'wphm_adjacent_posts' )){
-	remove_action( 'wphm_wp_head', 'adjacent_posts_rel_link_wp_head' );
-	remove_action( 'wphm_wp_head', 'adjacent_posts_rel_link');
+ remove_action( 'wphm_wp_head', 'adjacent_posts_rel_link_wp_head' );
+ remove_action( 'wphm_wp_head', 'adjacent_posts_rel_link');
 }
 if (get_option( 'wphm_index_rel_link' )){remove_action( 'wp_head', 'index_rel_link' );}
 if (get_option( 'wphm_post_rel_link' )){
-	remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
-	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+ remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
+ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
 }
 ?>
 ```

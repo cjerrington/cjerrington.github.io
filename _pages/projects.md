@@ -13,7 +13,7 @@ Project | Description
 [Wakey](https://github.com/cjerrington/wakey) | Simple Python app to keep a computer awake
 [netutil](https://pypi.org/project/netutil/) | Python module to check the staus of ports for local and remote connections
 [MoneyCounter](https://github.com/cjerrington/MoneyCounter) | Simple VueJS app to count your change and bills
-Deployment HQ | Internal project at work to help assis the deployment engineers with daily tasks
+Deployment HQ | Internal project at work to help assist the deployment engineers with daily tasks
 
 ### Projects I have contributed to
 
@@ -27,4 +27,4 @@ Project | Description
 
 - [Kidsfishlubbock](https://kidsfishlubbock.com/) - Local yearly event to bring awareness of outdoor activities and fun to children.
 - [Useful Scripting Network](http://usefulscripting.network/) - A website geared to showing examples of various programming skills to others.
-- [AlbionUO](https://albionuo.github.io/) - Self hosted game based on Microsoft .NET/C# and maintaining website documentation while playing with the game and customizations. 
+- [AlbionUO](https://albionuo.github.io/) - Self hosted game based on Microsoft .NET/C# and maintaining website documentation while playing with the game and customizations.

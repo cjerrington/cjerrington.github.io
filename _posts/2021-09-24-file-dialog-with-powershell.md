@@ -4,7 +4,7 @@ date: 2021-09-24T01:22:29.326Z
 template: "post"
 categories: Blog
 tags:
-  - PowerShel
+  - PowerShell
 excerpt: A simple way to show how to use FileDialog class with .NET in PowerShell
 classes: wide
 ---
@@ -54,7 +54,7 @@ Our file name we can use in our log or export process we can use the variable `$
 
 ## Opening a file
 
-This process is very similar execpt we choose the OpenFileDialog instead of SaveFileDialog
+This process is very similar except we choose the OpenFileDialog instead of SaveFileDialog
 
 ```powershell
 function Open-File([string] $initialDirectory){

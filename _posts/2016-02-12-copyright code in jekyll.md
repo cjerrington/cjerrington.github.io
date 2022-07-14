@@ -13,11 +13,11 @@ In a previous [post](/blog/2015/03/10/Copyright-Code-in-PHP) I talked about how 
 
 The great thing about this is it will auto-generate the site name and date based of your site settings. This makes it easier when creating a Jekyll site for someone else when they fork it. All they have to do is update the site settings in the `_config.yml` file and the new user is ready to go.
 
-```ruby 
+```ruby
 &copy; { { site.name } } { { site.time | date: '%Y' } } | All Rights Reserved.
 ```
 
-&copy; Site Name 2016 | All Rights Reserved. 
+&copy; Site Name 2016 | All Rights Reserved.
 
 You can see this in effect below. This was great too when the new year started, I didn't have to update my websites copyright time-stamp.
 
@@ -27,10 +27,10 @@ Sure you could add a date span by stating your "start date" in plain text. Somet
 &copy; { { site.name } } 2010 - { { site.time | date: '%Y' } } | All Rights Reserved.
 ```
 
-&copy; Site Name 2010 - 2016 | All Rights Reserved. 
+&copy; Site Name 2010 - 2016 | All Rights Reserved.
 
-You could even add a startyear variable and reference it instead.
+You could even add a `startyear` variable and reference it instead.
 
-```ruby 
+```ruby
 &copy; { { site.name } } { { site.startyear } } - { { site.time | date: '%Y' } } | All Rights Reserved.
 ```

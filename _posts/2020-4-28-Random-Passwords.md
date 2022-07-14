@@ -12,6 +12,7 @@ For the first item in our beginner series we'd like to talk about random passwor
 <!--more-->
 
 To begin, what we need:
+
 - random
 - string
 
@@ -164,7 +165,7 @@ optional arguments:
 
 With the arguments in the script we can create a password with the characters, numbers, punctuation, and the number of passwords to make.
 
-Lets create 5 passwords with a length of 20 and use alpha characters and numbers. 
+Lets create 5 passwords with a length of 20 and use alpha characters and numbers.
 
 ```shell
 > python randpass.py -l 20 -a -n -c 5
