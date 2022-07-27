@@ -19,6 +19,7 @@ Deployment HQ | Internal project at work to help assist the deployment engineers
 
 Project | Description
 --------|------------
+[raivo-otp.com](https://raivo-otp.com) | Raivo OTP, Simply the best authenticator
 [privacy.sexy](https://privacy.sexy/) | Open-source tool to enforce privacy & security best-practices on Windows
 [PyDebloatX](https://pydebloatx.com/) | Python GUI for uninstalling the default Windows 10 apps.
 [electron-vue-boilerplate](https://github.com/oliverfindl/electron-vue-boilerplate) | Simple boilerplate for building Vue app with Electron and Webpack.
