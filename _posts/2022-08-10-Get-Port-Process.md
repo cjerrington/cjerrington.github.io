@@ -4,6 +4,7 @@ excerpt_separator: "<!--more-->"
 categories:
   - Blog
 tags:
+  - PowerShell
   - Coding
 classes: wide
 ---
