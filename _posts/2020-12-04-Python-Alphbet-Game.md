@@ -3,6 +3,7 @@ title: "Python: Alphabet Game"
 excerpt_separator: "<!--more-->"
 categories: Blog
 tags: Python
+classes: wide
 ---
 
 ## Everyone likes games

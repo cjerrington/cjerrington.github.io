@@ -3,6 +3,7 @@ title: "Python Random Password"
 excerpt_separator: "<!--more-->"
 categories: Blog
 tags: Python
+classes: wide
 ---
 
 ## Setting up the basics

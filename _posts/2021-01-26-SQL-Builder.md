@@ -3,6 +3,7 @@ title: "SQL Builder"
 excerpt_separator: "<!--more-->"
 categories: Blog
 tags: C#
+classes: wide
 ---
 
 Simple C# app to build SQL Attach Scripts.

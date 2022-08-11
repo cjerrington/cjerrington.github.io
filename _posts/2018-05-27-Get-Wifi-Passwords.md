@@ -6,6 +6,7 @@ categories:
 tags:
   - Windows
   - PowerShell
+classes: wide
 ---
 
 Did you forget your WiFi passwords and wish you could retrieve them? Or know what wireless networks you've connected to? With PowerShell we can do that pretty easily.

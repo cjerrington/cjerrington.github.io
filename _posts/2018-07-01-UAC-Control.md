@@ -6,6 +6,7 @@ categories:
 tags:
   - Coding
   - C#
+classes: wide
 ---
 
 I've recently been dabbling in other programming languages and currently working with C#. This first program is a re-write of one that I did with AutoIT. Creating a GUI and simple buttons to give the user some choices and the simple text to give visual feedback of the status of UAC. UAC stands for User Account Control which adds the extra security for Windows desktops by asking the user if it is okay to perform an action.

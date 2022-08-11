@@ -3,7 +3,7 @@ title: "The New Job"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
-tags:
+classes: wide
 ---
 
 A lot has changed is the last few months. I started working for the University that I graduated from in their Information Technology division. The section I am working for is Classroom Technology Service. We maintain 44 General Purpose Classrooms.

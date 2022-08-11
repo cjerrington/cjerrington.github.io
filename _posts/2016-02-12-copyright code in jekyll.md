@@ -7,6 +7,7 @@ tags:
   - Coding
   - Jekyll  
   - Web Design
+classes: wide
 ---
 
 In a previous [post](/blog/2015/03/10/Copyright-Code-in-PHP) I talked about how to create your copyright date in PHP. Some time ago, I found a way to do the same thing in Jekyll.
