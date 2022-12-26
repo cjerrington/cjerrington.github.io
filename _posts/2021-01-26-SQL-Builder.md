@@ -2,7 +2,9 @@
 title: "SQL Builder"
 excerpt_separator: "<!--more-->"
 categories: Blog
-tags: C#
+tags: 
+  - C#
+  - Projects
 classes: wide
 ---
 
