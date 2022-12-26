@@ -39,7 +39,7 @@ This will automatically download the script and run it for you.
 
 So now that you have Jekyll installed, lets start a new site!
 
-Create a new Jekyll site at ./myblog.
+Create a new Jekyll site at ./myblog
 
 ```
 jekyll new myblog
