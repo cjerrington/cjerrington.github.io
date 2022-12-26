@@ -10,7 +10,7 @@ tags:
 classes: wide
 ---
 
-In a previous [post](/blog/2015/03/10/Copyright-Code-in-PHP) I talked about how to create your copyright date in PHP. Some time ago, I found a way to do the same thing in Jekyll.
+In a previous [post](/blog/Copyright-Code-in-PHP/) I talked about how to create your copyright date in PHP. Some time ago, I found a way to do the same thing in Jekyll.
 
 The great thing about this is it will auto-generate the site name and date based of your site settings. This makes it easier when creating a Jekyll site for someone else when they fork it. All they have to do is update the site settings in the `_config.yml` file and the new user is ready to go.
 
