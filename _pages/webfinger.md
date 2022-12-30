@@ -1,6 +1,6 @@
 ---
 layout: none
-permalink: ./well-known/webfinger
+permalink: .well-known/webfinger
 ---
 {
     "subject":"acct:cjerrington@mstdn.social",
