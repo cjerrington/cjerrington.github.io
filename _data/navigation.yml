@@ -9,3 +9,5 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
+  - title : 100 Days to Offload
+    url: /100DaysToOffload/
