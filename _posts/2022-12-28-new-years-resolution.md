@@ -16,7 +16,7 @@ Since [Twitter has been bought by Elon Musk](https://en.wikipedia.org/wiki/Acqui
 
 Anyways, from the folks that I have met, there are some that are posting with a purposed called [100 days to offload](https://100daystooffload.com/). The whole point of `#100DaysToOffload` is to challenge yourself to publish 100 posts on your personal blog in a year. There's nothing fancy about it, no real rules, just a challenge to post more about anything big or small. 
 
-You can follow along on my site, [#100daystooffload](/tags/#100daystooffload), or others:
+You can follow along on my site, [#100daystooffload](/100DaysToOffload/), or others:
 - [Twitter](https://twitter.com/hashtag/100DaysToOffload)
 - [Mastodon](https://fosstodon.org/tags/100DaysToOffload)
 - [Write.As](https://fosstodon.org/tags/100DaysToOffload)
