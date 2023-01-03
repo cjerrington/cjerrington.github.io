@@ -21,6 +21,11 @@ github_username: cjerrington
 minimal_mistakes_skin: dark
 search: true
 
+head_scripts:
+  - https://code.jquery.com/jquery-3.2.1.min.js
+  - /assets/js/custom.js
+
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
@@ -33,6 +38,7 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 include:
   - _pages
   - .well-known
+  - assets
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -101,6 +107,7 @@ defaults:
       comments: true
       share: true
       related: true
+      show_date: true
   # _pages
   - scope:
       path: "_pages"
