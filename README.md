@@ -1,5 +1,10 @@
 # My Personal Website
 
+![Website](https://img.shields.io/website?down_message=Offline&up_message=Online&url=https%3A%2F%2Fclaytonerrington.com)
+![pages-build-deployment](https://github.com/cjerrington/cjerrington.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+![Mastodon Follow](https://img.shields.io/mastodon/follow/108200000569711642?domain=https%3A%2F%2Fmstdn.social&style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/cjerrington?style=social)
+
 This is created with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes). Minimal Mistakes has so many feature rich options already built in. 
 
 ## Browsing
@@ -9,9 +14,9 @@ You can find the full site at [claytonerrington.com](https://claytonerrington.co
 ## Running Locally
 
 - Make sure Ruby is installed
-- install bundler
-- run `bundle install`
-- run `bundle exec jekyll serve`
+- install `jekyll` and `bundler` [here](https://jekyllrb.com/docs/)
+- run `npm install`
+- run `npm run serve`
 
 ## Troubleshooting
 
