@@ -7,6 +7,8 @@ tags:
   - Jekyll
   - 100DaysToOffload
 classes: wide
+header:
+  og_image: https://jekyllrb.com/img/jekyll-og.png
 ---
 
 Jekyll has some powerful uses now with categories, tags, post, pages. I found a unique way to create a page just for one post. 
