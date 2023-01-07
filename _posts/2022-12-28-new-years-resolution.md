@@ -24,4 +24,5 @@ You can follow along on my site, [#100daystooffload](/100DaysToOffload/), or oth
 
 Lets get to posting this year! 
 
-I’m publishing this as part of 100 Days To Offload. You can join in yourself by visiting [100DaysToOffload.com](https://100DaysToOffload.com).
+I’m publishing this as part of [100 Days To Offload](/100DaysToOffload/). You can join in yourself by visiting [100DaysToOffload.com](https://100DaysToOffload.com).
+{: .notice--primary}

@@ -1,7 +1,7 @@
 # My Personal Website
 
 ![Website](https://img.shields.io/website?down_message=Offline&up_message=Online&url=https%3A%2F%2Fclaytonerrington.com)
-![pages-build-deployment](https://github.com/cjerrington/cjerrington.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6bb6e770-e1ac-42df-bdd7-39d1ef3d0c4e/deploy-status)](https://app.netlify.com/sites/cjerrington/deploys)
 ![Mastodon Follow](https://img.shields.io/mastodon/follow/108200000569711642?domain=https%3A%2F%2Fmstdn.social&style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/cjerrington?style=social)
 
