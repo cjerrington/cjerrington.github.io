@@ -7,3 +7,9 @@ $(document).ready(function() {
            	window.open(url);
         });
 });
+
+// if browsing to the root of the github.io site, redirect to the custom domain
+if (window.location.hostname == "cjerrington.github.io" && 
+    window.location.pathname=="" ) {
+   window.location.href = 'https://claytonerrington.com'; 
+}

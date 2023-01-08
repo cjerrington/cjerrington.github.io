@@ -3,9 +3,3 @@
   to = "https://claytonerrington.com"
   status = 301
   force = true
-
-[[redirects]]
-  from = "https://cjerrington.github.io/"
-  to = "https://claytonerrington.com"
-  status = 301
-  force = true
