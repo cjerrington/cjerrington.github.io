@@ -1,0 +1,8 @@
+I"S<p>At <a href="http://wordpub.com/">Word Publications</a> they wanted to have a website that emphasized the advertisers on the printed map.</p>
+
+<p>I took the current design they had and implemented Google Maps and <a href="http://lifeinthegrid.com/labs/mapit/">jQuery MapIt</a> to place the locations on the interactive map.</p>
+
+<p>MapIt can run off XML or JSON to control all the places in the map. I decided to try something new and use JSON. It was easier to use and understand when creating a new project.</p>
+
+<p>Check it out now at <a href="http://lubbockmap.com">lubbockmap.com</a></p>
+:ET

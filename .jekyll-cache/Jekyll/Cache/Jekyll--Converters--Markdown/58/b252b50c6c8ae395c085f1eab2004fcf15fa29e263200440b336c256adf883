@@ -1,0 +1,76 @@
+I"�<p>This is a WordPress Plugin that I developed that disables, enables, and enhances WP and other settings.</p>
+
+<p>This plugin is hosted at <a href="https://wordpress.org/plugins/wp-helper-master/">WordPress.org</a> and <a href="https://github.com/cjerrington/WP-Helper">GitHub.com</a>. More information can be found <a href="http://claytonerrington.com/WP-Helper/">here</a></p>
+
+<p><strong>Feature list includes:</strong></p>
+
+<p><strong>WP Clean Up: Clean up WP header.</strong></p>
+
+<ul>
+  <li>RSD Links - Remove the link to the Really Simple Discovery</li>
+  <li>Canonical Links - Remove Canonical Links</li>
+  <li>Windows Live Writer manifest file - Removes the link to the Windows Live Writer manifest file.</li>
+  <li>Short Link - Removes the short links.</li>
+  <li>WP Generator - Removes the WordPress version i.e. - 4.0.2.</li>
+  <li>Adjacent Posts - Removes the relational links for the posts adjacent to the current post.</li>
+  <li>Index Link - Removes the index link.</li>
+  <li>Parent and Post links - Removes the Parent and Post Link link.</li>
+  <li>RSS feeds for post, category and comments - Removes the post, category and comments RSS feeds.</li>
+  <li>Display WP Version? - Removes the WP Version.</li>
+  <li>Disable RSS Feeds - Disables RSS Feeds</li>
+</ul>
+
+<p><strong>Performance: Help speed up WP with these options</strong></p>
+
+<ul>
+  <li>Enable GZIP compression - This will speed up your WordPress website drastically and reduces bandwidth usage as well.</li>
+  <li>Remove Query Version - Remove the version query string from scripts and styles - allows for better caching. i.e. jquery.js?ver=1.8</li>
+  <li>Prevent SSL Check when XMLRPC is not utilized? - Prevents WordPress from testing SSL capability on domain.com/xmlrpc.php?rsd when XMLRPC not in use</li>
+  <li>Disable Auto-Formatting - Disable Auto-Formatting in Content and Excerpt</li>
+</ul>
+
+<p><strong>Security: Add more security to WP</strong></p>
+
+<ul>
+  <li>Hide login form error messages - Hide login form error messages</li>
+  <li>Remove WordPress version number - Remove WordPress version number</li>
+  <li>Disable XMLRPC - Disable XMLRPC</li>
+  <li>Post Revisions true false 3 5 - Set the maximum number of post revisions unless the constant is already set in wp-config.php.</li>
+  <li>True = enable post revisions. False = disables post revisions. Or 3 or 5 post revisions.</li>
+  <li>Disable Auto Linking - Disable Auto Linking of URLs in comments</li>
+  <li>Disable self-ping - Disable self-ping</li>
+  <li>Remove lost password link - Remove lost password link if you do not want people trying to reset your password or theirs.</li>
+</ul>
+
+<p><strong>Admin Modifications: Add more security to WP</strong></p>
+
+<ul>
+  <li>Change the greeting for the Admin Page. Change the standard Howdy to something you like.</li>
+  <li>All Settings - Add new Admin menu item “All Settings”</li>
+</ul>
+
+<p><strong>A sample of the Settings page is below:</strong>
+<img src="/images/settings-page.jpg" alt="Settings Page" /></p>
+
+<p><strong>Sample code is below for the file</strong></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">&lt;?php</span>
+<span class="c1">// ++++++++++++++++ WP CLEANUP +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //</span>
+  
+<span class="k">if</span> <span class="p">(</span><span class="nf">get_option</span><span class="p">(</span> <span class="s1">'wphm_cononical_links'</span> <span class="p">)){</span><span class="nf">remove_action</span> <span class="p">(</span><span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'rsd_link'</span><span class="p">);}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nf">get_option</span><span class="p">(</span> <span class="s1">'wphm_manifest_file'</span> <span class="p">)){</span><span class="nf">remove_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'wlwmanifest_link'</span><span class="p">);}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nf">get_option</span><span class="p">(</span> <span class="s1">'wphm_short_link'</span> <span class="p">)){</span><span class="nf">remove_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'wp_shortlink_wp_head'</span><span class="p">);}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nf">get_option</span><span class="p">(</span> <span class="s1">'wphm_wp_generator'</span> <span class="p">)){</span><span class="nf">remove_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'wp_generator'</span><span class="p">);}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nf">get_option</span><span class="p">(</span> <span class="s1">'wphm_adjacent_posts'</span> <span class="p">)){</span>
+ <span class="nf">remove_action</span><span class="p">(</span> <span class="s1">'wphm_wp_head'</span><span class="p">,</span> <span class="s1">'adjacent_posts_rel_link_wp_head'</span> <span class="p">);</span>
+ <span class="nf">remove_action</span><span class="p">(</span> <span class="s1">'wphm_wp_head'</span><span class="p">,</span> <span class="s1">'adjacent_posts_rel_link'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nf">get_option</span><span class="p">(</span> <span class="s1">'wphm_index_rel_link'</span> <span class="p">)){</span><span class="nf">remove_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'index_rel_link'</span> <span class="p">);}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nf">get_option</span><span class="p">(</span> <span class="s1">'wphm_post_rel_link'</span> <span class="p">)){</span>
+ <span class="nf">remove_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'parent_post_rel_link'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+ <span class="nf">remove_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'start_post_rel_link'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+:ET

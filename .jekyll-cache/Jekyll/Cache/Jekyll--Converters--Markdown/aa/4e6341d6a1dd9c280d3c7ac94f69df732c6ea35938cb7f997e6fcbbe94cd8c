@@ -1,0 +1,79 @@
+I"*<p>As with many software there are updates to them. <a href="https://jellyfin.org/">Jellyfin</a> seems to not have a great way to check for updates and install automatically. However, you can use the built-in API to help with that.</p>
+
+<!--more-->
+
+<p><a href="https://jellyfin.org/">Jellyfin</a> comes with an API it uses internally, but also has a public portal as well that gives some useful information. Start by going to <code class="highlighter-rouge">http://localhost:8096/System/Info/Public</code> if you have the default settings running for your server. This will give you a <a href="https://www.json.org/json-en.html">JSON</a> response of some basic settings like: <code class="highlighter-rouge">LocalAddress</code>, <code class="highlighter-rouge">ServerName</code>, <code class="highlighter-rouge">Version</code>, <code class="highlighter-rouge">ProductName</code>, <code class="highlighter-rouge">OperatingSystem</code>, <code class="highlighter-rouge">Id</code>, and if the Startup Wizard has been completed.</p>
+
+<p>What we’ll be using today is the <code class="highlighter-rouge">version</code> part of the response. This will give us the version of the server we are using locally. So now we can query the GitHub API since the repository for Jellyfin has the latest releases as well. The <a href="https://api.github.com/repos/jellyfin/jellyfin/releases/latest">Github API</a> will give us quite a bit of information but we are only looking for a few small things. Head over to, <a href="https://api.github.com/repos/jellyfin/jellyfin/releases/latest">https://api.github.com/repos/jellyfin/jellyfin/releases/latest</a> yourself and take a look.</p>
+
+<p>The JSON response from that will show a name for the <code class="highlighter-rouge">version</code>, <code class="highlighter-rouge">html_url</code> for download, and <code class="highlighter-rouge">body</code> for the content of the release notes.</p>
+
+<h2 id="putting-it-all-together">Putting it all together</h2>
+
+<p>Now that we have our information lest try putting it all together.</p>
+
+<p>We’ll start with PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"localhost"</span><span class="w">
+</span><span class="nv">$port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8096</span><span class="w">
+
+</span><span class="nv">$myinstall</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Invoke-WebRequest</span><span class="w"> </span><span class="nt">-UseBasicParsing</span><span class="w"> </span><span class="nx">http://</span><span class="err">$</span><span class="p">(</span><span class="nv">$server</span><span class="p">):</span><span class="nv">$port</span><span class="n">/System/Info/Public</span><span class="p">)</span><span class="o">.</span><span class="nf">Content</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ConvertFrom-Json</span><span class="w">
+
+</span><span class="nv">$latest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Invoke-WebRequest</span><span class="w"> </span><span class="nt">-UseBasicParsing</span><span class="w"> </span><span class="nx">https://api.github.com/repos/jellyfin/jellyfin/releases/latest</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ConvertFrom-Json</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nv">$myinstall</span><span class="o">.</span><span class="nf">Version</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="nv">$latest</span><span class="o">.</span><span class="nf">name</span><span class="p">){</span><span class="w">
+    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"</span><span class="si">$(</span><span class="nv">$myinstall</span><span class="o">.</span><span class="nf">Version</span><span class="si">)</span><span class="s2"> is the latest version."</span><span class="w">
+</span><span class="p">}</span><span class="kr">else</span><span class="p">{</span><span class="w">
+    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"You are running </span><span class="nv">$myinstall</span><span class="s2"> and </span><span class="si">$(</span><span class="nv">$latest</span><span class="o">.</span><span class="nf">name</span><span class="si">)</span><span class="s2"> is the latest."</span><span class="w">
+    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"You can download it from </span><span class="si">$(</span><span class="nv">$latest</span><span class="o">.</span><span class="nf">html_url</span><span class="si">)</span><span class="s2">"</span><span class="w">
+    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"</span><span class="si">$(</span><span class="nv">$latest</span><span class="o">.</span><span class="nf">body</span><span class="si">)</span><span class="s2">"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Using the local API endpoint we can get our local version, then use GitHub to get the <code class="highlighter-rouge">latest</code> version as well. From there we can do a simple comparison of the versions and if a new one is available, you’ll see some simple stats and the release notes for the latest version.</p>
+
+<p>For those that use Python, we can do that too for a multi-platform solution.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Setup of variables:
+# Update server and port to your local values
+</span><span class="n">server</span> <span class="o">=</span> <span class="s">"localhost"</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">8096</span>
+<span class="n">githubAPI</span> <span class="o">=</span> <span class="s">"https://api.github.com/repos/jellyfin/jellyfin/releases/latest"</span>
+
+<span class="n">localresp</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="sa">f</span><span class="s">"http://</span><span class="si">{</span><span class="n">server</span><span class="si">}</span><span class="s">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s">/System/Info/Public"</span><span class="p">)</span>
+<span class="n">myVersion</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">localresp</span><span class="p">.</span><span class="n">read</span><span class="p">())</span>
+
+<span class="n">remoteresp</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s">"https://api.github.com/repos/jellyfin/jellyfin/releases/latest"</span><span class="p">)</span>
+<span class="n">remoteversion</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">remoteresp</span><span class="p">.</span><span class="n">read</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="n">myVersion</span><span class="p">[</span><span class="s">'Version'</span><span class="p">]</span> <span class="o">==</span> <span class="n">remoteversion</span><span class="p">[</span><span class="s">'name'</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">myVersion</span><span class="p">[</span><span class="s">'Version'</span><span class="p">]</span><span class="si">}</span><span class="s"> is the latest version"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You are running </span><span class="si">{</span><span class="n">myVersion</span><span class="p">[</span><span class="s">'Version'</span><span class="p">]</span><span class="si">}</span><span class="s"> and </span><span class="si">{</span><span class="n">remoteversion</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span><span class="si">}</span><span class="s"> is the latest."</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You can download it from </span><span class="si">{</span><span class="n">remoteversion</span><span class="p">[</span><span class="s">'html_url'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">remoteversion</span><span class="p">[</span><span class="s">'body'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="results">Results</h2>
+
+<p>Currently I am a little behind on updates and here are the results:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You are running 10.8.7 and 10.8.8 is the latest.
+You can download it from https://github.com/jellyfin/jellyfin/releases/tag/v10.8.8
+# Jellyfin 10.8.8
+
+Stable hotfix release for 10.8.z release branch.
+
+## New Features and Major Improvements
+...
+</code></pre></div></div>
+
+<p>You will still need to download the latest version for your operating system and installation method you are using, but you can use the Github API to get the asset information and then start the process to do the install. Maybe even try to make a prompt to download and launch the installer.</p>
+
+<p>You can also find the code samples on Gists: <a href="https://gist.github.com/cjerrington/b39a7ecfbeff8049eff08e1a0fdaf7be#file-jellyfin-update-ps1">Powershell</a> and <a href="https://gist.github.com/cjerrington/b39a7ecfbeff8049eff08e1a0fdaf7be#file-jellyfin-update-py">Python</a></p>
+
+<p>Happy streaming!</p>
+:ET

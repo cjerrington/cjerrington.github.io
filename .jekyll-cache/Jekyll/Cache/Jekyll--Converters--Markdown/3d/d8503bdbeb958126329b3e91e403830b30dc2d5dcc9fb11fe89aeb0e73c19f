@@ -1,0 +1,22 @@
+I"è<p>Simple C# app to build SQL Attach Scripts.</p>
+
+<p>Allows users to build a mass attach script from the MDF and LDF files for MS SQL. I was looking into a way to automate the process when migrating a SQL server and running the ATTACH command. We had a lot of files and sometimes the file path was long. This simplified that process.</p>
+
+<!--more-->
+
+<h2 id="usage">Usage</h2>
+
+<p>You can select the location of the MDF files and the LDF files. These can be in different drives. The program will then compile the list of files in the directories and create the appropriate attach script.</p>
+
+<p>You can also specify a file prefix if you so choose to. This will only select and create the script for the MDF and LDF files with that name.</p>
+
+<p>You may also export the generated SQL Query to a SQL file for later use. It will be saved in the same directory as SQLBuilder and if a file prefix is entered, the file name will be save as well.</p>
+
+<h2 id="screenshot">Screenshot</h2>
+
+<p><img src="https://raw.githubusercontent.com/cjerrington/SQLBuilder/main/SQLBuilder.png" alt="SQLBuilder" /></p>
+
+<h2 id="download">Download</h2>
+
+<p>Check out the <a href="https://github.com/cjerrington/SQLBuilder/releases/latest">latest releases</a> to download.</p>
+:ET

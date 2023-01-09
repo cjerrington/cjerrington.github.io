@@ -1,0 +1,12 @@
+I"�<p><a href="https://cjerrington.codeberg.page/html-codes/">HTML Codes</a> is a responsive search service for anyone who is looking for the special character codes for symbols.</p>
+
+<p>I wrote this in just a few hours after gathering all the specialty codes. I was interested in learning more about <a href="https://angularjs.org/">AngularJS</a> and creating a search field. The first inspiration for this project came from the <a href="http://lubbockmedguide.com">Lubbock Med Guide</a>. I started working on a full MySQL and PHP search feature. This got to be a lot of hard work making the query search each field and displaying the required information.</p>
+
+<p>I found that JSON and AngularJS can provide a quick responsive way to manage a database like amount of information. The JSON file for this project has 1,263 lines of codes in it. Since these “databases” are static text files they load extremely fast. With the use of AngularJS it makes the output seem like it was hard coded into the page.</p>
+
+<p>The nice functioning about this is that I can make changes to the JSON file and not have to worry about messing any other code up. Editing is simple and each area of the app has its own purpose and won’t be over written in another keeping everything separate.</p>
+
+<p>Feel free to link to, use, update, correct anything you may find.</p>
+
+<p><a href="https://cjerrington.codeberg.page/html-codes/">View App</a> or <a href="https://codeberg.org/cjerrington/html-codes">View Project Source</a> as you wish.</p>
+:ET

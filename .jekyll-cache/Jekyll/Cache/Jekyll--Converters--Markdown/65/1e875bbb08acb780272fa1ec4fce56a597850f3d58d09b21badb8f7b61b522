@@ -1,0 +1,83 @@
+I"�<p>There comes a time in writing <a href="https://www.python.org/">Python</a> Python programs where you need to test something, work on an update to a module, or test a new module in a sandbox. Luckily there is a helpful process to use called Virtual Environments. Running your project in a virtual environment will allow you to keep modules seperate from your global module set if you do not want to keep everything all together or need to work specifically on a new project.</p>
+
+<!--more-->
+
+<h2 id="setting-up">Setting up</h2>
+
+<ol>
+  <li>
+    <p>Before we go further lets ensure we have everything setup.
+We need to run <code class="highlighter-rouge">python --version</code> from our terminal
+You should get a response back like <code class="highlighter-rouge">Python 3.7.4</code>. If you do not have Python you can download it from <a href="https://www.python.org/downloads/">Python.org</a> or using <a href="https://chocolatey.org/">Chocolatey</a> as well by doing <code class="highlighter-rouge">choco install python</code>.</p>
+  </li>
+  <li>
+    <p>Now that Python is installed, lets upgrade PIP.
+<a href="https://pip.pypa.io/en/stable/">PIP</a> is the package installer for Python. This is what we use to install other Python modules. Run <code class="highlighter-rouge">python -m pip install -U pip</code> in our terminal and pip will check if there is an update to the pip module.</p>
+  </li>
+  <li>
+    <p>Checking on virtualenv
+Run <code class="highlighter-rouge">pip install virtualenv</code>. This will check to see if <code class="highlighter-rouge">virtualenv</code> is installed and if not, pip will install it.</p>
+  </li>
+</ol>
+
+<h2 id="creating-our-virtualenv">Creating our virtualenv</h2>
+
+<p>Now that we have our pre-requisites in place we can create our virtual environment. In our terminal lets create a new folder, and change to that directory.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>testapp
+<span class="nb">cd </span>testapp
+</code></pre></div></div>
+
+<p>Now in our testapp folder run the following command and it will generate a base copy of Python and other setup items.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">virtualenv</span> <span class="p">.</span>
+</code></pre></div></div>
+
+<p>This will create the following folders for use in the new virtual environment.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Include
+Lib
+Scripts
+tcl
+License.txt
+</code></pre></div></div>
+
+<h2 id="activating-out-virtualenv">Activating out virtualenv</h2>
+
+<p>Now we will need to activate our virtual environment by doing the following for Windows</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scripts<span class="se">\a</span>ctivate
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> /bin/activate
+</code></pre></div></div>
+
+<p>You will notice your terminal now switched to</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>testapp<span class="o">)</span> PS C:<span class="se">\s</span>cripts<span class="se">\t</span>estapp&gt;
+</code></pre></div></div>
+
+<p>If you were to run <code class="highlighter-rouge">pip install requests</code> this will install a new version of this module for this virtual environment.</p>
+
+<p>If you needed to leave the virtual environment and stay in the terminal you can always type <code class="highlighter-rouge">deactivate</code> and this will return you to your normal terminal.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>A Virtual Environment is a great tool to keep the dependencies required by different projects in separate places, by creating virtual Python environments for them. This allows us to manage different projects that use different dependencies and versions, and keeps your global site-packages directory clean and manageable.</p>
+
+<p>This is also good to test newer module versions to ensure your original source code will work with the newer version.</p>
+
+<h3 id="extras">Extras</h3>
+
+<p>To keep your environments consistent you can “freeze” your current state of packages by typing to following.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div></div>
+
+<p>This will create a requirements.txt file that you can use for later for easier development or sharing of your Python project with others. The other users will just need to install the requirements.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div></div>
+:ET

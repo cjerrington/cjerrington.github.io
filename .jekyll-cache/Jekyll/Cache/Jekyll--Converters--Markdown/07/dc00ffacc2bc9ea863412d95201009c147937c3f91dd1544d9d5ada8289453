@@ -1,0 +1,61 @@
+I"Ò<h2 id="everyone-likes-games">Everyone likes games</h2>
+
+<p>I saw a post a while ago with a similar project but with PowerShell. I wanted to try something new and decided to use Python and the text to speech option.</p>
+
+<!--more-->
+
+<p>What we need to get this started is the random, string, os, and platform modules. Then created a few functions to get a random letter and a custom <code class="highlighter-rouge">say</code> command depending on the operating system a user is using.</p>
+
+<h2 id="random-letter">Random letter</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_letter</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="n">letters</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="n">ascii_uppercase</span>
+    <span class="n">result_str</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result_str</span>
+</code></pre></div></div>
+
+<p>The string module allows us to quickly get all the ascii letters by choice. In this case I wanted the uppercase letters so I didnt have to <code class="highlighter-rouge">string.upper()</code> latter on. We utilize the <code class="highlighter-rouge">random.choice()</code> command to get our letter in the length we specify. For this application we only need 1, but still pass that in as a variable if we wanted to have the user input multiple letters instead.</p>
+
+<h2 id="getting-the-phrase">Getting the phrase</h2>
+
+<p>Windows and Linux both have a text to speech command. Here we will define our operating system and use the correct speech operator.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">say</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">platform</span><span class="p">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s">"Windows"</span><span class="p">:</span>
+        <span class="n">speaker</span> <span class="o">=</span> <span class="n">win32com</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">Dispatch</span><span class="p">(</span><span class="s">"SAPI.SpVoice"</span><span class="p">)</span>
+        <span class="n">speaker</span><span class="p">.</span><span class="n">Speak</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">platform</span><span class="p">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s">"Linux"</span><span class="p">:</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s">"spd-say --wait '</span><span class="si">{</span><span class="n">phrase</span><span class="si">}</span><span class="s">'"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>For Windows we have to call the SAPI driver and then pass our phrase to the Speak command. In Linux most modern distributions have the command <code class="highlighter-rouge">spd-say</code>. We have to pass the <code class="highlighter-rouge">--wait</code> command in to have the system say the whole phrase before continuing.</p>
+
+<h2 id="putting-it-together">Putting it together</h2>
+
+<p>To make it a constant loop we can have a while true loop. After that we need to generate our letter and our assignment and begin the game.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">letter</span> <span class="o">=</span> <span class="n">get_letter</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">assignment</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"Press the letter </span><span class="si">{</span><span class="n">letter</span><span class="si">}</span><span class="s">: "</span>
+
+    <span class="c1"># Speak assignment
+</span>    <span class="n">say</span><span class="p">(</span><span class="n">assignment</span><span class="p">)</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">assignment</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">guess</span><span class="p">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">guess</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">letter</span><span class="p">.</span><span class="n">lower</span><span class="p">():</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Great! You pressed the letter </span><span class="si">{</span><span class="n">letter</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="n">say</span><span class="p">(</span><span class="sa">f</span><span class="s">"Great! You pressed the letter </span><span class="si">{</span><span class="n">letter</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You pressed </span><span class="si">{</span><span class="n">guess</span><span class="si">}</span><span class="s">. You should have pressed </span><span class="si">{</span><span class="n">letter</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="n">say</span><span class="p">(</span><span class="sa">f</span><span class="s">"You pressed </span><span class="si">{</span><span class="n">guess</span><span class="si">}</span><span class="s">. You should have pressed </span><span class="si">{</span><span class="n">letter</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"You did not choose a letter."</span><span class="p">)</span>
+        <span class="n">say</span><span class="p">(</span><span class="s">"You did not choose a letter."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This is a pretty simple solution that will take the letter and assignement then speak and print to the console. A input field is then asking for the letter. If the guess is an alpha character then we check if its the same as the generated. Simple checks let the user know if its the same letter or the letter the pressed and what they should have pressed. If a non alpha character is pressed like a number or special character we let them know as well.</p>
+
+<p>Happy playing!</p>
+
+<p><a href="https://github.com/cjerrington/UsefulScripts/blob/master/Python/alphagame.py">Full source on GitHub</a></p>
+:ET
