@@ -8,7 +8,7 @@ tags:
   - Coding
 ---
 
-[HTML Codes](http://claytonerrington.com/html-codes/) is a responsive search service for anyone who is looking for the special character codes for symbols.
+[HTML Codes](https://cjerrington.codeberg.page/html-codes/) is a responsive search service for anyone who is looking for the special character codes for symbols.
 
 I wrote this in just a few hours after gathering all the specialty codes. I was interested in learning more about [AngularJS](https://angularjs.org/) and creating a search field. The first inspiration for this project came from the [Lubbock Med Guide](http://lubbockmedguide.com). I started working on a full MySQL and PHP search feature. This got to be a lot of hard work making the query search each field and displaying the required information.
 
@@ -18,4 +18,4 @@ The nice functioning about this is that I can make changes to the JSON file and 
 
 Feel free to link to, use, update, correct anything you may find.
 
-[Download](https://github.com/cjerrington/html-codes/archive/gh-pages.zip) or [View Project Source](https://github.com/cjerrington/html-codes) as you wish.
+[View App](https://cjerrington.codeberg.page/html-codes/) or [View Project Source](https://codeberg.org/cjerrington/html-codes) as you wish.
