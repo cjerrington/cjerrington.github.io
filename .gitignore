@@ -1,9 +1,2 @@
-_site
-_drafts
-.sass-cache
-.jekyll-metadata
-Gemfile.lock
-node_modules
-ideas.md
-post-notice.md
-template.md
+.jekyll-cache/
+node_modules/
