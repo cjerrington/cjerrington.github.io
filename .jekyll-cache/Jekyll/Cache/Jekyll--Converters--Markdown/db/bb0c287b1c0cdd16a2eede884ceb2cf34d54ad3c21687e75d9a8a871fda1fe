@@ -1,3 +1,0 @@
-I"Ê<p>PowerShell is great to use with a Microsoft SQL server. There are plenty of ways to work with a SQL server from <a href="https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver16">Microsoftâ€™s SQL module</a>, by calling the underlying <a href="https://www.delftstack.com/howto/powershell/running-sql-queries-in-powershell/">.NET classes</a>, but recently I found <a href="https://dbatools.io">dbatools</a>!</p>
-
-:ET

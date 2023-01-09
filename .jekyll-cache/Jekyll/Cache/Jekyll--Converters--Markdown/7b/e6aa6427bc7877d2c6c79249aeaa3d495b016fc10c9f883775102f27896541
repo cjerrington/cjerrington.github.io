@@ -1,5 +1,0 @@
-I"T<p>Simple C# app to build SQL Attach Scripts.</p>
-
-<p>Allows users to build a mass attach script from the MDF and LDF files for MS SQL. I was looking into a way to automate the process when migrating a SQL server and running the ATTACH command. We had a lot of files and sometimes the file path was long. This simplified that process.</p>
-
-:ET

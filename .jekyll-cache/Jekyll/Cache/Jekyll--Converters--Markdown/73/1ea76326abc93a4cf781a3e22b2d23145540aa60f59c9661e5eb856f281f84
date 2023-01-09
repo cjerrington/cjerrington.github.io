@@ -1,4 +1,0 @@
-I"^<p><a href="https://electron.atom.io">Electron</a> is an easy to use API that allows you to create a desktop app using HTML, CSS, and Javascript. The best part of these apps are they are created on one platform and can be exported to all Microsoft Windows, MacOS, and Linux distributions.</p>
-
-<p>These apps use <a href="https://www.chromium.org">Chromium</a> and <a href="https://nodejs.org/en/">Node.js</a> to ensure all the CSS and Javascript are rendered the same throughout the different platforms. The use of Node.js makes adding components from the Node library easy to add to your application.</p>
-:ET
