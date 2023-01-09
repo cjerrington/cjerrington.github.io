@@ -69,7 +69,7 @@ plugins:
 
 author:
   name   : "Clayton Errington"
-  avatar : "../images/avatar2.jpg"
+  avatar : "../images/avatar.webp"
   bio    : "Specialized web designer and software developer"
   links:
     - label: "Website"
