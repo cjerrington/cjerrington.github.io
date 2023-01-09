@@ -29,7 +29,7 @@ repository: "cjerrington/cjerrington.github.io"
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+theme: "minimal-mistakes-jekyll"
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -84,8 +84,10 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/cjerrington/"
-
-
+    - label: "Codeberg"
+      icon: "fab fa-fw fa-git-alt"
+      url: "https://codeberg.org/cjerrington"
+      
 footer:
   links:
     - label: "Mastodon"
@@ -97,6 +99,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/cjerrington"
+    - label: "Codeberg"
+      icon: "fab fa-fw fa-git-alt"
+      url: "https://codeberg.org/cjerrington"
 
 defaults:
   # _posts
