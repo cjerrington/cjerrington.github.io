@@ -34,6 +34,7 @@
       "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
       "build:js": "npm run uglify && npm run add-banner",
       "serve": "bundle exec jekyll serve",
+      "ssl": "bundle exec jekyll serve --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt",
       "dev": "bundle exec jekyll serve jekyll serve --drafts",
       "update": "bundle update",
       "newpost": "plop",
