@@ -20,6 +20,7 @@ twitter_username: cjerrington
 github_username: cjerrington
 minimal_mistakes_skin: dark
 search: true
+url: "https://claytonerrington.com"
 
 head_scripts:
   - https://code.jquery.com/jquery-3.2.1.min.js
