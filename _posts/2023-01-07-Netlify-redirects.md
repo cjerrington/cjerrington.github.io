@@ -24,7 +24,7 @@ I recently moved to Netlify for hosting instead of [GitHub Pages](https://pages.
 
 I found this post on [Moving your Jekyll site to Netfify](https://www.netlify.com/blog/2017/05/11/migrating-your-jekyll-site-to-netlify/), and Netlify makes this easy as well straight from your dashboard when making a new project with them. 
 
-Once the site was built, I could go to [cjerrington.netlify.app](cjerrington.netlify.app) and (once DNS was update) [claytonerrington.com](claytonerrington.com), but just like [www.claytonerrington.com](www.claytonerrington.com) forwards to the APEX domain, I wanted the `*.netlify.app` to auto redirect which it does not from the website configurations. 
+Once the site was built, I could go to [cjerrington.netlify.app](https://cjerrington.netlify.app) and (once DNS was update) [claytonerrington.com](https://claytonerrington.com), but just like [www.claytonerrington.com](https://www.claytonerrington.com) forwards to the APEX domain, I wanted the `*.netlify.app` to auto redirect which it does not from the website configurations. 
 
 Thus comes in the redirects: 
 
