@@ -18,7 +18,7 @@ eleventyNavigation:
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </h3>
       <p class="card__date">{{ post.date | readableDate }}</p>
-      <p class="card__description">{{ post.data.description }}</p>
+      <p class="card__description">{{ post.data.excerpt }}</p>
       <p class="card__subtitle">Tags:</p>
       <div class="card__tags">
         {% for tag in post.data.tags %}
