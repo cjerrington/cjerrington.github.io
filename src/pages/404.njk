@@ -1,0 +1,20 @@
+---
+title: Whoops!
+layout: layouts/post.njk
+permalink: /404
+hideTagsList: true
+eleventyExcludeFromCollections: true
+---
+
+<h1>Content not found.</h1>
+
+Go <a href="{{ '/' | url }}">home</a> or browse the archive
+
+{% for year, yearPosts in collections.postsByYear %}
+  <h2>{{ year }}</h2>
+  <ul>
+    {% for post in yearPosts | reverse %}
+      <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
