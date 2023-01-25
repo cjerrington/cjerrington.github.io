@@ -44,7 +44,9 @@ alias cls=clear
 Your aliases can even be functions that you make as well. Another simple one when creating directories is then you have to `cd` into them. If you make a new function you can do just that! The following takes input after the new `mkd` command to be the folder name, then change directories into it.
 
 {% highlight shell %}
+
 # make directory and then cd to it
+
 mkd () {
   mkdir -p $1
   cd $1

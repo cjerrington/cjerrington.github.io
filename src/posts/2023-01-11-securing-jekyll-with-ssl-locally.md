@@ -15,7 +15,7 @@ Jekyll is a great static site generator for many reasons, but lets encrypt that 
 
 So you might be thinking why would I need SSL when running locally? That is a great question!
 
-1. If you are publishing your website, most providers are serving it with an SSL on the published hosting server. Or you might have purchased your own SSL and hosting or through service like Let's Encrypt. 
+1. If you are publishing your website, most providers are serving it with an SSL on the published hosting server. Or you might have purchased your own SSL and hosting or through service like Let's Encrypt.
 2. There are certain production like qualities that might run best under SSL, currently you dont have a way to test that.
 3. Some browsers or extentions auto redirect browser pages to use SSL and HTTPS.
 
