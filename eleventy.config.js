@@ -13,7 +13,7 @@ module.exports = (config) => {
   config.addPlugin(syntaxHighlight);
   config.addPlugin(editOnGithub, {
     // required
-    github_edit_repo: 'https://github.com/cjerrington/blog',
+    github_edit_repo: 'https://github.com/cjerrington/cjerrington.github.io',
     // optional: defaults
     github_edit_path: "", // non-root location in git url. root is assumed
     github_edit_branch: 'master',
