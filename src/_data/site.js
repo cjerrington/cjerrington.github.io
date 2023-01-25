@@ -7,8 +7,8 @@ module.exports = {
   },
   feed: { // used in feed.xml.njk
     subtitle: "Lorem ipsum dolor sit amet consecuteor",
-    filename: "atom.xml",
-    path: "/atom.xml",
+    filename: "feed.xml",
+    path: "/feed.xml",
     id: "https://claytonerrington.com/",
     authorName: "Clayton Errington",
     authorEmail: "me@claytonerrington.com"
