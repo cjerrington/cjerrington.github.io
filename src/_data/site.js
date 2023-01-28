@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: "https://claytonerrington.com/",
   },
   feed: { // used in feed.xml.njk
-    subtitle: "Lorem ipsum dolor sit amet consecuteor",
+    subtitle: "Specialized web designer and software developer",
     filename: "feed.xml",
     path: "/feed.xml",
     id: "https://claytonerrington.com/",
