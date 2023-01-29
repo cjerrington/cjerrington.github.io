@@ -3,6 +3,7 @@ title: "GitHub profile with actions"
 excerpt: "GitHub has a few hidden features for a user profile repository and how to add some GitHub Actions to them"
 tags:
   - git
+  - automation
   - 100DaysToOffload
 ---
 
@@ -107,7 +108,8 @@ jobs:
 
 So now that we have the `index.js` file and the workflow add, ensure those are committed the repository and let the work be done for you. Now each day this workflow will run and read my RSS links for new posts and update the Gitub profile for me. 
 
-Take a look too
+Take a look at some extra resources:
 - [my workflow](https://github.com/cjerrington/cjerrington/blob/main/.github/workflows/build.yml)
 - [my index.js](https://github.com/cjerrington/cjerrington/blob/main/index.js)
 - [Awesome README Profile list](https://zzetao.github.io/awesome-github-profile/)
+- [readme-scribe](https://github.com/muesli/readme-scribe)
