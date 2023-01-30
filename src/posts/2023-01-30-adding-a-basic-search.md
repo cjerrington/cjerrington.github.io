@@ -84,4 +84,4 @@ The part that does the work is in the `search.js` file. It reads the search inde
 
 ## Conclusion
 
-I have seen this idea from [joshinator.de](https://joshinator.de/posts/11ty-search/), and modified it a little in application on my site. Most of the credit goes to him. How could you use this for your static site? 
+I have seen this idea from [joshinator.de](https://joshinator.de/posts/11ty-search/), and modified it a little in application on my site. Most of the credit goes to him. How could you use this for your static site? Try it out for yourself too: [Search now](/search/)
