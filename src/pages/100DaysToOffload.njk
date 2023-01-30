@@ -9,7 +9,13 @@ eleventyNavigation:
 
 <div class="container">
 
-  <h1>100 Days To Offload</h1>
+  <h1>100 Days To Offload
+    {% set postCount = 0 %}
+    {% for tag in collections.offload %}
+      {% set postCount = postCount + 1 %}
+    {% endfor %}
+    <small>({{ postCount }} posts)</small>
+  </h1>
 
   <div class="card-grid">
     {% for post in collections.offload %}
