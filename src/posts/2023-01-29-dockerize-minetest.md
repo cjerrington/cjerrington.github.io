@@ -4,6 +4,7 @@ excerpt: "setting up the open source Minecraft alternative, Minetest, with docke
 tags:
   - docker
   - gaming
+  - selfhost
   - 100DaysToOffload
 image: /static/images/posts/minetest/minetest-icon.png
 ---
