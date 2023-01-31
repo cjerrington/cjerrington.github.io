@@ -3,7 +3,6 @@ title: "Nextcloud Docker Compose"
 excerpt: "I did things the hard way and how I saved my Nextcloud data and began using docker"
 tags:
   - docker
-  - 100DaysToOffload
 ---
 
 For the longest time I was intimidated by Docker. I have been fairly familiar with virtual machines, linux environments, desktops; it's been my job for most of my career. Working in the terminal was not an issue, I really don't know what the issue was. Finally I decided to use some dedicated hardware to experiment with Docker more. Recently I built a [minetest server](/blog/dockerize-minetest/), and that went well.
