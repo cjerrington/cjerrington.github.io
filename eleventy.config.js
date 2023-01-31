@@ -50,7 +50,7 @@ module.exports = (config) => {
 
   config.addCollection("tagList", collection => {
     const tagsObject = {}
-    collection.getAll().forEach(item => {
+    collection.getFilteredByGlob("src/posts/*.md").forEach(item => {
       if (!item.data.tags) return;
       item.data.tags
         .filter(tag => !['post', 'all'].includes(tag))
@@ -83,6 +83,11 @@ module.exports = (config) => {
   // Get only content that matches a tag
   config.addCollection("offload", function(collectionApi) {
     return collectionApi.getFilteredByTag("100DaysToOffload").reverse();
+  });
+
+  // Get only content that matches a tag
+  config.addCollection("drafts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/drafts/*.md").reverse();
   });
 
   return {
