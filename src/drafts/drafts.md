@@ -2,7 +2,7 @@
 title: "Draft Post"
 excerpt: "Working with drafts"
 tags:
-  - 100DaysToOffload
+  - tagsgohere
 ---
 
 Test Draft post
