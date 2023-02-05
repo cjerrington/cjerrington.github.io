@@ -1,3 +1,5 @@
+
+
 module.exports = function(plop) {
     const today = new Date(Date.now())
     const shortDate = today.toISOString().split("T")[0]
