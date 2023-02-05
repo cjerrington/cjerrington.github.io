@@ -10,6 +10,7 @@
     "concurrently": "^7.6.0",
     "eleventy-plugin-edit-on-github": "^1.1.0",
     "luxon": "^3.2.1",
+    "plop": "^3.1.1",
     "stylus": "^0.59.0"
   },
   "scripts": {
@@ -19,7 +20,10 @@
     "watch:11ty": "eleventy --serve",
     "build": "npm run build:stylus && npm run build:11ty",
     "clean": "node ./tools/clean.js",
-    "dev": "concurrently -n stylus,11ty \"npm:watch:stylus\" \"npm:watch:11ty\""
+    "dev": "concurrently -n stylus,11ty \"npm:watch:stylus\" \"npm:watch:11ty\"",
+    "newpost": "plop",
+    "git": "git add . && git commit -m",
+    "postgit": "git push --all"
   },
   "dependencies": {
     "eleventy-plugin-seo": "^0.5.2"
