@@ -34,7 +34,7 @@ module.exports = (config) => {
 
   config.addPassthroughCopy('css');
   config.addPassthroughCopy('static');
-  //config.addPassthroughCopy('_redirects');
+  config.addPassthroughCopy('_redirects');
   // Copy the favicon file from static/img to the root of the site.
   config.addPassthroughCopy({ "static/img/*.ico": "/" });
   
