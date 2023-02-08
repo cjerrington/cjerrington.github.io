@@ -3,3 +3,9 @@
   to = "https://claytonerrington.com"
   status = 301
   force = true
+
+# Mastodon Webfinger
+[[redirects]]
+  from = "/.well-known/webfinger"
+  to = "https://mstdn.social/.well-known/webfinger?resource=acct:cjerrington@mstdn.social"
+  status = 200
