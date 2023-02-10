@@ -29,7 +29,7 @@ module.exports = (config) => {
     url: "https://claytonerrington.com",
     author: "Clayton Errington",
     twitter: "cjerrington",
-    image: "https://claytonerrington.com/static/images/avatar.webp"
+    image: "https://claytonerrington.com/static/images/opengraph.png"
   });
 
   config.addPassthroughCopy('css');
