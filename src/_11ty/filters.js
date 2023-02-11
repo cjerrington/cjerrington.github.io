@@ -12,5 +12,5 @@ module.exports = {
     },  
     readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {    
         return DateTime.fromISO(dateStr).toFormat(formatStr);  
-    }
+    },
 }
