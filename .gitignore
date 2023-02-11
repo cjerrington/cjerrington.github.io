@@ -3,3 +3,7 @@ node_modules/
 _site/
 build/
 ssl/
+# Local Netlify folder
+.netlify
+_cache/
+.env

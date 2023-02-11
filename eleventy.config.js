@@ -5,6 +5,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const editOnGithub = require('eleventy-plugin-edit-on-github');
 const pluginSEO = require('eleventy-plugin-seo');
 const _ = require("lodash");
+const filters = require('./src/_11ty/filters')
 
 module.exports = (config) => {
   
@@ -46,6 +47,11 @@ module.exports = (config) => {
 
   config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL, yyyy");
+  });
+  
+  // Filters  
+  Object.keys(filters).forEach(filterName => {    
+    config.addFilter(filterName, filters[filterName])  
   });
 
   config.addCollection("tagList", collection => {
