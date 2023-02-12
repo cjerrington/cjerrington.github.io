@@ -1,8 +1,18 @@
+const fs = require('fs')
 
+function getDirectories(path) {
+  return fs.readdirSync(path).filter(function (file) {
+    return fs.statSync(path+'/'+file).isDirectory();
+  });
+}
 
 module.exports = function(plop) {
     const today = new Date(Date.now())
     const shortDate = today.toISOString().split("T")[0]
+
+    const tags = getDirectories("./build/tags")
+
+    //console.log(tags)
 
     plop.setHelper("shortDate", () => shortDate),
       plop.setHelper("ISOStringDate", () => today.toISOString()),
@@ -35,7 +45,7 @@ module.exports = function(plop) {
             type: "checkbox",
             name: "category",
             message: "Category:",
-            choices: ["Computers", "C#", "Javascript", "Powershell", "Python", "Security", "Web"],
+            choices: tags,
             //filter: function(val) {
             //  return val.toLowerCase()
             //},
