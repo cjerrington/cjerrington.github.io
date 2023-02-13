@@ -13,6 +13,19 @@
 {# Count the total replies #}  
 {% set repliesSize = replies | size  %}
 
+
+<div class="webmention-replies"> 
+    <h4>
+    {% if likesSize >0 %} 
+        {{ likesSize }} {% if likesSize == "1" %}Like{% else %}Replies{% endif %}
+    {% endif %}
+    {% if repostsSize >0 %} 
+        {{ repostsSize }} {% if repostsSize == "1" %}Repost{% else %}Reposts{% endif %}
+    {% endif %}
+    </h4> 
+</div>
+
+
 {% if repliesSize > 0 %}
 <div class="webmention-replies">  
     <h4>{{ repliesSize }} {% if repliesSize == "1" %}Reply{% else %}Replies{% endif %}</h4>  

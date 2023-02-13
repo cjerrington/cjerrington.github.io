@@ -21,7 +21,7 @@
     "watch:stylus": "stylus --watch ./src/stylus/ --out ./static/css/",
     "build:11ty": "NODE_ENV=production npx @11ty/eleventy",
     "watch:11ty": "eleventy --serve",
-    "start": "netlify dev",
+    "start": "concurrently -n stylus,11ty \"npm:watch:stylus\"  \"netlify dev\"",
     "build": "npm run build:stylus && npm run build:11ty",
     "clean": "node ./tools/clean.js",
     "dev": "concurrently -n stylus,11ty \"npm:watch:stylus\" \"npm:watch:11ty\"",

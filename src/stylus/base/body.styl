@@ -15,16 +15,27 @@ body
 
 search
 input[type="text"]
-    display block
-    width calc(100% - 24px)
-    font-size 18px
-    font-weight 600
-    color text_color
-    padding 10px
-    border 2px solid bg_color
+textarea
+  display block
+  width calc(100% - 24px)
+  font-size 18px
+  font-weight 600
+  color text_color
+  padding 10px
+  border 2px solid bg_color
+  border-radius 4px
 
-.webmauthor img{
-  width 50%
-  height 50%
+  &.dark
+    color text_color_dark
+    background-color bg_color_dark
+  
+textarea
+  height 150px
+
+.webmauthor img
+  width 48px
+  height 48px
   border-radius 50%
-}
+
+.hidden
+  display none

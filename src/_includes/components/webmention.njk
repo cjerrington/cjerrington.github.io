@@ -2,9 +2,9 @@
     <div class="webmention__meta webmauthor">    
         {% if webmention.author %}      
             {% if webmention.author.photo %}      
-            <!--img src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}" width="48" height="48" loading="lazy"-->      
+            <img class="webmauthor" src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}" width="48" height="48" loading="lazy">      
             {% else %}      
-            <!--img src="{{ '/img/avatar.svg' | url }}" alt="" width="48" height="48"-->      
+            <img class="webmauthor" src="{{ '/img/avatar.svg' | url }}" alt="" width="48" height="48">
         {% endif %}      
         <span>        
             <a class="h-card u-url" {% if webmention.url %}href="{{ webmention.url }}" {% endif %} target="_blank" rel="noopener noreferrer"><strong class="p-name">{{ webmention.author.name }}</strong></a>      
