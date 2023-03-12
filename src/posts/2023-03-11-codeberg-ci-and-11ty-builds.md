@@ -9,7 +9,7 @@ tags:
   - 100DaysToOffload
 ---
 
-In this post we weill help walk you through how to build a [NodeJS](https://nodejs.org/en/) and [11ty](https://www.11ty.dev/) (eleventy) website on [Codeberg Pages](https://codeberg.page/).
+In this post we will help walk you through how to build a [NodeJS](https://nodejs.org/en/) and [11ty](https://www.11ty.dev/) (eleventy) website on [Codeberg Pages](https://codeberg.page/).
 
 Currently users need early adopter access to Codeberg's CI environment based on the Woodpecker CI. You can gain access here: [https://codeberg.org/Codeberg-CI/request-access](https://codeberg.org/Codeberg-CI/request-access)
 
