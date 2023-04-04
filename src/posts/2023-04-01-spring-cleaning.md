@@ -67,6 +67,6 @@ $ find . -type f -printf '%s %p\n' | sort -nr | head -5
 
 We start by specifying our path, then format the output, sort the data. The `-n` is for numeric sort and the `-r` passed to sort will reverse the result of comparisons.  The Head will take the first 5 items as well.
 
-## Conslusion
+## Conclusion
 
 After finding the large files hopefully now we know what is taking up disk space and have an idea of how to manage that: move to glacier storage, delete, or keep it. Maybe now we've found that one file that was misplaced and is now the largest file on the disk. Hopefully this has inspired you to take a moment and find some other areas you might need to do some Spring Cleaning in other areas and finding ways to help automate the archive or removal of some old data.
