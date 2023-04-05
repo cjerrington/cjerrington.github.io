@@ -4,6 +4,7 @@ layout: layouts/base.njk
 
 <div class="container-sm">
   <h1>{{ title }}</h1>
+  <p class="small">{{ page.date | readableDate }}</p>
   {{ content | safe }}
 
 {% set found = false %}
