@@ -1,15 +1,15 @@
 ---
-title: Changes with Python's PIP Manager
-excerpt: Setting bookmark locations within the PowerShell console and quickly move into them
+title: Ubuntu's change with Python support
+excerpt: Discussing Python package manager PIP and recent changes Ubuntu has taken
 tags:
   - python
-  - shell
+  - linux
   - 100DaysToOffload
 ---
 
-Recently Ubuntu released their most recent release of 23.04 for the start of the year. Like any good developer you find time to test your scripts and programs on new operating systems and runtime environments for Python changes. However to be like a great Python developer, you use virtual environments.
+Recently [Ubuntu](https://ubuntu.com/desktop) released their most recent release of 23.04 for the start of the year. Like any good developer you find time to test your scripts and programs on new operating systems and runtime environments for Python changes. However to be like a great Python developer, you use [virtual environments](https://claytonerrington.com/blog/python-virtual-environments/).
 
-I wrote about [virtual environments](https://claytonerrington.com/blog/python-virtual-environments/) and Python before. With the new release of Ubuntu they adopted [PEP 668](https://peps.python.org/pep-0668/) to make Python base environments as “externally managed”. So what does this mean?
+With the new release of Ubuntu they adopted [PEP 668](https://peps.python.org/pep-0668/) to make Python base environments as “externally managed”. So what does this mean?
 
 ## PEP 668
 
@@ -23,7 +23,9 @@ From the abstract of the PEP itself says it best:
 
 > It also standardizes an interpretation of the `sysconfig` schemes so that, if a Python-specific package manager is about to install a package in an interpreter-wide context, it can do so in a manner that will avoid conflicting with the external package manager and reduces the risk of breaking software shipped by the external package manager.>
 
-On many Linux distributions like Ubuntu, Fedora, Linux Mint, Python has a huge part of how the operating system functions and operates. For many years Python 2.7 was the only supported version of Python since so many Linux distributions still relied on it on the OS level. More Python development has improved in Python 3.11 now. What makes Python great is the user community that has such a great input on how the language evolves. Many PEPs have been introduced and the community helps pitch in ideas and ways to adopt them.
+On many Linux distributions like: Ubuntu, Fedora, and Linux Mint, Python has a huge part of how the operating system functions and operates. For many years Python 2.7 was the only supported version of Python since so many Linux distributions still relied on it on the OS level. More Python development has improved in [Python 3.11](https://www.python.org/downloads/) now. 
+
+What makes Python great is the user community that has such a great input on how the language evolves. Many PEPs have been introduced and the community helps pitch in ideas and ways to adopt them.
 
 A few PEPs that make the language great:
 
@@ -35,7 +37,7 @@ A few PEPs that make the language great:
 
 According to [Debian.org](https://wiki.debian.org/Python), their website states, 'Debian is the largest "integrated Python distribution"', and recently removed the "python" package and symlink since Python 2 is depreciated. Meaning there are packaged scripts shipped with the OS that rely on certain aspects of the Python language to perform certain functions within the OS.
 
-Ubuntu for example you can count the number of packages that depend on Python, not counting the python specific packages. This number will be pretty large.
+Take Ubuntu for example, you can count the number of packages that depend on Python, not counting the python specific packages. This number will be pretty large.
 
 {% highlight shell %}
 apt-cache rdepends python3 | grep -v python | wc -l
