@@ -31,7 +31,7 @@
     "postgit": "git push --all"
   },
   "dependencies": {
-    "dotenv": "^16.1.4",
+    "dotenv": "^16.3.1",
     "eleventy-plugin-seo": "^0.5.2",
     "npm-check-updates": "^16.10.12"
   }
