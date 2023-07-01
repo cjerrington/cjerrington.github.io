@@ -5,6 +5,7 @@ tags:
   - coding
   - gaming
   - python
+  - wordle
   - 100DaysToOffload
 ---
 
