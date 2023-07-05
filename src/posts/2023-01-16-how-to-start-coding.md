@@ -21,7 +21,7 @@ Once I got into the real world did I begin to dabble with PowerShell, C#, Python
 
 Start simple and small, just get the task done, then add in the flavoring and flair. Start with moving files to new directories and understand how to programming language interacts with your operating system. Learn the basics first then improve upon them.
 
-When people ask me what to start with programming wise, I would say if on Windows, start with PowerShell, something that is built in and designed for that system. If on Linux, learns ome basic Bash commands - theres always a time when you're in the terminal. Don't overcomplicate your solution. Python is another great place to start as it is widely used still, and cross platform. A lot, not all, of what is written can be reused depending on your task at hand.
+When people ask me what to start with programming wise, I would say if on Windows, start with PowerShell, something that is built in and designed for that system. If on Linux, learns ome basic Bash commands - theres always a time when you're in the terminal. Don't over-complicate your solution. Python is another great place to start as it is widely used still, and cross platform. A lot, not all, of what is written can be reused depending on your task at hand.
 
 ## Read, write, repeat
 
@@ -35,8 +35,8 @@ While engaged with these resources, ask questions, be persistent, because you wo
 
 ## Time
 
-You wont be the next big tech star overnight, but starting small, learning, and understating some basic logic, can help you excel in other areas too. Automate the boring stuff first, then you can get to the real projects you want to do since you have to time to do them now.
+You won't be the next big tech star overnight, but starting small, learning, and understating some basic logic, can help you excel in other areas too. Automate the boring stuff first, then you can get to the real projects you want to do since you have to time to do them now.
 
 The biggest challenge is just start somewhere. Find something that you can accomplish and build upon that. Once you think you've got a good grasp of Powershell, try to do the same task in Python for example.
 
-I've heard it said, now one programing language is perfect, they are all a part of a programmers tool box. You use the right tool for the job and you'll succeed.
+I've heard it said, no one programming language is perfect, they are all a part of a programmers tool box. You use the right tool for the job and you'll succeed.
