@@ -24,9 +24,9 @@
   <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="{{ '/favicon.ico' | url }}" type="image/x-icon">
   <!-- Favicon provided by @joel@fosstodon.org - https://fosstodon.org/@joel -->
-  
+  {% if site.env == 'prod' %}
   <script async src="https://analytics.umami.is/script.js" data-website-id="edcce5d0-3443-48ca-8ba0-2194d9b6bbbf"></script>
-
+  {% endif %}
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
@@ -88,7 +88,8 @@
     console.log("This is fun... Hello, there! What might we be looking for?")
   </script>
 
+  {% if site.env == 'prod' %}
   <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "62c81dba15344321bf179042364b18ba"}'></script><!-- End Cloudflare Web Analytics -->
-
+  {% endif %}
 </body>
 </html>

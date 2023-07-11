@@ -16,5 +16,6 @@ module.exports = {
   hero: { // used in hero section of main page ie. index.html.njk
     title: "Clayton Errington",
     description: "Specialized web designer and software developer"
-  }
+  },
+  env: process.env.ELEVENTY_ENV,
 }

@@ -9,6 +9,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
     "eleventy-plugin-edit-on-github": "^1.1.0",
     "lodash": "^4.17.21",
     "luxon": "^3.3.0",
@@ -20,12 +21,12 @@
   "scripts": {
     "build:stylus": "stylus --compress ./src/stylus/ --out ./static/css/",
     "watch:stylus": "stylus --watch ./src/stylus/ --out ./static/css/",
-    "build:11ty": "NODE_ENV=production npx @11ty/eleventy",
+    "build:11ty": "cross-env ELEVENTY_ENV=prod NODE_ENV=production npx @11ty/eleventy",
     "watch:11ty": "eleventy --serve",
     "start": "concurrently -n stylus,11ty \"npm:watch:stylus\"  \"netlify dev\"",
     "build": "npm run build:stylus && npm run build:11ty",
     "clean": "node ./tools/clean.js",
-    "dev": "concurrently -n stylus,11ty \"npm:watch:stylus\" \"npm:watch:11ty\"",
+    "dev": "cross-env ELEVENTY_ENV=dev concurrently -n stylus,11ty \"npm:watch:stylus\" \"npm:watch:11ty\"",
     "newpost": "plop",
     "git": "git add . && git commit -m",
     "postgit": "git push --all"
@@ -36,4 +37,3 @@
     "npm-check-updates": "^16.10.13"
   }
 }
- 
