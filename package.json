@@ -12,7 +12,7 @@
     "cross-env": "^7.0.3",
     "eleventy-plugin-edit-on-github": "^1.1.0",
     "lodash": "^4.17.21",
-    "luxon": "^3.3.0",
+    "luxon": "^3.4.2",
     "netlify-plugin-cache-folder": "^0.0.8",
     "node-fetch": "3.3.2",
     "plop": "^3.1.2",
