@@ -1,0 +1,41 @@
+source: src
+paths:
+  data: _data
+  collections: ''
+  layouts: _includes
+  static: ''
+  uploads: uploads
+  includes: _includes
+  pages: ''
+collections_config:
+  post:
+    path: posts
+    output: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  drafts:
+    path: drafts
+    output: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  data:
+    path: _data
+    output: false
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+_inputs: {}
+_select_data: {}
+_structures: {}
+_editables: {}
+data_config: {}
+source_editor:
+  tab_size: 2
+  theme: monokai
+  show_gutter: true
+timezone: Etc/UTC
