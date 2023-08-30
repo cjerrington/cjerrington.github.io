@@ -26,7 +26,7 @@ collections_config:
     path: _data
     output: false
     icon: notes
-    disable_add: false
+    disable_add: true
     disable_add_folder: false
     disable_file_actions: false
 _inputs: {}
