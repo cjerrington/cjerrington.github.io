@@ -1,7 +1,4 @@
 source: src
-schemas:
-      default:
-        path: schemas/post.md
 paths:
   data: _data
   collections: ''
@@ -21,7 +18,9 @@ collections_config:
     add_options:
       - name: Add Post
         editor: content
-    schema: default
+    schemas:
+      default:
+        path: src/_schemas/post.md
   drafts:
     path: drafts
     output: true
@@ -32,7 +31,9 @@ collections_config:
     add_options:
       - name: Add Draft
         editor: content
-    schema: default
+    schemas:
+      default:
+        path: src/_schemas/post.md
   data:
     path: _data
     output: false
@@ -40,7 +41,9 @@ collections_config:
     disable_add: true
     disable_add_folder: false
     disable_file_actions: false
-_inputs: {}
+_inputs: 
+  layout:
+    hidden: true
 _select_data: {}
 _structures: {}
 _editables: {}
