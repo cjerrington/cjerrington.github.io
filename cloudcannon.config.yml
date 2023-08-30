@@ -36,6 +36,6 @@ _editables: {}
 data_config: {}
 source_editor:
   tab_size: 2
-  theme: monokai
+  theme: nord_dark
   show_gutter: true
 timezone: Etc/UTC
