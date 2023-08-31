@@ -16,12 +16,12 @@ Quickly I found the `aws ec2 start-instances` was the way to go. The problem was
 
 {% highlight shell %}
 (aws ec2 describe-instances --filters "Name=tag:Name,Values=ServerHostName)" --query "Reservations[].Instances[].InstanceId" --profile default --output text --region us-east-1)
-{% endhhighlight %}
+{% endhighlight %}
 
 This query would describe the instance given the server name and query the JSON output for the InstanceID and output it as text. From here I could then start an EC2 instance
 
 {% highlight shell %}
 aws ec2 start-instances --instance-ids i-XXXXXXXXXXXX --profile default --output text --region us-east-1
-{% endhhighlight %}
+{% endhighlight %}
 
 We found a solution, but there is no way I was able to remember that. So I started writing a function around this idea.
