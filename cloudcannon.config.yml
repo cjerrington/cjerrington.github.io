@@ -34,6 +34,8 @@ collections_config:
     schemas:
       default:
         path: src/_schemas/post.md
+    layout:
+      hidden: true
   data:
     _unlisted: true
 _inputs: 
