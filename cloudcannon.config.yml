@@ -18,6 +18,7 @@ collections_config:
     create:
       extra_data:
         filename: '{date|year}-{date|month}-{date|day}-{title}'
+      path: '[relative_base_path]/{filename|slugify}.md'
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -39,6 +40,7 @@ collections_config:
     create:
       extra_data:
         filename: '{date|year}-{date|month}-{date|day}-{title}'
+      path: '[relative_base_path]/{filename|slugify}.md'
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
