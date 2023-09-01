@@ -35,12 +35,7 @@ collections_config:
       default:
         path: src/_schemas/post.md
   data:
-    path: _data
-    output: false
-    icon: notes
-    disable_add: true
-    disable_add_folder: false
-    disable_file_actions: false
+    _unlisted: true
 _inputs: 
   layout:
     hidden: true
