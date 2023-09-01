@@ -15,6 +15,9 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+    create:
+      extra_data:
+        filename: '{date|year}-{date|month}-{date|day}-{title}'
     add_options:
       - name: Add Post
         editor: content
@@ -28,6 +31,9 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+    create:
+      extra_data:
+        filename: '{date|year}-{date|month}-{date|day}-{title}'
     add_options:
       - name: Add Draft
         editor: content
