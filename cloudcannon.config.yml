@@ -12,45 +12,54 @@ collections_config:
     path: posts
     output: true
     icon: notes
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    create:
-      extra_data:
-        filename: '{date|year}-{date|month}-{date|day}-{title}'
     add_options:
       - name: Add Post
         editor: content
+    create:
+      extra_data:
+        filename: '{date|year}-{date|month}-{date|day}-{title}'
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
     schemas:
       default:
         path: src/_schemas/post.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        icon: notes
   drafts:
     path: drafts
     output: true
     icon: notes
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    create:
-      extra_data:
-        filename: '{date|year}-{date|month}-{date|day}-{title}'
     add_options:
       - name: Add Draft
         editor: content
+    create:
+      extra_data:
+        filename: '{date|year}-{date|month}-{date|day}-{title}'
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
     schemas:
       default:
         path: src/_schemas/post.md
-    layout:
-      hidden: true
-  data:
-    _unlisted: true
-_inputs: 
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        icon: notes
+_inputs:
   layout:
+    type: auto
     hidden: true
+    cascade: true
 _select_data: {}
 _structures: {}
 _editables: {}
 data_config: {}
+editor: {}
 source_editor:
   tab_size: 2
   theme: nord_dark
