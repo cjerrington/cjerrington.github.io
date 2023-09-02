@@ -10,6 +10,7 @@ tags:
 
 **For the month of August, 23 letters used of the alphabet**
 
+| Letter | Percentage 
 | :--- | ---:|
 | A | 9.03% |
 | B | 3.87% |
