@@ -92,9 +92,9 @@ module.exports = (config) => {
   });
 
   // Get only content that matches a tag
-  config.addCollection("drafts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/drafts/*.md").reverse();
-  });
+  // config.addCollection("drafts", function(collectionApi) {
+  //   return collectionApi.getFilteredByGlob("src/drafts/*.md").reverse();
+  // });
 
   return {
     dir: {
