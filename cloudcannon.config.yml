@@ -6,7 +6,7 @@ paths:
   static: ''
   uploads: uploads
   includes: _includes
-  pages: ''
+  pages: pages
 collections_config:
   post:
     path: posts
@@ -32,6 +32,7 @@ collections_config:
         icon: notes
   drafts:
     path: drafts
+    _unlisted: true
     output: true
     icon: notes
     add_options:
