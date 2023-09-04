@@ -8,6 +8,7 @@ paths:
   includes: _includes
   pages: pages
 collections_config:
+  _unlisted: true
   post:
     path: posts
     output: true
@@ -32,7 +33,6 @@ collections_config:
         icon: notes
   drafts:
     path: drafts
-    _unlisted: true
     output: true
     icon: notes
     add_options:
