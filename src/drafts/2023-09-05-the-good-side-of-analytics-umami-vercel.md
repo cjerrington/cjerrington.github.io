@@ -2,8 +2,12 @@
 _schema: default
 title: The Good Side of Analytics - Umami & Vercel
 excerpt: The term analytics has gotten a bad name recently, but not all of it is bad.
-tags: 100DaysToOffload
-draft: true
+tags: 
+  - 100DaysToOffload
+  - web design
+  - selfhost
+  - vercel
+draft: false
 ---
 Analytics. It's been a word of taboo for a while now, and for a good reason. No one really likes to be tracked knowingly or unknowingly. I think there is a difference between analytics and telemetry and also how that data is to be used. When a company or organization adds analytics to a product it should be for the purpose of improving the product and understand the end user workflows.
 
