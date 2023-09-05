@@ -17,7 +17,9 @@ There are some positive things analytics do provide. If you have your product ab
 
 Recently I removed Google Analytics and moved to <a target="_blank" rel="noopener" href="https://umami.is/">Umami</a> which is self-hosted and makes analytics easy for the user, and maintains visitor privacy and data ownership. I recently created a cloud account on their service for free, which was great. After getting some data I could see in a clearer way than Google Analytics ever did what pages and data it was collecting. The integration, setup, and review of the data was simple and easy.
 
-Also this weekend, I moved my web hosting to <a target="_blank" rel="noopener" href="https://vercel.com">Vercel</a> and was looking again and the full self-hosted options Umami offers and saw a <a target="_blank" rel="noopener" href="https://umami.is/docs/running-on-vercel">Running on Vercel</a> page and started looking into this option. The trick was I still didn't have a database connection. Vercel to rescue! They have plenty of <a target="_blank" rel="noopener" href="https://vercel.com/docs/storage">storage options</a> and a Postgres database is one of them. I was able to create a Postgres Database withing my Vercel account and import the forked Umami git repository to my GitHub account. There were a few settings I did not find in the setup on the page that might be helpful, even from a process workflow.
+Also this weekend, I moved my web hosting to <a target="_blank" rel="noopener" href="https://vercel.com">Vercel</a> and was looking again and the full self-hosted options Umami offers and saw a <a target="_blank" rel="noopener" href="https://umami.is/docs/running-on-vercel">Running on Vercel</a> page and started looking into this option. The trick was I still didn't have a database connection. Vercel to rescue! 
+
+They have plenty of <a target="_blank" rel="noopener" href="https://vercel.com/docs/storage">storage options</a> and a Postgres database is one of them. I was able to create a Postgres Database withing my Vercel account and import the forked Umami git repository to my GitHub account. There were a few settings I did not find in the setup on the page that might be helpful, even from a process workflow.
 
 ## Combination settings
 
@@ -32,12 +34,12 @@ The steps below are the settings I would think could be updated for a better dep
    3. Choose Postgres
    4. Once named and created you will find your database url in the `.env.local` settings
    5. You will use the POSTGRES\_PRISMA\_URL\_PRISMA\_URL as the DATABASE\_URL environment variable for your Vercel deployment settings.
-5. You should use POSTGRES\_PRISMA\_URL for umami, which is in the form of postgres://user:passwd@endpoint-pooler.postgres.vercel-storage.com/verceldb?pgbouncer=true&connect\_timeout=10.
+5. You should use POSTGRES\_PRISMA\_URL for umami, which is in the form of `postgres://user:passwd@endpoint-pooler.postgres.vercel-storage.com/verceldb?pgbouncer=true&connect_timeout=10`.
 6. The environment variable used for the database URL can be changed in the db/postgresql/prisma.schema file.
 7. Deploy and visit your application at &lt;deploy-id&gt;.vercel.app.
 8. Follow the **Getting started** guide starting from the [Login](https://umami.is/docs/login) step and be sure to change the default password.
 
-After creating the database in step 4, I would clone your forked repository of the Umami project add a `.env` file with your `DATABASE\_URL=\{connection\_url\}`. Then run:
+After creating the database in step 4, I would clone your forked repository of the Umami project add a `.env` file with your `DATABASE_URL={connection_url}`. Then run:
 
 {% highlight shell %}
 yarn install
