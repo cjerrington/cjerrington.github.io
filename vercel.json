@@ -19,14 +19,6 @@
         {
           "source": "/net-check",
           "destination": "https://cjerrington.github.io/net-check/"
-        },
-        {
-            "source": "/blog/mapping-the-interner",
-            "destination": "https://claytonerrington.com/blog/mapping-the-internet/"
-        },
-        {
-            "source": "/.well-known/webfinger",
-            "destination": "https://mstdn.social/.well-known/webfinger?resource=acct:cjerrington@mstdn.social"
         }
     ]
 }
