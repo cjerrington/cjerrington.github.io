@@ -6,5 +6,5 @@ const pullMyWebFinger = async ( domain, user ) => {
     console.log( profile );
   };
   
-  pullMyWebFinger( "mstdn.social", "cjerrington" );
+  pullMyWebFinger( "claytonerrington.com", "cjerrington" );
   

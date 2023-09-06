@@ -20,16 +20,15 @@ eleventyNavigation:
 
 <h3>Contact me</h3>
 
-<p>You can also contact me on the <a href="https://joinmastodon.org/" target="_blank">Fedierse</a> at <a href="https://mstdn.social/@cjerrington" target="_blank">@cjerrington@mstdn.social</a></p>
+<p>You can also contact me on the <a href="https://joinmastodon.org/" target="_blank">Fediverse</a> at <a href="https://mstdn.social/@cjerrington" target="_blank">@cjerrington@mstdn.social</a></p>
 
 <form
   name="contact"
   method="POST"
-  data-netlify-recaptcha="true"
-  netlify-honeypot="bot-field"
-  data-netlify="true"
+  action="https://formspree.io/f/xrgodley"
 >
 <input type="hidden" name="subject" value="Contact Form submission from my Website" />
+<input type="text" name="_gotcha" style="display:none" />
   <p>
     <label>
       Name: <input type="text" name="name" placeholder="Your name" />
@@ -50,7 +49,6 @@ eleventyNavigation:
       Message: <textarea name="message"></textarea>
     </label>
   </p>
-  <div data-netlify-recaptcha="true"></div>
   <p>
     <button type="submit">Send</button>
   </p>
