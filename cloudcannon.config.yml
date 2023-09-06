@@ -23,6 +23,9 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+    filter:
+      exclude:
+        - posts.json
     schemas:
       default:
         path: src/_schemas/post.md
