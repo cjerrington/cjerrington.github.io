@@ -20,7 +20,9 @@ To get started go to <a target="_blank" rel="noopener" href="https://cloudcannon
 
 You will need to create your Organization and from there you create a Site by building with your own files. Next, you'll need to name your Site Name the same as your GitHub repo and choose your file source and you can choose from Bitbucket, GitHub, GitLab, or a folder. You can then choose and update your build settings and then you are complete and ready to start editing on CloudCannon.
 
-The Dashboard will show you a preview of your built site, your Live URL you can use for testing, recent activity, and recent files. 11ty and CloudCannon have a natural integration and will load your data files, collections, and more. You can go to your collection, Post, in my case and see all the blog posts that I have written and begin editing in the visual editor. The editor also shows the frontmatter of the post and allows you to edit the title, excerpt, tags, etc. You can also create a new post and start writing right away!
+![import files](/static/images/posts/cloudcannon/syncimport.png)
+
+The Dashboard will show you a preview of your built site, your Live URL you can use for testing, recent activity, and recent files. 11ty and CloudCannon have a natural integration and will load your data files, collections, and more. You can go to your collection, Post, in my case and see all the blog posts that I have written and begin editing in the visual editor. The editor also shows the front matter of the post and allows you to edit the title, excerpt, tags, etc. You can also create a new post and start writing right away!
 
 ## CloudCannon config
 
@@ -51,7 +53,7 @@ collections_config:
       path: '[relative_base_path]/{filename|slugify}.md'
 {% endhighlight %}
 
-When creating a post it pulls the metadata from the last file. This is not what we want when creating a new item as we have a new title, tags, or what else we have. We can add a \`schema\` and specify a path to this source file.
+When creating a post it pulls the metadata from the last file. This is not what we want when creating a new item as we have a new title, tags, or what else we have. We can add a `schema` and specify a path to this source file.
 
 {% highlight yml %}
 collections_config:
@@ -66,8 +68,8 @@ collections_config:
         icon: notes
 {% endhighlight %}
 
-
-{% higlight yml %}
+Template file that is used for a new post
+{% highlight yml %}
 ---
 title: ""
 excerpt: ""
@@ -85,3 +87,11 @@ collections_config:
       exclude:
         - posts.json
 {% endhighlight %}
+
+## Happy editing
+
+With the integration of CloudCannon this will make it easier and quicker to write a new blog post. I even wrote this post with CloudCannon. Currently the only tricky part is the code highlights that I like to share, but I can also quickly switch from the visual editor to the source editor and make those adjustments. In the end, it is a nice addition to have in my static site journey and another tool in the chest. Next I probably should write out the integrations used on my site again as that has changed as well.
+
+Feel free to review my full `cloudcannon.config.yml` file on my [website source files](https://github.com/cjerrington/cjerrington.github.io/blob/master/cloudcannon.config.yml)
+
+![Saving file](/static/images/posts/cloudcannon/savepost.png)
