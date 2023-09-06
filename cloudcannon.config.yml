@@ -45,6 +45,9 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+    filter:
+      exclude:
+        - drafts.json
     schemas:
       default:
         path: src/_schemas/post.md
@@ -53,7 +56,6 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: true
         icon: notes
-collections_config_override: false
 _inputs:
   layout:
     type: auto
