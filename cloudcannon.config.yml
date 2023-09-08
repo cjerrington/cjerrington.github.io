@@ -58,9 +58,9 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: true
         icon: notes
-main_content: 
+container: 
 _inputs:
-  main_content:
+  container:
     type: markdown
     options:
       blockquote: true
@@ -90,7 +90,6 @@ _inputs:
       right: align-right
       justify: align-justify
       image_size_attributes: true
-
 _select_data: {}
 _structures: {}
 _editables: {}
