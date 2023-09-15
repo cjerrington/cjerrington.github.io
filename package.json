@@ -13,7 +13,6 @@
     "eleventy-plugin-edit-on-github": "^1.1.0",
     "lodash": "^4.17.21",
     "luxon": "^3.4.2",
-    "netlify-plugin-cache-folder": "^0.0.8",
     "node-fetch": "3.3.2",
     "plop": "^3.1.2",
     "stylus": "^0.60.0"
@@ -23,7 +22,7 @@
     "watch:stylus": "stylus --watch ./src/stylus/ --out ./static/css/",
     "build:11ty": "cross-env ELEVENTY_ENV=prod NODE_ENV=production npx @11ty/eleventy",
     "watch:11ty": "eleventy --serve",
-    "start": "concurrently -n stylus,11ty \"npm:watch:stylus\"  \"netlify dev\"",
+    "start": "concurrently -n stylus,11ty \"npm:watch:stylus\"  \"npm:watch:11ty\"",
     "build": "npm run build:stylus && npm run build:11ty",
     "clean": "node ./tools/clean.js",
     "dev": "cross-env ELEVENTY_ENV=dev concurrently -n stylus,11ty \"npm:watch:stylus\" \"npm:watch:11ty\"",
