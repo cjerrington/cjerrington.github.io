@@ -33,6 +33,6 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "eleventy-plugin-seo": "^0.5.2",
-    "npm-check-updates": "^16.14.2"
+    "npm-check-updates": "^16.14.4"
   }
 }
