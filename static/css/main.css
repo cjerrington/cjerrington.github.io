@@ -46,6 +46,11 @@ img {
   width: 100%;
   height: auto;
 }
+img.blogroll {
+  all: revert;
+  width: 20px;
+  height: 20px;
+}
 h1,
 h2,
 h3,
