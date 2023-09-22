@@ -6,4 +6,5 @@ ssl/
 # Local Netlify folder
 .netlify
 _cache/
+.cache/
 .env

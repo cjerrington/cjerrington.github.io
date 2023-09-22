@@ -5,7 +5,7 @@ layout: layouts/post.njk
 hideTagsList: true
 eleventyNavigation:
   key: Projects
-  weight: 4
+  order: 5
 ---
 
 ### Projects I have created
