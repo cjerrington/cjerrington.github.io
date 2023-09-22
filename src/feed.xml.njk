@@ -3,13 +3,14 @@ permalink: "{{ site.feed.path }}"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{ site.meta.title }}</title>
+<?xml-stylesheet href="/static/rss-style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
+  <title>{{ site.meta.title }}</title>
 	<subtitle>{{ site.feed.subtitle }}</subtitle>
-	{% set absoluteUrl %}{{ site.feed.path | url | absoluteUrl(site.feed.id) }}{% endset %}
+  {% set absoluteUrl %}{{ site.feed.path | url | absoluteUrl(site.feed.id) }}{% endset %}
 	<link href="{{ absoluteUrl }}" rel="self"/>
-	<link href="{{ site.siteUrl }}"/>
-	<updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <link href="{{ site.meta.siteUrl }}"/>
+  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
 	<id>{{ site.feed.id }}</id>
 	<author>
 		<name>{{ site.feed.authorName }}</name>
@@ -22,6 +23,7 @@ eleventyExcludeFromCollections: true
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ post.date | rssDate }}</updated>
 		<id>{{ absolutePostUrl }}</id>
+		<description>{{ post.data.excerpt }}</description>
 		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
 	</entry>
 	{%- endfor %}
