@@ -58,7 +58,7 @@ module.exports = function(plop) {
         actions: [
           {
             type: "add",
-            path: `src/drafts/${shortDate}-{{dashCase title}}.md`,
+            path: `src/posts/${shortDate}-{{dashCase title}}.md`,
             templateFile: "drafts.md.hbs",
           },
         ],
