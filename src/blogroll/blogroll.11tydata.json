@@ -37,8 +37,13 @@
       },
       {
         "name": "Lazybear",
-        "url": "http://lazybear.io/",
+        "url": "https://lazybear.io/",
         "feed": "https://lazybear.io/index.xml"
-      }      
+      },
+      {
+        "name": "Michael Harley",
+        "url": "https://mharley.dev/",
+        "feed": "https://mharley.dev/feed/feed.xml"
+      }
     ]
 }
