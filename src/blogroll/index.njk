@@ -3,21 +3,16 @@ title: Blogroll
 description: Blogroll
 layout: layouts/post.njk
 hideTagsList: true
-eleventyNavigation:
-  key: Blogroll
-  order: 2
+"eleventyExcludeFromCollections": true
 ---
 <div class="card-grid">
     {% for blog in blogData %}
     <div class="card">
-      <h3 class="card__title">
-        	<img alt="" class="blogroll" src="{{ blog.favicon }}" width="16px" height="16px" loading="lazy" decoding="async" /> 
-            <a href="{{ blog.url }}" target="_blank">
-            {{ blog.name }}
-            </a>
+        <h3 class="card__title">
+            <img alt="icon for {{ blog.name }}" class="blogroll" src="{{ blog.favicon }}" width="16px" height="16px" loading="lazy" decoding="async" /> 
+            <a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a>
             <i><small class="card__description">{{ blog.cleansedUrl }}</small></i>
-       </h3>
-        
+        </h3>
         {% if blog.latestPost and blog.latestPost.title %}
         <p class="latest-post">
             <b>Latest post:</b>
