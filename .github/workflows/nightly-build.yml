@@ -1,10 +1,20 @@
-name: Deploy
+# This action triggers the build hook
+name: Schedule Build & Deploy Hooks
+
+# Controls when the workflow will run
 on:
   schedule:
-    - cron: '30 3 * * *'
+    # Runs at 9am every weekday
+    - cron: "0 9 * * *"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# The workflow to run
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger our build webhook on Netlify
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/${{ secrets.NETLIFY_CRON_BUILD_HOOK }}
+      # Runs a request to the build hook
+      # For security keep your build hook secret - add it to your github repo in Settings > Secrets
+      - name: Build hook request
+        run: curl -X POST -d {} ${{ secrets.BUILD_HOOK }}
