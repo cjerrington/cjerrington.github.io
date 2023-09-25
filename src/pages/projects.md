@@ -1,7 +1,7 @@
 ---
 title: Projects
 description: Small sampling of projects I've worked on and want to highlight
-layout: layouts/post.njk
+layout: layouts/page.njk
 hideTagsList: true
 eleventyNavigation:
   key: Projects

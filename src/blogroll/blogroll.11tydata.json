@@ -16,6 +16,17 @@
         "feed": "https://benjaminhollon.com/feed/?from=musings%2Ctty1%2Cpoetry%2Cblurbs"
       },
       {
+        "name": "Bryce Wray",
+        "url": "https://brycewray.com/",
+        "feed": "https://www.brycewray.com/index.xml"
+      },
+      {
+        "name": "Daniel Schroeder",
+        "url": "https://blog.danskingdom.com/",
+        "feed": "https://blog.danskingdom.com/feed.xml"
+      },
+      
+      {
         "name": "Darek Kay",
         "url": "https://darekkay.com/",
         "feed": "https://darekkay.com/atom.xml"
@@ -36,6 +47,11 @@
         "feed": "https://www.joelchrono12.xyz/feed.xml"
       },
       {
+        "name": "Julia Evans",
+        "url": "http://jvns.ca/",
+        "feed": "https://jvns.ca/atom.xml"
+      },
+      {
         "name": "Lazybear",
         "url": "https://lazybear.io/",
         "feed": "https://lazybear.io/index.xml"
@@ -44,6 +60,12 @@
         "name": "Michael Harley",
         "url": "https://mharley.dev/",
         "feed": "https://mharley.dev/feed/feed.xml"
+      }
+      ,
+      {
+        "name": "Werd I/O",
+        "url": "https://werd.io/",
+        "feed": "https://werd.io/feed.xml"
       }
     ]
 }

@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+---
+
+{% if size == 'wide' %}
+<div class="container">
+{% else %}
+<div class="container-sm">
+{% endif %}
+
+  <h1>{{ title }}</h1>
+
+  {{ content | safe }}
+
+{% set found = false %}
+
+{% for tag in tags %}
+  {% if tag === '100DaysToOffload' %}
+    <hr />
+    I'm publishing this as part of <a href="/100DaysToOffload/">100 Days To Offload</a>. You can join in yourself by visiting <a href="https://100DaysToOffload.com">100DaysToOffload.com</a>.
+  {% endif %}
+{% endfor %}
+
+  <br><hr>
+  {% if not hideTagsList %}
+    <b>Tags: </b>
+    {% for tag in tags %}
+      {% if tag != 'post' %}
+        <a href="{{ '/tags/' | url }}{{ tag | slugify }}">{{ tag }}</a>
+        {%- if not loop.last %}, {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  <br /><br />
+
+  Found an issue? {% gh_edit page %}
+  <br /><br />
+  <a href="{{ '/' | url }}">&larr; Back home</a>
+</div>
