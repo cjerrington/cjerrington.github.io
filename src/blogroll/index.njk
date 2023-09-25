@@ -5,7 +5,7 @@ layout: layouts/page.njk
 hideTagsList: true
 "eleventyExcludeFromCollections": true
 ---
-<p><small>Last updated: {{ helpers.buildTime() }}</small></p>
+<p><small>Last updated: {{ helpers.buildTime() }} UTC</small></p>
 <div class="card-grid">
     {% for blog in blogData %}
     <div class="card">
