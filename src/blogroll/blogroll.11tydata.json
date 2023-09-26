@@ -21,6 +21,11 @@
         "feed": "https://www.brycewray.com/index.xml"
       },
       {
+        "name": "Chris Wiegman",
+        "url": "https://chriswiegman.com/",
+        "feed": "https://chriswiegman.com/feed"
+      },
+      {
         "name": "Daniel Schroeder",
         "url": "https://blog.danskingdom.com/",
         "feed": "https://blog.danskingdom.com/feed.xml"
@@ -57,15 +62,29 @@
         "feed": "https://lazybear.io/index.xml"
       },
       {
+        "name": "MDGRS Factory",
+        "url": "https://mdgrs.hashnode.dev/",
+        "feed": "https://mdgrs.hashnode.dev/rss.xml"
+      },
+      {
         "name": "Michael Harley",
-        "url": "https://mharley.dev/",
-        "feed": "https://mharley.dev/feed/feed.xml"
-      }
-      ,
+        "url": "https://michaelharley.net/",
+        "feed": "https://michaelharley.net/feed.xml"
+      },
+      {
+        "name": "R.L. Dane",
+        "url": "https://rldane.space/",
+        "feed": "https://rldane.space/feeds/all.atom.xml"
+      },
       {
         "name": "Werd I/O",
         "url": "https://werd.io/",
         "feed": "https://werd.io/feed.xml"
+      },
+      {
+        "name": "Zach Leatherman",
+        "url": "https://www.zachleat.com",
+        "feed": "https://www.zachleat.com/web/feed/"
       }
     ]
 }
