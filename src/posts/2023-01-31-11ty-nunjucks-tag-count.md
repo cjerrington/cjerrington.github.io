@@ -2,6 +2,7 @@
 title: "11ty, nunjucks, tag counts"
 excerpt: "Using nunjucks to get the count of the posts for a tag."
 tags:
+  - 11ty
   - web design
   - 100DaysToOffload
 ---
