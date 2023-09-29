@@ -8,3 +8,4 @@ ssl/
 _cache/
 .cache/
 .env
+src/posts/.obsidian

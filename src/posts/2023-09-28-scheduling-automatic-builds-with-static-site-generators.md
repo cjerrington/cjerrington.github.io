@@ -1,7 +1,7 @@
 ---
 title: Scheduling Automatic Builds with Static Site Generators
 excerpt: Having a static site is great, but there could be times where you need to build your site on a schedule.
-tags: 
+tags:
   - 11ty
   - automation
   - web design

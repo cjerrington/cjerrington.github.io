@@ -1,7 +1,7 @@
 ---
 title: "Redesign of the Lubbock Map Website"
 date: 2015-02-13
-excerpt: "The company I worked for wanted to redsign their website."
+excerpt: "The company I worked for wanted to redesign their website."
 tags:
   - web design
 ---
