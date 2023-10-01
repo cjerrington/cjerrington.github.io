@@ -48,8 +48,8 @@
       },
       {
         "name": "Joel G.",
-        "url": "https://joelchrono12.xyz/",
-        "feed": "https://www.joelchrono12.xyz/feed.xml"
+        "url": "https://joelchrono.xyz/",
+        "feed": "https://joelchrono.xyz/feed.xml"
       },
       {
         "name": "Julia Evans",
@@ -69,7 +69,7 @@
       {
         "name": "Michael Harley",
         "url": "https://michaelharley.net/",
-        "feed": "https://michaelharley.net/feed.xml"
+        "feed": "https://michaelharley.net/feed/feed.xml"
       },
       {
         "name": "R.L. Dane",
