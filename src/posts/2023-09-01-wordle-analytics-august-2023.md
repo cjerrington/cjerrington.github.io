@@ -35,3 +35,5 @@ tags:
 | W | 1.94% |
 | X | 1.29% |
 | Y | 3.87% |
+
+Find out more about the [Wordle Analytics](/blog/wordle-analytics/).

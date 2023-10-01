@@ -36,3 +36,5 @@ For the month of September, 24 letters used of the alphabet
 | X | 0.67% |
 | Y | 4.0% |
 | Z | 0.67% |
+
+Find out more about the [Wordle Analytics](/blog/wordle-analytics/).
