@@ -3,6 +3,7 @@ title: Using Cheat sheets
 excerpt: How to quickly get help with command line commands and other resources
 tags: 
   - shell
+  - snippets
   - 100DaysToOffload
 draft: false
 ---
