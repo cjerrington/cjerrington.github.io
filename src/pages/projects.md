@@ -6,6 +6,7 @@ hideTagsList: true
 eleventyNavigation:
   key: Projects
   order: 5
+size: wide
 ---
 
 ### Projects I have created

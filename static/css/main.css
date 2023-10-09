@@ -20,15 +20,13 @@ textarea {
   width: calc(100% - 24px);
   font-size: 18px;
   font-weight: 600;
-  color: #333;
   padding: 10px;
-  border: 2px solid #fff;
+  border: 2px solid;
   border-radius: 4px;
 }
 search.dark,
 input[type="text"].dark,
 textarea.dark {
-  color: #fff;
   background-color: #333;
 }
 textarea {
