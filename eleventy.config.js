@@ -56,7 +56,7 @@ module.exports = (config) => {
 
   config.addCollection("tagList", collection => {
     const tagsObject = {}
-    collection.getFilteredByGlob("src/posts/*.md").forEach(item => {
+    collection.getFilteredByGlob("src/posts/**/*.md").forEach(item => {
       if (!item.data.tags) return;
       item.data.tags
         .filter(tag => !['post', 'all'].includes(tag))
@@ -79,7 +79,7 @@ module.exports = (config) => {
 
   config.addCollection("postsByYear", (collection) => {
     // create a collection called postsByYear of a glob of the posts folder and only the markdown files
-    return _.chain(collection.getFilteredByGlob("src/posts/*.md"))
+    return _.chain(collection.getFilteredByGlob("src/posts/**/*.md"))
       .groupBy((post) => post.date.getFullYear())
       .toPairs()
       .reverse()
