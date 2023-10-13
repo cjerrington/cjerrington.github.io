@@ -14,7 +14,7 @@ I began writing about the things I’ve done to help myself and others. A few ye
 - [File dialog with PowerShell](/blog/file-dialog-with-powershell)
 - [PowerShell GUI with WPF](/blog/powershell-gui-with-wpf)
 
-When I write many posts, many of them are the challenges I faced and like to share my solutions in hope that it helps someone else. I also look at this challenge as a way to archive my own journey through issues with [PowerShell](/tags/powershell/), my new journey with [AWS](/tags/aws/), neat things with [Python](/tags/python/), and [more](/tags/). I have even gone back to my own blog post to fix a solution later, and I just knew I had written about it.
+When I write, most of the topics are the challenges I faced and like to share my solutions in hope that it helps someone else. I also look at this challenge as a way to archive my own journey through issues with [PowerShell](/tags/powershell/), my new journey with [AWS](/tags/aws/), neat things with [Python](/tags/python/), and [more](/tags/). I have even gone back to my own blog post to fix a solution later, and I just knew I had written about it.
 
 Not too long ago was looking at my post [archives](/archive/) and I had a few less posts some months than others. 100 posts in a year is only about 8 a month. I thought that was doable and took on the challenge. Many posts are about my coding process and progress this year, and it has been a crazy ride. I’ve even seen some improvements on my programming style and ability to write a solution for now, but also thinking about the future of the script and the process it’s being implemented for.
 
