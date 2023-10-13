@@ -8,9 +8,10 @@ function getDirectories(path) {
 
 module.exports = function(plop) {
     const today = new Date(Date.now())
+    const year = today.getFullYear()
     const shortDate = today.toISOString().split("T")[0]
 
-    const tags = getDirectories("./build/tags")
+    const tags = getDirectories("./build/tags")   
 
     //console.log(tags)
 
@@ -58,7 +59,7 @@ module.exports = function(plop) {
         actions: [
           {
             type: "add",
-            path: `src/posts/${shortDate}-{{dashCase title}}.md`,
+            path: `src/posts/${year}/${shortDate}-{{dashCase title}}.md`,
             templateFile: "drafts.md.hbs",
           },
         ],
