@@ -8,7 +8,6 @@ const _ = require("lodash");
 const filters = require('./src/_11ty/filters')
 
 module.exports = (config) => {
-  
   config.addPlugin(navigationPlugin);
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);
@@ -46,7 +45,7 @@ module.exports = (config) => {
   });
 
   config.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL, yyyy");
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("LLL dd, yyyy"); 
   });
   
   // Filters  

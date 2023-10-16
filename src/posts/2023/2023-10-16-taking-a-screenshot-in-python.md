@@ -9,7 +9,7 @@ draft: false
 
 Quick demonstration of how to take a screenshot using Python.
 
-Python is great because there are so many ways to do the same thing. Some are simple while others are built into other larger modules, thus making it simpler to use. 
+Python is great because there are so many ways to do the same thing. Some are simple while others are built into other larger modules, thus making it simpler to use.
 
 We'll look at a few three ways to do this using Numpy, pyautogui, and OpenCV.
 
