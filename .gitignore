@@ -9,3 +9,4 @@ _cache/
 .cache/
 .env
 src/posts/.obsidian
+node_modules

@@ -27,15 +27,18 @@
     "build": "npm run build:stylus && npm run build:11ty",
     "clean": "node ./tools/clean.js",
     "dev": "cross-env ELEVENTY_ENV=dev concurrently -n stylus,11ty \"npm:watch:stylus\" \"npm:watch:11ty\"",
+    "cms": "npx tinacms dev -c \"npm run dev\"",
     "newpost": "plop",
     "git": "git add . && git commit -m",
     "postgit": "git push --all"
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.0",
+    "@tinacms/cli": "^1.5.30",
     "dotenv": "^16.3.1",
     "eleventy-plugin-seo": "^0.5.2",
     "normalize-url": "^6.1.0",
-    "rss-parser": "^3.13.0"
+    "rss-parser": "^3.13.0",
+    "tinacms": "^1.5.21"
   }
 }
