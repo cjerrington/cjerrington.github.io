@@ -14,6 +14,7 @@ tags:
   - windows
   - 100DaysToOffload
 draft: true
+date: 2023-10-03
 ---
 
 It's about time I write down all the hardware, software, and selfhost I use regularly.

@@ -1,4 +1,5 @@
 ---
+date: 2023-10-16
 title: Updating Umami Analytics
 excerpt: How to keep you self hosted analytics software up to date
 tags: 

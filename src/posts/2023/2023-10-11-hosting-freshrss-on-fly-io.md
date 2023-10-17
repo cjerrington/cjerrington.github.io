@@ -6,6 +6,7 @@ tags:
   - selfhost
   - 100DaysToOffload
 draft: false
+date: 2023-10-11
 ---
 
 RSS is a great way to follow websites that publish content via blog posts, new articles, or other syndicated media. A RSS reader that is out there is called [FreshRSS](https://www.freshrss.org/) and can easily installed via self-hosted options or on the public cloud providers.

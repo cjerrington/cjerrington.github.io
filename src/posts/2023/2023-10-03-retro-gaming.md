@@ -5,6 +5,7 @@ tags:
   - gaming
   - 100DaysToOffload
 draft: false
+date: 2023-10-03
 ---
 
 I have quite a few games on my phone that I play I've had for quite awhile, but one thing that is not fun are ads that have been popping up while playing the games. This is not that relaxing to sit back and get lost in the story line of the game. It is amazing the graphics that are put into the games now for a mobile game. Sometimes though it's nostalgic to go back to a few of those 8-bit graphic games and enjoy the simplicity of those.

@@ -6,6 +6,7 @@ tags:
   - snippets
   - 100DaysToOffload
 draft: false
+date: 2023-10-01
 ---
 
 Recently I have come across a few other ways to get help on terminal commands and some examples. Sometimes you need a quick note about a command and there are a few ways to do this. Many terminal based languages and even the operating system have a help system.

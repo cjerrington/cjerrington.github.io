@@ -5,6 +5,7 @@ tags:
   - shell
   - 100DaysToOffload
 draft: false
+date: 2023-10-09
 ---
 
 There is a lot you can do with your GPG and PGP keys. There are a lot of similarities and slight differences, but the same still applies where you generate a key pair consisting of a private and public keys. There are plenty of resources on how to properly create your gpg/pgp keys so I'll leave that to the experts.

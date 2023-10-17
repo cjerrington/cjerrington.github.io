@@ -6,11 +6,12 @@ tags:
   - wordle
   - 100DaysToOffload
 draft: false
+date: 2023-10-01
 ---
 
 For the month of September, 24 letters used of the alphabet
 
-| Letter | Percentage 
+| Letter | Percentage |
 | :--- | ---:|
 | A | 9.33% |
 | B | 1.33% |

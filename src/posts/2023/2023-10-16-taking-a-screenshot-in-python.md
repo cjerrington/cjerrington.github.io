@@ -5,6 +5,7 @@ tags:
   - python
   - 100DaysToOffload
 draft: false
+date: 2023-10-16
 ---
 
 Quick demonstration of how to take a screenshot using Python.

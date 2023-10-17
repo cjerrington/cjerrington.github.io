@@ -6,6 +6,7 @@ tags:
   - snippets
   - 100DaysToOffload
 draft: false
+date: 2023-10-03
 ---
 
 I needed a quick way to create a test file of various sizes and filenames. This was handy when needing to create test files for a certain file manipulation script and didn't want to use real files in the process, or have files of various sizes. Today, I'd like to share this snippet wtih you. 

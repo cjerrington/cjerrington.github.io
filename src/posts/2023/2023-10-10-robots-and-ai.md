@@ -5,6 +5,7 @@ tags:
   - web design
   - 100DaysToOffload
 draft: false
+date: 2023-10-10
 ---
 
 What is this robots file even for? It is supposed to be used by the web crawlers to know information about your website. This is how crawlers for search engines like Google, Bing, Yahoo! and more know about your website, and thus it's content. These web crawlers got the nickname of web robots, and begin to archive and categorize websites across the web. Most of these bots are designed to look for a `robots.txt` file on the root of the domain, and read any special instructions as to how to crawl and index the web site.

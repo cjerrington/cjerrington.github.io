@@ -8,6 +8,7 @@ tags:
   - 100DaysToOffload
 draft: false
 size: wide
+date: 2023-10-12
 ---
 
 The other day I saw someone ask on social media if there was a way to know how much bandwidth was used on their laptop. Based on the conversation I knew they were using a Linux machine, and they were using other tools to get other kinds of data, but this was information those tools wasn't capturing.
