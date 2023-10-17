@@ -53,7 +53,7 @@ If you'd like more information, check out the documentation for [Deploying Tina 
 
 ## My Configuration Changes
 
-First, I wanted to configure a new run command. The npx tinacms dev -c "eleventy --serve" is a bit much to always type in. Plus I have dev command that properly starts up my stylus, eleventy watch, and serve commands.
+First, I wanted to configure a new run command. The `npx tinacms dev -c "eleventy --serve"` is a bit much to always type in. Plus I have dev command that properly starts up my stylus, eleventy watch, and serve commands.
 
 ```javascript
 "scripts": {
@@ -192,4 +192,4 @@ Here is what this looks like now.
 
 ## Conclusion
 
-I know I previously wrote about [CloudCannon and 11ty](/blog/cloudcannon-eleventy/), but with today's technology there are plenty of great choices. CloudCannon is a great choice as well. Currently, it is in some infancy and will only get better. TinaCMS I have heard of for a while. There is some setup needed still, but so far I am enjoying the configuration changes and ability to write in a visual way as well.
+I know I previously wrote about [CloudCannon and 11ty](/blog/cloudcannon-eleventy/), but with today's technology there are plenty of great choices. CloudCannon is a great choice as well. Currently, it is in some infancy and will only get better. TinaCMS I have heard of for a while, just never had a moment to get it tested and working until now. There is some setup needed still, but so far I am enjoying the configuration changes and ability to write in a visual way as well.
