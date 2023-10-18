@@ -10,7 +10,7 @@
           ]
         }
     ],
-    "trailingSlash": false,
+    "trailingSlash": true,
     "redirects": [
         {
           "source": "/view-source",
