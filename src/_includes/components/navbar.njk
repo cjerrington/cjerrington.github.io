@@ -2,7 +2,7 @@
 <nav class="navbar">
   <div class="navbar__inner">
     <a class="navbar__logo h-card" href="{{ '/' | url }}">{{ site.meta.title }}</a>
-
+      
     <div class="navbar__mobile-options">
       <div class="navbar__button dark-toggle" aria-label="toggle dark theme">
         <img src="{{ '/static/img/moon.svg' | url }}" alt="">
@@ -16,6 +16,10 @@
     </div>
 
     <div class="navbar__links">
+      {% if site.env === 'dev' %}
+        <a class="navbar__link" href="/admin">Admin</a>
+      {% endif %}
+
       {% for entry in navPages %}
         <a class="navbar__link {% if entry.url == page.url %}navbar__link--active{% endif %}" href="{{ entry.url | url }}">
           {{ entry.title }}
