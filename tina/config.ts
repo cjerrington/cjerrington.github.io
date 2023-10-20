@@ -32,7 +32,6 @@ export default defineConfig({
             // When a new post is created the title field will be set to "New post"
             date: dateTime,
             draft: true,
-            tags: "100DaysToOffload"
           }
         },
         fields: [
