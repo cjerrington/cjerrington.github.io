@@ -91,9 +91,50 @@ module.exports = (config) => {
   });
 
   // Get only content that matches a tag
-  // config.addCollection("drafts", function(collectionApi) {
-  //   return collectionApi.getFilteredByGlob("src/drafts/*.md").reverse();
-  // });
+  config.addCollection("drafts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/drafts/*.md").reverse();
+  });
+
+
+  config.addGlobalData("eleventyComputed.permalink", function() {
+		return (data) => {
+			// Always skip during non-watch/serve builds
+			if(data.draft && !process.env.BUILD_DRAFTS) {
+				return false;
+			}
+
+			return data.permalink;
+		}
+	});
+
+  // When `eleventyExcludeFromCollections` is true, the file is not included in any collections
+	config.addGlobalData("eleventyComputed.eleventyExcludeFromCollections", function() {
+		return (data) => {
+			// Always exclude from non-watch/serve builds
+			if(data.draft && !process.env.BUILD_DRAFTS) {
+				return true;
+			}
+
+			return data.eleventyExcludeFromCollections;
+		}
+	});
+
+  let logged = false;
+	config.on("eleventy.before", ({runMode}) => {
+    let text = "Excluding";
+		// Only show drafts in serve/watch modes
+		if(runMode === "serve" || runMode === "watch") {
+			process.env.BUILD_DRAFTS = true;
+			text = "Including";
+		}
+
+		// Only log once.
+		if(!logged) {
+			console.log( `[11ty/drafts] ${text} drafts.` );
+		}
+    logged = true;
+	});
+
 
   return {
     dir: {
