@@ -1,6 +1,15 @@
 import { defineConfig } from "tinacms";
 
-const dateTime = (new Date()).toISOString().split('T')[0];
+//const htmldate = (new Date()).toISOString().split('T')[0];
+
+const now = new Date().toLocaleDateString("en-US", {timeZone : "America/Chicago"});
+const year = now.split("/")[2];
+const month = now.split("/")[0];
+const day = now.split("/")[1]
+
+const htmldate = `${year}-${month}-${day}`
+
+console.log(htmldate)
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
@@ -17,8 +26,8 @@ export default defineConfig({
   media: {
     tina: {
       mediaRoot: "static",
-      publicFolder: "build",
-    },
+      publicFolder: "",
+    }
   },
   schema: {
     collections: [
@@ -30,7 +39,7 @@ export default defineConfig({
         defaultItem: () => {
           return {
             // When a new post is created the title field will be set to "New post"
-            date: dateTime,
+            date: htmldate,
             draft: true,
           }
         },
@@ -151,7 +160,7 @@ export default defineConfig({
             // Example of using a custom slugify function
             slugify: (values) => {
               // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
-              return `${dateTime}-${values.title
+              return `${htmldate}-${values.title
                 ?.toLowerCase()
                 .replace(/ /g, '-')}`
             },
@@ -167,9 +176,8 @@ export default defineConfig({
         defaultItem: () => {
           return {
             // When a new post is created the title field will be set to "New post"
-            date: dateTime,
+            date: htmldate,
             draft: true,
-            tags: "100DaysToOffload"
           }
         },
         fields: [
@@ -289,7 +297,7 @@ export default defineConfig({
             // Example of using a custom slugify function
             slugify: (values) => {
               // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
-              return `${dateTime}-${values.title
+              return `${htmldate}-${values.title
                 ?.toLowerCase()
                 .replace(/ /g, '-')}`
             },
