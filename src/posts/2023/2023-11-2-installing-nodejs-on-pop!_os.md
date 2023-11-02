@@ -10,11 +10,11 @@ tags:
   - nodejs
 ---
 
-Recently I had to reinstall my laptop and use NodeJS regularly for my website and other applications and installing from the apt repository was not the best option.
+Recently I had to reinstall my laptop with [Pop!\_OS ](https://pop.system76.com/)and use [NodeJS](https://nodejs.org/en) regularly for my website and other applications and installing from the apt repository was not the best option.
 
 First, I tried to install from `apt` but the Node version was v12.18 and this is an old LTS version from 2019. Not sure why the repository maintainers keep older LTS versions available for users. I saw similar issues with [Installing NodeJS on Fedora](/blog/installing-nodejs-on-fedora/).
 
-Next, I found steps to download the source and build. This was how I went about installing Node initially, but the build took forever. I then saw the built binaries you can download, install, update your PATH, and begin working.
+Next, I found steps to download the source and build. This was how I went about installing Node initially, but the build took forever. I then saw the built binaries you can download, install, update your `PATH`, and begin working.
 
 I wrote up a little script that will help assit with this process
 
@@ -52,7 +52,10 @@ fi
 
 What is nice about this is when there is a new release, we can update the `VERSION` and run. You might want to double check your profile settings to ensure your path to your node binaries are in the right order in `$PATH`.
 
+This was geared towards Pop!\_OS, but should work similarly for a [Ubuntu](https://ubuntu.com/) or [Debian](https://www.debian.org/) based distribution as well.
+
 Resources:
 
 * [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 * [https://github.com/nodejs/help/wiki/Installation](https://github.com/nodejs/help/wiki/Installation)
+* [https://codeberg.org/cjerrington/snippets/src/branch/main/bash/install\_node.sh](https://codeberg.org/cjerrington/snippets/src/branch/main/bash/install_node.sh)
