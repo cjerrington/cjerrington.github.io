@@ -1,6 +1,6 @@
 ---
-title: Installing NodeJS on Pop!_OS 22.04 LTS
-excerpt: How to install NodeJS on Pop!_OS 22.04 LTS
+title: Installing Node.js on Pop!_OS 22.04 LTS
+excerpt: How to install Node.js on Pop!_OS 22.04 LTS
 draft: false
 date: 2023-11-02T05:00:00.000Z
 tags:
@@ -10,9 +10,9 @@ tags:
   - nodejs
 ---
 
-Recently I had to reinstall my laptop with [Pop!\_OS ](https://pop.system76.com/)and use [NodeJS](https://nodejs.org/en) regularly for my website and other applications and installing from the apt repository was not the best option.
+Recently I had to reinstall my laptop with [Pop!\_OS ](https://pop.system76.com/)and use [Node.js](https://nodejs.org/en) regularly for my website and other applications and installing from the apt repository was not the best option.
 
-First, I tried to install from `apt` but the Node version was v12.18 and this is an old LTS version from 2019. Not sure why the repository maintainers keep older LTS versions available for users. I saw similar issues with [Installing NodeJS on Fedora](/blog/installing-nodejs-on-fedora/).
+First, I tried to install from `apt` but the Node version was v12.18 and this is an old LTS version from 2019. Not sure why the repository maintainers keep older LTS versions available for users. I saw similar issues with [Installing Node.js on Fedora](/blog/installing-nodejs-on-fedora/).
 
 Next, I found steps to download the source and build. This was how I went about installing Node initially, but the build took forever. I then saw the built binaries you can download, install, update your `PATH`, and begin working.
 
@@ -45,7 +45,7 @@ if [ -f "$FILE" ]; then
     npx -v
 else 
     echo "$FILE does not exist."
-    echo "Please manually update your profile to add NodeJS to your PATH"
+    echo "Please manually update your profile to add Node.js to your PATH"
 fi
 
 ```

@@ -1,7 +1,7 @@
 ---
 _schema: default
-title: Installing NodeJS on Fedora
-excerpt: How to properly install NodeJS on Fedora 38
+title: Installing Node.js on Fedora
+excerpt: How to properly install Node.js on Fedora 38
 tags: 
     - 100DaysToOffload
     - coding
@@ -11,7 +11,7 @@ draft: false
 size: wide
 ---
 
-I recently reinstalled [Fedora 38](https://www.fedoraproject.org/) on my laptop and needed [NodeJS](https://nodejs.org/en) installed. I was going through and needed to install and update quite a few applications, and Node was stuck at version 16. I finally found a few additional articles on how to install a specific version of Node.
+I recently reinstalled [Fedora 38](https://www.fedoraproject.org/) on my laptop and needed [Node.js](https://nodejs.org/en) installed. I was going through and needed to install and update quite a few applications, and Node was stuck at version 16. I finally found a few additional articles on how to install a specific version of Node.
 
 Typically you can run the following command, and it'll install the version of Node we'd like. You can specify a version as well. This method is installing from the Fedora Repository.
 
@@ -73,7 +73,7 @@ Now after install process you will be able to see the version of Node you have i
 $ node -v
 v18.17.1
 
-$ npm -v 
+$ npm -v
 npm@9.6.7 /usr/lib/node_modules/npm
 {% endhighlight %}
 
@@ -107,6 +107,6 @@ $ sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
 
 ## Conclusion
 
-There is also a way to install Node.js using NVM (Node Version Manager), but for my use case I only have one version installed. If I did more development work or wanted to test versions before upgrading my main version, I can see where this process would be beneficial. 
+There is also a way to install Node.js using NVM (Node Version Manager), but for my use case I only have one version installed. If I did more development work or wanted to test versions before upgrading my main version, I can see where this process would be beneficial.
 
 I have not tested this method out at this time, but you can read more as well: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
