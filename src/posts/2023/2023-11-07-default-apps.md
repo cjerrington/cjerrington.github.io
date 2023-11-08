@@ -4,7 +4,7 @@ excerpt: A list of the default apps I’m currently using. It's a thing apparent
 tags: 
   - 100DaysToOffload
 draft: false
-date: 11-07-2023
+date: 2023-11-07
 ---
 
 Apparently there's currently a thing where people share their preferred and default apps. Check out Robb Knight's recent [podcast](https://defaults.rknight.me/) on the topic. 
