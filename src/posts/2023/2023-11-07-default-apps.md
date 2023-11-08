@@ -3,7 +3,7 @@ title: Default apps
 excerpt: A list of the default apps I’m currently using. It's a thing apparently. 
 tags: 
   - 100DaysToOffload
-draft: false
+draft: true
 date: 2023-11-07
 ---
 
