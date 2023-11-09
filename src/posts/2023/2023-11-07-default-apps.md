@@ -7,7 +7,7 @@ tags:
   - 100DaysToOffload
 ---
 
-Apparently there's currently a thing where people share their preferred and default apps. Check out Robb Knight's recent [podcast](https://defaults.rknight.me/) on the topic.
+Apparently there's currently a thing where people share their preferred and default apps. Check out the [podcast](https://listen.hemisphericviews.com/097) that sparked the interest and the [website ](https://defaults.rknight.me/)by Rob, who is keeping a list of posts by others.
 
 Without further ado, here's my list:
 
