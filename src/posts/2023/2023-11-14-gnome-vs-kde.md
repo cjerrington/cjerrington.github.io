@@ -1,7 +1,7 @@
 ---
 title: GNOME VS KDE
 excerpt: 'Thoughts on a podcast I listened to: GNOME VS KDE - FIGHT!'
-draft: true
+draft: false
 date: 2023-11-14T00:00:00.000Z
 tags:
   - 100DaysToOffload
