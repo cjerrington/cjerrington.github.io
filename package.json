@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.0",
-    "@tinacms/cli": "^1.5.35",
+    "@tinacms/cli": "^1.5.36",
     "dotenv": "^16.3.1",
     "eleventy-plugin-seo": "^0.5.2",
     "normalize-url": "^6.1.0",
