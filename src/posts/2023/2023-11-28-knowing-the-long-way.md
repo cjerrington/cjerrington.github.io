@@ -1,7 +1,7 @@
 ---
 title: Knowing the long way
 excerpt: 'You have to know the long way, so you know the automation'
-draft: true
+draft: false
 date: 2023-11-28T06:00:00.000Z
 tags:
   - 100DaysToOffload
