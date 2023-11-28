@@ -1,12 +1,12 @@
 ---
 title: Whoops!
-layout: layouts/post.njk
+layout: layouts/page.njk
 permalink: /404.html
 hideTagsList: true
 eleventyExcludeFromCollections: true
 ---
 
-<h1>Content not found.</h1>
+<h2>Content not found.</h2>
 
 Go <a href="{{ '/' | url }}">home</a> or browse the archive
 
@@ -14,7 +14,7 @@ Go <a href="{{ '/' | url }}">home</a> or browse the archive
   <h2>{{ year }}</h2>
   <ul>
     {% for post in yearPosts | reverse %}
-      <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+      <li>{{ post.date | readableDate }} | <a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
     {% endfor %}
   </ul>
 {% endfor %}
