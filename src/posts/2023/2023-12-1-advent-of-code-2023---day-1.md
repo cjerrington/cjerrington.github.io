@@ -5,8 +5,8 @@ draft: false
 date: 2023-12-01T06:00:00.000Z
 tags:
   - 100DaysToOffload
-  - PowerShell
-  - Coding
+  - powershell
+  - coding
   - AdventOfCode
 ---
 
