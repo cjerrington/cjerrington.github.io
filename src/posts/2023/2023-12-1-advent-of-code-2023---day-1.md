@@ -1,6 +1,6 @@
 ---
 title: Advent of Code - Day 1
-description: This year I stumbled upon this month long challenge of coding. Here is what I have been able to do.
+excerpt: This year I stumbled upon this month long challenge of coding. Here is what I have been able to do.
 draft: false
 date: 2023-12-01T06:00:00.000Z
 tags:
