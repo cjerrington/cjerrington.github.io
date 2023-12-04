@@ -82,6 +82,10 @@ export default defineConfig({
                 value: "100DaysToOffload",
                 label: "100DaysToOffload"
               },
+			  {
+                value: "AdventOfCode",
+                label: "AdventOfCode"
+              },
               {
                 value: "11ty",
                 label: "11ty"
@@ -97,6 +101,10 @@ export default defineConfig({
               {
                 value: "cloud",
                 label: "Cloud"
+              },
+			  {
+                value: "coding",
+                label: "Coding"
               },
               {
                 value: "docker",
