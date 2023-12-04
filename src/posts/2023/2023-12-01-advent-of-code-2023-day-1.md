@@ -46,7 +46,7 @@ $digits | ForEach-Object {
 Write-Host "Part one total: $sum"
 ```
 
-I found my regex was not as good as it should be to select only digits. So I decided to do a replace of alpha characters with blanks. This worked and for each line, I split the numbers to an array so I could select the first and last digits. Some lines had 3,4,5 digits. After re-reading the instructions and example, this was a neat way to get the numbers. What threw me off even still is some lines only had one number... so this line, `9zml`, the number 9 counted as 99. I found this from teh example in the last line with the 7,
+I found my regex was not as good as it should be to select only digits. So I decided to do a replace of alpha characters with blanks. This worked and for each line, I split the numbers to an array so I could select the first and last digits. Some lines had 3,4,5 digits. After re-reading the instructions and example, this was a neat way to get the numbers. What threw me off even still is some lines only had one number... so this line, `9zml`, the number 9 counted as 99. I found this from the example in the last line with the 7.
 
 Since this was a string, to add numbers, I had to type cast this to be an `[int]`.
 

@@ -17,9 +17,9 @@ The use of SSH would be for repositories you have access to perform the complete
 
 Via the command line these services don't have a way to interact with the MFA process. Setting up your authentication is pretty important, and you should choose the [right method](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#authenticating-with-the-command-line) for you when accessing git from the CLI.
 
-Earier today I saw a cocnversation where a friend recloned their whole repository just so they could push the code back to the remote source. While this works, there is a little simpler way. If you already have SSH enabled in your remote source and on your local machine, there is a quick change. If you've already cloned your repo and want to change to SSH after setting it up, you can do that too.
+Earier today I saw a conversation where a friend recloned their whole repository just so they could push the code back to the remote source. While this works, there is a little simpler way. If you already have SSH enabled in your remote source and on your local machine, there is a quick change. If you've already cloned your repo and want to change to SSH after setting it up, you can do that too.
 
-When you clone a repository you get a hidden folder calld .git. This is how git knows all about your local changes, remote, and how to keep them in sync. That can be a whole other topic. There is a really great [post by Julia Evans]() on some of the inner workings of git.
+When you clone a repository you get a hidden folder calld .git. This is how git knows all about your local changes, remote, and how to keep them in sync. That can be a whole other topic. There is a really great [post by Julia Evans](https://jvns.ca/blog/2023/09/14/in-a-git-repository--where-do-your-files-live-/) on some of the inner workings of git.
 
 If you did a listing of your .git you might see something like this:
 
