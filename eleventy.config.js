@@ -76,6 +76,29 @@ module.exports = (config) => {
 
   });
 
+  config.addCollection("tagList2023", collection => {
+    const tagsObject = {}
+    collection.getFilteredByTag("100DaysToOffload").forEach(item => {
+      if (!item.data.tags) return;
+      item.data.tags
+        .filter(tag => !['post', 'all'].includes(tag))
+        .forEach(tag => {
+          if(typeof tagsObject[tag] === 'undefined') {
+            tagsObject[tag] = 1
+          } else {
+            tagsObject[tag] += 1
+          }
+        });
+    });
+
+    const tagList = []
+    Object.keys(tagsObject).forEach(tag => {
+      tagList.push({ tagName: tag, tagCount: tagsObject[tag] })
+    })
+    return tagList.sort((a, b) => b.tagCount - a.tagCount)
+
+  });
+
   config.addCollection("postsByYear", (collection) => {
     // create a collection called postsByYear of a glob of the posts folder and only the markdown files
     return _.chain(collection.getFilteredByGlob("src/posts/**/*.md"))

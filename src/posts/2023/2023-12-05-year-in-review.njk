@@ -1,0 +1,19 @@
+---
+title: Year in Review
+excerpt: My attempt at day 4 of the Advent of Code challenge
+layout: layouts/post.njk
+draft: true
+date: 2023-12-05T06:00:00.000Z
+tags:
+  - 100DaysToOffload
+---
+
+Not only is this the Year in Review for 2023, but it also completes the <a href="/100DaysToOffload/">100 Days to Offload</a> challenge I started this time last year. 
+
+{{ collections.tagList2023.length }} total tags and topics I wrote about.
+
+<ul>
+{% for tag in collections.tagList2023 %}
+    <li><a href="{{ '/tags/' | url }}{{ tag.tagName | slugify }}">{{ tag.tagName }}</a> - {{ tag.tagCount }} Posts</li>
+{% endfor %}
+</ul>

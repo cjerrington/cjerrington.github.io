@@ -19,9 +19,9 @@ permalink: /tags/{{ tag | slugify | lower }}/
 {% block content %}
 
 <div class="container">
-  <h1>Tagged "{{ tag }}"</h1>
+  <h2>{{ collections[tag].length }} Posts Tagged "{{ tag }}"</h2>
 
-  {% set posts = collections[tag] %}
+  {% set posts = collections[tag] | reverse %}
   {% include 'components/postslist.njk' %}
 
   <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
