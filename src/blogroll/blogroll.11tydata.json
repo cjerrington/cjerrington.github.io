@@ -57,6 +57,11 @@
         "feed": "https://jvns.ca/atom.xml"
       },
       {
+        "name": "Konstantin Tutsch",
+        "url": "https://konstantintutsch.com/",
+        "feed": "https://konstantintutsch.com/feed.xml"
+      },
+      {
         "name": "Lazybear",
         "url": "https://lazybear.io/",
         "feed": "https://lazybear.io/index.xml"

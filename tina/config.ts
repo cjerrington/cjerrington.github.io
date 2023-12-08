@@ -102,7 +102,7 @@ export default defineConfig({
                 value: "cloud",
                 label: "Cloud"
               },
-			  {
+			        {
                 value: "coding",
                 label: "Coding"
               },
