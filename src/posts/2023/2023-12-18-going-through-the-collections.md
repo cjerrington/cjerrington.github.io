@@ -1,7 +1,7 @@
 ---
 title: The Collection
 excerpt: 'Growing up I had a few collections, and this weekend I pulled one out'
-draft: true
+draft: false
 date: 2023-12-18T00:00:00.000Z
 tags:
   - 100DaysToOffload
