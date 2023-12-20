@@ -5,7 +5,8 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const editOnGithub = require('eleventy-plugin-edit-on-github');
 const pluginSEO = require('eleventy-plugin-seo');
 const _ = require("lodash");
-const filters = require('./src/_11ty/filters')
+const filters = require('./src/_11ty/filters');
+const postGraph = require('@rknightuk/eleventy-plugin-post-graph')
 
 module.exports = (config) => {
   config.addPlugin(navigationPlugin);
@@ -31,6 +32,7 @@ module.exports = (config) => {
     twitter: "cjerrington",
     image: "https://claytonerrington.com/static/images/opengraph.png"
   });
+  config.addPlugin(postGraph)
 
   config.addPassthroughCopy('css');
   config.addPassthroughCopy('static');
