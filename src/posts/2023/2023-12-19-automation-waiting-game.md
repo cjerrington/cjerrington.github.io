@@ -18,4 +18,8 @@ The other day I was at a curbside delivery store, and enjoyed the people watchin
 
 I guess it all comes down to what you are willing to be patient for. Also, if it is something you have control over, where and how can you make those improvements. I saw a team discussing why a process was so slow, then they looked at the code and there were extra verification and status checks that were not necessary.
 
+Just today I had created a new subdomain for a small project and was waiting on Codeberg pages to assign the SSL cert and get all the required items they need to check to host my small static content. I updated my DNS to host the simple site and was waiting on Codeberg since the DNS was already resolving, but the hosting side was not ready yet. I began looking into other ways to build the site to accomodate other paths and overcome by obstacle of the website not showing in the browser correctly. 
+
+Well I had a meeting and came back, and decided to give it a shot. Afterall it was an SSL error and it did need time to propagate correctly, but I was just not patient enough. The automation to add a DNS record in their system, check my DNS, ensure the repo was ready, all the above, I was not ready to wait on the automation.
+
 A simple motto I started implementing was: work smarter, not harder. Sometimes we try to account for all the little things in our automation process, which we should, but we don't need to make it complicated either. What are you willing to wait for, and for how long, the next time the automation task runs?
