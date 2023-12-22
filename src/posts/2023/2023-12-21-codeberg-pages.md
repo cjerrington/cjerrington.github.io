@@ -61,7 +61,7 @@ $ git commit -m "Update dad jokes on $now"
 $ git push -u origin pages
 ```
 
-Since you cloned the pages branch, the origin should still be set already to that branch. But since we are going between source/main branch to \_site/pages, I think it's best to ensure you're pushing to the right location. This is found in the [git documentation](https://git-scm.com/docs/git-push) as well.
+Since you cloned the pages branch, the origin should still be set already to that branch. But since we are going between source/main branch to _site/pages, I think it's best to ensure you're pushing to the right location. This is found in the [git documentation](https://git-scm.com/docs/git-push) as well.
 
 ## Woodpecker
 
