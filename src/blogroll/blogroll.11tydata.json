@@ -42,6 +42,11 @@
         "feed": "https://blog.ctms.me/index.xml"
       },
       {
+        "name": "Garrit Franke",
+        "url": "https://garrit.xyz/",
+        "feed": "https://garrit.xyz/rss.xml"
+      },
+      {
         "name": "Jeremy",
         "url": "https://moddedbear.com/",
         "feed": "https://moddedbear.com/blog/index.xml"
