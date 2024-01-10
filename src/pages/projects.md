@@ -39,4 +39,3 @@ Project | Description
 ### Websites I maintain
 
 - [Kidsfishlubbock](https://kidsfishlubbock.com/) - Local yearly event to bring awareness of outdoor activities and fun to children.
-- [Useful Scripting Network](http://usefulscripting.network/) - A website geared to showing examples of various programming skills to others.
