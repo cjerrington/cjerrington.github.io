@@ -29,7 +29,6 @@ module.exports = (config) => {
     description: "Specialized web designer and software developer",
     url: "https://claytonerrington.com",
     author: "Clayton Errington",
-    twitter: "cjerrington",
     image: "https://claytonerrington.com/static/images/opengraph.png"
   });
   config.addPlugin(postGraph)
