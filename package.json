@@ -23,7 +23,7 @@
     "build:stylus": "stylus --compress ./src/stylus/ --out ./static/css/",
     "watch:stylus": "stylus --watch ./src/stylus/ --out ./static/css/",
     "build:11ty": "cross-env ELEVENTY_ENV=prod NODE_ENV=production npx @11ty/eleventy",
-    "watch:11ty": "eleventy --serve",
+    "watch:11ty": "npx @11ty/eleventy --serve",
     "start": "concurrently -n stylus,11ty \"npm:watch:stylus\"  \"npm:watch:11ty\"",
     "build": "npm run build:stylus && npm run build:11ty",
     "clean": "node ./tools/clean.js",
