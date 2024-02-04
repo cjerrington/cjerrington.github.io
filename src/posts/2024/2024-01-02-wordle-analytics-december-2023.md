@@ -4,7 +4,6 @@ excerpt: The letter distribution for the Wordle for December 2023
 tags: 
   - gaming
   - wordle
-  - 100DaysToOffload
 draft: false
 date: 2024-01-02
 ---
