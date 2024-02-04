@@ -4,7 +4,6 @@ excerpt: The letter distribution for the Wordle for January 2024
 tags: 
   - gaming
   - wordle
-  - 100DaysToOffload
 draft: false
 date: 2024-02-03
 ---
