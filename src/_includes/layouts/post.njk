@@ -35,7 +35,7 @@ layout: layouts/base.njk
   
   <section>  
     <h2>Webmentions &amp; Replies</h2> 
-    <p>Reply via <a href="mailto:me@claytonerrington.com?subject=RE: {{ title }}">email</a></p>
+    <p>Reply via <a href="mailto:blog@claytonerrington.com?subject=RE: {{ title }}">email</a></p>
     <p>If there are webmentions, they will show below.</p>
     {% set webmentionUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}  
     {%- include 'components/webmentions.njk'-%}
