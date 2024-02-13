@@ -18,3 +18,5 @@ jobs:
       # For security keep your build hook secret - add it to your github repo in Settings > Secrets
       - name: Build hook request
         run: curl -X POST -d {} ${{ secrets.BUILD_HOOK }}
+      - name: alert
+        run: curl -H ta:heavy_check_mark -H p:3 -H "t: Site Rebuild" -d "rebuild of website completed" ${{ secrets.NTFY }}
