@@ -34,12 +34,12 @@
     "postgit": "git push --all"
   },
   "dependencies": {
-    "@11ty/eleventy-fetch": "^4.0.0",
-    "@tinacms/cli": "^1.5.39",
-    "dotenv": "^16.3.2",
+    "@11ty/eleventy-fetch": "^4.0.1",
+    "@tinacms/cli": "^1.5.40",
+    "dotenv": "^16.4.5",
     "eleventy-plugin-seo": "^0.5.2",
     "normalize-url": "^6.1.0",
     "rss-parser": "^3.13.0",
-    "tinacms": "^1.5.28"
+    "tinacms": "^1.5.29"
   }
 }
