@@ -40,6 +40,6 @@
     "eleventy-plugin-seo": "^0.5.2",
     "normalize-url": "^6.1.0",
     "rss-parser": "^3.13.0",
-    "tinacms": "^1.5.29"
+    "tinacms": "^1.6.0"
   }
 }
