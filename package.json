@@ -17,7 +17,7 @@
     "luxon": "^3.4.4",
     "node-fetch": "3.3.2",
     "plop": "^4.0.1",
-    "stylus": "^0.62.0"
+    "stylus": "^0.63.0"
   },
   "scripts": {
     "build:stylus": "stylus --compress ./src/stylus/ --out ./static/css/",
