@@ -17,7 +17,7 @@
     "luxon": "^3.4.4",
     "node-fetch": "3.3.2",
     "plop": "^4.0.1",
-    "stylus": "^0.62.0"
+    "stylus": "^0.63.0"
   },
   "scripts": {
     "build:stylus": "stylus --compress ./src/stylus/ --out ./static/css/",
@@ -35,11 +35,11 @@
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.1",
-    "@tinacms/cli": "^1.5.40",
+    "@tinacms/cli": "^1.5.42",
     "dotenv": "^16.4.5",
     "eleventy-plugin-seo": "^0.5.2",
     "normalize-url": "^6.1.0",
     "rss-parser": "^3.13.0",
-    "tinacms": "^1.5.29"
+    "tinacms": "^1.6.0"
   }
 }
