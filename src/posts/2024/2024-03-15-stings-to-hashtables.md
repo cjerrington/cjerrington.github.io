@@ -16,8 +16,8 @@ We started off with a mapping of the regions and the values we needed from each 
 ```powershell
 $S3Mappings = @{
   "us-east-1" = "s3://bucket-backup-east-1";
-  "us-east-2" = "s3://bucket-backup-east-1";
-  "us-west-2" = "s3://bucket-backup-east-1";
+  "us-east-2" = "s3://bucket-backup-east-2";
+  "us-west-2" = "s3://bucket-backup-west-2";
 }
 ```
 
@@ -52,8 +52,8 @@ Lets set up our object as a string.
 ```powershell
 $HashString = @'
 us-east-1 = s3://bucket-backup-east-1
-us-east-2 = s3://bucket-backup-east-1
-us-west-2 = s3://bucket-backup-east-1
+us-east-2 = s3://bucket-backup-east-2
+us-west-2 = s3://bucket-backup-west-1
 '@
 
 $HashString.GetType()
