@@ -38,7 +38,7 @@
     "@tinacms/cli": "^1.5.43",
     "dotenv": "^16.4.5",
     "eleventy-plugin-seo": "^0.5.2",
-    "normalize-url": "^6.1.0",
+    "normalize-url": "^8.0.1",
     "rss-parser": "^3.13.0",
     "tinacms": "^1.6.1"
   }
