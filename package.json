@@ -17,7 +17,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cjerrington/new-website.git"
+    "url": "https://github.com/cjerrington/cjerrington.github.io.git"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
