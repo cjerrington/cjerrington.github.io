@@ -1,7 +1,7 @@
 ---
 _schema: default
 title: Installing Node.js on Fedora
-excerpt: How to properly install Node.js on Fedora 38
+description: How to properly install Node.js on Fedora 38
 tags: 
     - 100DaysToOffload
     - coding
@@ -15,7 +15,7 @@ I recently reinstalled [Fedora 38](https://www.fedoraproject.org/) on my laptop 
 
 Typically you can run the following command, and it'll install the version of Node we'd like. You can specify a version as well. This method is installing from the Fedora Repository.
 
-{% highlight shell %}
+{% highlight "shell" %}
 # Install default version
 $ sudo dnf install nodejs
 
@@ -25,7 +25,7 @@ $ dnf module install nodejs:18/common
 
 These methods did not work as for some reason I was only able to see the Node 16 LTS version. I was able to find how to add the NodeSource Repository by doing the following, but that has changed as well.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ curl -sL https://rpm.nodesource.com/setup_lts.x | sudo bash -
 $ sudo dnf install nodejs
 {% endhighlight %}
@@ -36,7 +36,7 @@ I tried running this but got that the install method is retired and sent me to a
 
 Before you install Node.js it is best to make sure your system is up to date. It could be possible that the version we need just needs to be updated.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ sudo dnf upgrade --refresh
 {% endhighlight %}
 
@@ -44,7 +44,7 @@ Running the command ensures your system checks for updates regardless of the las
 
 ## Step 2: Install optional items and cleanup
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ yum install gcc-c++ make
 {% endhighlight %}
 
@@ -52,7 +52,7 @@ With Node you can install and compile native javascript modules and having these
 
 This part I'd say is optional, but I did do an uninstall of Node.js before continuing with the NodeSource install.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ yum remove nodejs &&\
 $ rm -r /etc/yum.repos.d/nodesource*.repo &&\
   yum clean all
@@ -62,14 +62,14 @@ $ rm -r /etc/yum.repos.d/nodesource*.repo &&\
 
 Now you will be able to add the Node.js nodesource repo and install v18.x.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ sudo yum install https://rpm.nodesource.com/pub_18.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
 $ sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
 {% endhighlight %}
 
 Now after install process you will be able to see the version of Node you have installed and get to work! I had to update my Node version that was done on a fresh install of Fedora 38 since projects are built and tested with v18.x.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ node -v
 v18.17.1
 
@@ -81,7 +81,7 @@ npm@9.6.7 /usr/lib/node_modules/npm
 
 At the time of installing the `npm` version was 9.6.7, and version 10.x was available. Let's get that updated too.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ npm install -g npm@latest
 $ npm -v
 10.1.0
@@ -99,7 +99,7 @@ Soon Node.js v18.x will be out of Active support and will need to move onto Node
 
 Once this happens, we should be able to follow along the same path to install v20. You might want to uninstall v18 first, but once I see this I'll figure out the best path forward to upgrade.
 
-{% highlight shell %}
+{% highlight "shell" %}
 # installing Node.js v20.x
 $ sudo yum install https://rpm.nodesource.com/pub_20.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
 $ sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1

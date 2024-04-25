@@ -1,7 +1,7 @@
 ---
 title: "The New Job"
-excerpt: "The new job in 2015, great things ahead"
-classes: wide
+description: "The new job in 2015, great things ahead"
+date: 2015-07-01
 ---
 
 A lot has changed is the last few months. I started working for the University that I graduated from in their Information Technology division. The section I am working for is Classroom Technology Service. We maintain 44 General Purpose Classrooms.

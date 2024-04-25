@@ -1,6 +1,6 @@
 ---
 title: Mapping the internet
-excerpt: How to map out the IP trace of a domain with PowerShell and IP Geo Location services
+description: How to map out the IP trace of a domain with PowerShell and IP Geo Location services
 tags: 
   - powershell
   - 100DaysToOffload
@@ -13,7 +13,7 @@ Every domain has an IP address a domain is linked to. There are commandlets we c
 
 To try this out we can run the following:
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Test-NetConnection -ComputerName claytonerrington.com
 
 ComputerName           : claytonerrington.com
@@ -30,11 +30,11 @@ The Remote address is the IP the website resolves to to host the web content. If
 
 With command prompt we would run a `tracert` to see the hops and jumps your connection is taking to reach it's destination. This was helpful in troubleshooting network issues locally and across the globe with the internet. PowerShell built this into `Test-NetConenction` with an argument `-TraceRoute` and can now do two things with one command, ping and trace the route. One other neat addition is the `-Port` argument to test a connection to a specific port on the remote host.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Test-NetConnection -ComputerName claytonerrington.com -TraceRoute
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight "text" %}
 ComputerName           : claytonerrington.com
 RemoteAddress          : 75.2.60.5
 InterfaceAlias         : Ethernet 5
@@ -61,11 +61,11 @@ The hops or relaying conenctions are listed in the TraceRoute part of the genera
 
 With each of the IPs in the `TraceRoute` object we can loop through them and query the API for [https://ipinfo.io](https://ipinfo.io) or other provider.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 (Invoke-WebRequest "ipinfo.io/72.2.60.5?token=API-KEY-HERE").Content | ConvertFrom-Json
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight "text" %}
 ip       : 75.2.60.5
 hostname : acd89244c803f7181.awsglobalaccelerator.com
 anycast  : True
@@ -80,7 +80,7 @@ timezone : America/Los_Angeles
 
 Now that we have gotten all the IPs between me and the remote website, we can loop through the `TraceRoute` object items and query each for location information and build out visual trace, or map to the remote destination. I've added a custom function to `Test-PrivateIP` so we can skip local IPs as our geo location service only has knowledge of external IP addresses.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $trace = Test-NetConnection -ComputerName $domain -TraceRoute | Select-Object TraceRoute
 
 $starting = (Invoke-WebRequest "ipinfo.io/?token=API-KEY-HERE").Content | ConvertFrom-Json
@@ -99,7 +99,7 @@ $trace.TraceRoute | ForEach-Object {
 }
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight "text" %}
 Starting from: 98.145.52.25
 98.145.52.25 : El Centro, California
 38.32.12.218 : Dallas, Texas

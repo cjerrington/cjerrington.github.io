@@ -1,6 +1,6 @@
 ---
 title: Using PSCustomObjects
-excerpt: I have been really enjoying custom objects in PowerShell lately
+description: I have been really enjoying custom objects in PowerShell lately
 draft: false
 date: 2023-12-13T00:00:00.000Z
 tags:
@@ -13,7 +13,7 @@ When using PowerShell, it took a while to see that almost everything is an objec
 
 Setting up your custom object is pretty simple.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 [PSCustomObject]@{
   Hostname = $Value
   IPAddress = $Value
@@ -29,13 +29,13 @@ What I like is the ability to get a lot of data from different sources and pull 
 
 So let's bring this together in a simple system info script. Starting off with a list of computers.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $computers = @($env:COMPUTERNAME, "localhost")
 {% endhighlight %}
 
 Now we can take the $computers object and loop over each object and do something to it.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $computers | ForEach-Object {
 
     $ip=[System.Net.Dns]::GetHostAddresses($_) | Where-Object {$_.AddressFamily -notlike "InterNetworkV6"} | ForEach-Object {
@@ -82,7 +82,7 @@ This example is taking the list of computers and as we go to each computer, we a
 
 In this example, this only exports to the terminal in a nice table. We can assign this to a variable as well, do the loop of data. Once it's done, we can query the result on the property in the custom object.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $result = $computers | ForEach-Object {
     # Do data gathering
 
@@ -103,7 +103,7 @@ Write-Host $result
 
 Now this is in the variable, $result. I can now get just the IP Addresses, or other properties in the object.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Write-Host $result.Hostname
 MyDesktop
 localhost

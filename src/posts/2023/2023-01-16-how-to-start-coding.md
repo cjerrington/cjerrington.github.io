@@ -1,12 +1,12 @@
 ---
 title: "How to start coding"
-excerpt: "In todays era knowing some form of programming logic can take you to great places. But where to start, or how to start?"
+description: "In todays era knowing some form of programming logic can take you to great places. But where to start, or how to start?"
 tags:
   - coding
   - opinion
   - 100DaysToOffload
-classes: wide
-image: /images/posts/coding.jpg
+date: 2023-01-16
+image: './src/assets/images/blog/coding.jpg'
 ---
 
 In todays era knowing some form of programming logic can take you to great places. But where to start, or how to start?

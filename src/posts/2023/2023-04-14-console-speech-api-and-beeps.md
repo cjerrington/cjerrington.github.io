@@ -1,6 +1,6 @@
 ---
 title: Console Speech API and Beeps
-excerpt: How to make your computer talk with you using the .NET Speech assembly.
+description: How to make your computer talk with you using the .NET Speech assembly.
 tags: 
   - powershell
   - 100DaysToOffload
@@ -12,7 +12,7 @@ I remember when Windows 95 had the command prompt text to speech and would sit a
 
 First we need to have our console ready for the speech by adding in the `System.Speech` type assembly. This will utilize the `SpeechSynthesizer` object to be able to use the built in voices that we’re looking for to use Powershell voice.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Add-Type -AssemblyName System.Speech
 $Speech = New-Object System.Speech.Synthesis.SpeechSynthesizer
 {% endhighlight %}
@@ -23,13 +23,13 @@ Now we have our assembly in our `$Speech` variable and can access the other item
 
 Go ahead and test the speech process:
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $Speech.Speak("Hello, World!")
 {% endhighlight %}
 
 So what all do we hae available to us? Let's see with the `Get-Member` command.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $Speech | Get-Member
 
    TypeName: System.Speech.Synthesis.SpeechSynthesizer
@@ -76,7 +76,7 @@ Volume                        Property   int Volume {get;set;}
 
 We can see we have a lot to work with now. One neat thing is you can see what installed voices you have:
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $Speech.GetInstalledVoices() | select -ExpandProperty VoiceInfo | select Name, Gender, Description
 
 Name                    Gender Description
@@ -88,7 +88,7 @@ Microsoft Zira Desktop  Female Microsoft Zira Desktop - English (United States)
 
 By default Microsoft has the Male voice but you can change that to the female voice too.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $Speech.SelectVoice("Microsoft Zira Desktop")
 $Speech.Speak("Hello, World!")  
 {% endhighlight %}
@@ -97,7 +97,7 @@ $Speech.Speak("Hello, World!")
 
 Now we just need a message and then we can talk about it!
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $Message = "I learned how to use PowerShell to have the console speak to me today"
 $Speech.Speak($Message)  
 {% endhighlight %}
@@ -106,7 +106,7 @@ $Speech.Speak($Message)
 
 You know that beep the bios makes when booting, or used to depending on your motherboard and boot post settings? You can make that same noise happen from your console as well. This style of noise might also be beneficial if you'd like to alert your user of an error for instance.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 [console]::beep(500,300)
 {% endhighlight %}
 

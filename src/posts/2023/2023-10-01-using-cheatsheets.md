@@ -1,6 +1,6 @@
 ---
 title: Using Cheat sheets
-excerpt: How to quickly get help with command line commands and other resources
+description: How to quickly get help with command line commands and other resources
 tags: 
   - shell
   - snippets
@@ -18,7 +18,7 @@ Both the commands can display help about the commands you need. Sometimes these 
 
 There is a popular one I've used before called [cheat.sh](https://cheat.sh) where you can do a `curl` request to the site and the command.
 
-{% highlight shell %}
+{% highlight "shell" %}
 curl cheat.sh/ls
 
 # To display everything in <dir>, excluding hidden files:
@@ -62,7 +62,7 @@ ls -R
 
 I ran this with PowerShell and we had to select the `Content` to get it to output right. So to get around this, I wrote a PowerShell wrapper around this concept.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 function cht{
 
   [CmdletBinding()]

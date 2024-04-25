@@ -1,6 +1,6 @@
 ---
 title: Almost there - 100DaysToOffload
-excerpt: Appreciation post and word of encouragement
+description: Appreciation post and word of encouragement
 draft: false
 date: 2023-11-10T00:00:00.000Z
 tags:

@@ -2,8 +2,8 @@
 title: File Dialog With PowerShell
 tags:
   - powershell
-excerpt: A simple way to show how to use FileDialog class with .NET in PowerShell
-classes: wide
+description: A simple way to show how to use FileDialog class with .NET in PowerShell
+date: 2021-09-24
 ---
 
 Several command line scripts can benefit with some graphical user interface interactions. One of the most common that come to mind is opening and saving files. This could be searching for a config file or saving the location of a log file.

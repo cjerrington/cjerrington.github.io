@@ -1,6 +1,6 @@
 ---
 title: Creating a Test File
-excerpt: Using PowerShell to create a test file for various uses
+description: Using PowerShell to create a test file for various uses
 tags: 
   - powershell
   - snippets
@@ -11,7 +11,7 @@ date: 2023-10-03
 
 I needed a quick way to create a test file of various sizes and filenames. This was handy when needing to create test files for a certain file manipulation script and didn't want to use real files in the process, or have files of various sizes. Today, I'd like to share this snippet wtih you. 
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 function Create-TestFile {
 
   [CmdletBinding()]
@@ -51,7 +51,7 @@ function Create-TestFile {
 
 What is great about this is the ability to set the `filepath`, `filename`, and the `filesize`. To create a file just run the following
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 # Create a file with a random name in the C:\TEMP folder that is 1 GB in size.
 
 Create-TestFile -filePath "C:\TEMP" -fileSize 1000MB

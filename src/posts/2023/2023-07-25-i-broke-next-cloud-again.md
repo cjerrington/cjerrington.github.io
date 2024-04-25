@@ -1,6 +1,6 @@
 ---
 title: I Broke NextCloud, Again
-excerpt: How not to update NextCloud and figuring out Docker updates
+description: How not to update NextCloud and figuring out Docker updates
 tags: 
   - docker
   - selfhost
@@ -11,7 +11,7 @@ Not too long ago, there was an update to my selfhosted version of [NextCloud](ht
 
 To update Docker containers you should do something like the following: 
 
-{% highlight shell %}
+{% highlight "shell" %}
 docker stop nextcloud
 docker rm nextcloud
 docker pull nextcloud:latest
@@ -24,7 +24,7 @@ Every time there is an update I always seem to have issues of some kind, so this
 
 So this was the point I was stuck in. I think I started from 23.0.x and the latest is 27.0.1 at the time of writing. I installed [portainer.io](https://docs.portainer.io/start/install-ce) a while ago to help manage images, containers, ports, etc, and was able to confirm the persitant volume location. I found it located below and for safety, I copied everything from the Docker volume to a folder I knew I had access to.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ sudo cp /var/lib/docker/volumes/nextcloud_nextcloud/_data /srv/docker/nextcloud/files
 $ sudo ls -l -d /srv/docker/nextcloud/files
 $ sudo chown -R <username> /srv/docker/nextcloud/files

@@ -1,6 +1,6 @@
 ---
 title: Advent of Code - Day 4
-excerpt: My attempt at day 4 of the Advent of Code challenge
+description: My attempt at day 4 of the Advent of Code challenge
 draft: false
 date: 2023-12-04T06:00:00.000Z
 tags:

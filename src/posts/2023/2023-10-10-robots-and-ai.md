@@ -1,6 +1,6 @@
 ---
 title: Robots and AI
-excerpt: Discussing AI, ChatPGT, and other web scrapper bots
+description: Discussing AI, ChatPGT, and other web scrapper bots
 tags: 
   - web design
   - 100DaysToOffload
@@ -18,7 +18,7 @@ There was a post by [@patricksamphire](https://wandering.shop/@patricksamphire/1
 
 Here is a current list I have set for my `robots.txt` file at the time of writing:
 
-{% highlight text %}
+{% highlight "text" %}
 User-agent: CCBot
 Disallow: /
 

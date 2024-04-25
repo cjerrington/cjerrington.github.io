@@ -1,6 +1,6 @@
 ---
 title: Automation waiting game
-excerpt: We expect the automation that has been presented to be more instantaneous
+description: We expect the automation that has been presented to be more instantaneous
 draft: false
 date: 2023-12-19T00:00:00.000Z
 tags:

@@ -1,7 +1,7 @@
 ---
 _schema: default
 title: The Good Side of Analytics - Umami & Vercel
-excerpt: The term analytics has gotten a bad name recently, but not all of it is bad.
+description: The term analytics has gotten a bad name recently, but not all of it is bad.
 tags:
   - 100DaysToOffload
   - web design
@@ -44,7 +44,7 @@ After creating the database in step 4, I would clone your forked repository of t
 
 Then run:
 
-{% highlight shell %} 
+{% highlight "shell" %}
 yarn install 
 yarn build 
 {% endhighlight %}
@@ -63,4 +63,4 @@ The nice thing about Umami, I can create a share URL for my analytics. You can s
 
 <a target="_blank" rel="noopener" href="https://analytics.claytonerrington.com/share/9FNL88ifrvc1v0EY/claytonerrington.com">View my analytics</a>
 
-Top pages ![Top Pages](/static/images/posts/analytics.png)
+Top pages ![Top Pages](/assets/images/blog/analytics.png)

@@ -1,15 +1,13 @@
 ---
 title: "Installing Jekyll the easy way"
-excerpt: "Speeding up the way I install Jekyll when on a new system."
+description: "Speeding up the way I install Jekyll when on a new system."
 tags:
   - coding
   - jekyll
-classes: wide
+date: 2022-05-05
 ---
 
 I recently reinstalled my laptop with [Ubuntu Budgie](https://ubuntubudgie.org/), and had to reinstall all my apps. One of them was [Jekyll](https://jekyllrb.com/) to keep up with my blog posts to render this site.
-
-<!--more-->
 
 I found the installation instructions for [Ubuntu based](https://jekyllrb.com/docs/installation/ubuntu/) operating systems. While it was easy to follow the prerequisites and the copy and paste or simple tying of the commands, I was in a hurry and wanted a full script to do the install.
 

@@ -1,6 +1,6 @@
 ---
 title: Strings to Hashtables
-excerpt: How to take a string and turn it into a PowerShell hash table
+description: How to take a string and turn it into a PowerShell hash table
 draft: false
 tags:
   - coding

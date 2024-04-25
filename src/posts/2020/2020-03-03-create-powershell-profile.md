@@ -1,9 +1,9 @@
 ---
 title: 'How to Create a PowerShell Profile'
-excerpt: "Speed up your PowerShell use with some profiling"
+description: "Speed up your PowerShell use with some profiling"
 tags:
   - powershell
-classes: wide
+date: 2020-03-03
 ---
 
 Every time you launch a PowerShell console, a profile is loaded that contains settings and much more to use. This is a great place to put your automation tasks and repetitive items if you are frequently using a console. Let's find out.

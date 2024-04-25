@@ -1,6 +1,6 @@
 ---
 title: Default apps
-excerpt: A list of the default apps I’m currently using. It's a thing apparently.
+description: A list of the default apps I’m currently using. It's a thing apparently.
 draft: false
 date: 2023-11-07T00:00:00.000Z
 tags:

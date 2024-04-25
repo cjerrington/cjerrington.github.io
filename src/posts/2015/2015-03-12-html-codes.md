@@ -1,8 +1,9 @@
 ---
 title: "HTML Codes"
-excerpt: "A sampling of the HTML codes and how to add them to you HTML sites."
+description: "A sampling of the HTML codes and how to add them to you HTML sites."
 tags:
   - coding
+date: 2015-03-12
 ---
 
 [HTML Codes](https://cjerrington.codeberg.page/html-codes/) is a responsive search service for anyone who is looking for the special character codes for symbols.

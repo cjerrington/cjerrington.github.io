@@ -1,0 +1,69 @@
+---
+layout: base
+masonry: true
+---
+
+<div class="wrapper">
+  <header class="full | section" style="--spot-color: var(--color-secondary)">
+    <div 
+      class="section__inner flow region"
+      style="--region-space-top: var(--space-xl-2xl)"
+    >
+      <h1 class="text-center text-base-light">{{ title }}</h1>
+    </div>
+    {% include 'svg/divider-waves.svg' %}
+  </header>
+
+  <article class="full | region">
+    <div class="wrapper flow prose">{{ content | safe }}</div>
+  </article>
+
+  <section class="full | region">
+    <div class="wrapper flow prose" style="--region-space-bottom: var(--space-xs)">
+      <h2>{{ blog.title }}</h2>
+      <!-- blog intro text is optional. -->
+
+      {% if blog.intro %}
+        <p>{{ blog.intro }}</p>
+      {% endif %}
+
+      <ul
+        class="feature | grid region"
+        role="list"
+        data-rows="masonry"
+        data-layout="50-50"
+      >
+        <!-- loop posts -->
+        {% set itemList = collections.posts %}
+        {% for item in itemList.slice(0, 4) %}
+          <!-- activate tags -->
+          {% set activateTags = true %}
+          <!-- set heading context -->
+          {% set headingContext = "h3" %}
+          <!-- card -->
+          {% include 'components/card.njk' %}
+        {% endfor %}
+      </ul>
+      <a href="/blog">Read more!</a>
+    </div>
+  </section>
+
+  <section class="full | region">
+   <div class="wrapper flow prose text-center text-step-min-1">
+      <p>
+        This site is member of many webrings! Check some other websites here!
+      </p>
+      <p>
+        <a href="https://fediring.net/previous?host=claytonerrington.com">←</a>
+        <a href="https://fediring.net/">Fediring</a>
+        <a href="https://fediring.net/next?host=claytonerrington.com">→</a>
+      </p>
+      <p>
+        <a href="https://xn--sr8hvo.ws/%F0%9F%95%99%F0%9F%94%AB%F0%9F%92%95/previous">←</a>
+        <a href="https://xn--sr8hvo.ws">IndieWeb</a> 🕸💍
+        <a href="https://xn--sr8hvo.ws/%F0%9F%95%99%F0%9F%94%AB%F0%9F%92%95/next">→</a>
+      </p>
+      <p>👻 Proud member of <a href="https://darktheme.club">darktheme.club</a> 👻</p>
+    </div>
+  </section>
+</div>

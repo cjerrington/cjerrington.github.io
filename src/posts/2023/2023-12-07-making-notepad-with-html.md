@@ -1,6 +1,6 @@
 ---
-title: Making Notepad with HTML in your browser
-excerpt: A quick tip of some of the fun things you can do with HTML and your browser
+title: Making Notepad with HTML
+description: A quick tip of some of the fun things you can do with HTML and your browser
 draft: false
 date: 2023-12-08T06:00:00.000Z
 tags:

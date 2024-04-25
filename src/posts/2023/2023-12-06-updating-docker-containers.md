@@ -1,6 +1,6 @@
 ---
 title: Updating Docker Containers
-excerpt: >-
+description: >-
   After breaking Docker a few times, I think I found the update process that
   works for most every container
 draft: false

@@ -1,15 +1,13 @@
 ---
 title: "How to get the Process a Port is Bound to"
-excerpt: "Have you ever needed to query a machine for a port but not sure what process is using that port? Here is a simple way to find that information out."
+description: "Have you ever needed to query a machine for a port but not sure what process is using that port? Here is a simple way to find that information out."
 tags:
   - powershell
   - coding
-classes: wide
+date: 2022-08-10
 ---
 
 Have you ever needed to query a machine for a port but not sure what process is using that port? Here is a simple way to find that information out.
-
-<!--more-->
 
 ## Setting the stage
 

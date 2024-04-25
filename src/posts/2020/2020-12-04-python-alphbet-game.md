@@ -1,15 +1,13 @@
 ---
 title: "Python: Alphabet Game"
-excerpt: "This is a console based game I made to help children learn their alphabet and typing."
+description: "This is a console based game I made to help children learn their alphabet and typing."
 tags: python
-classes: wide
+date: 2020-12-04
 ---
 
 ## Everyone likes games
 
 I saw a post a while ago with a similar project but with PowerShell. I wanted to try something new and decided to use Python and the text to speech option.
-
-<!--more-->
 
 What we need to get this started is the random, string, os, and platform modules. Then created a few functions to get a random letter and a custom ```say``` command depending on the operating system a user is using.
 

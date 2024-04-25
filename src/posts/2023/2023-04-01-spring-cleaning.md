@@ -1,12 +1,13 @@
 ---
 title: Spring Cleaning
-excerpt: It's time to spruce up your digital life and weed out those old and oversized files
+description: It's time to spruce up your digital life and weed out those old and oversized files
 tags: 
   - linux
   - shell
   - windows
   - powershell
   - 100DaysToOffload
+date: 2023-04-01
 ---
 
 It's time to spruce up your digital life and weed out those old and oversized files. I have had a bad habit of data hoarding, and always making sure I have a backup of the important things. Well over time as well, what might have been important then might not be now, but taking up that precious hard drive, flash drive, or cloud space. Now is the time to press that delete button and clean up.
@@ -21,13 +22,13 @@ Back to some file cleanup. One thing you might need to do is just organize your 
 
 PowerShell's `Get-ChildItem` has plenty of properties it obtains from the files when it creates the object.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Get-ChildItem | Sort-Object -descending -property length | Select-Object -first 5 name, length
 {% endhighlight %}
 
 If you did a `Select-Object *` that will get all the properties which can also be helpful to us. We are looking for the `Length` property. From the above we should see something like the following.
 
-{% highlight text %}
+{% highlight "text" %}
 Name                              Length
 ----                              ------
 Rock and Roll Photography.mp4 2686002201
@@ -39,7 +40,7 @@ News Story.mp4                 153353942
 
 While this is helpful, seeing the length in bytes isn't very helpful. Let's add a custom property value for the length instead. We do this by making the customer property know with a Name and Expression. For the length PowerShell is neat in that you can divide by 1GB to do file size math much easier.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Get-ChildItem | Sort-Object -descending -property length | Select-Object -first 5 name, @{Name="Gigabytes";Expression={[Math]::round($_.length / 1GB, 2)}}
 
 Name                          Gigabytes
@@ -55,7 +56,7 @@ News Story.mp4                     0.14
 
 The Bash command `find` is supper powerful. It does what it says, finds files.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ find . -type f -printf '%s %p\n' | sort -nr | head -5
 
 2686002201    ./Rock and Roll Photography.mp4

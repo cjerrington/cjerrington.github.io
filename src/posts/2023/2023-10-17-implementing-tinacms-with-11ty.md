@@ -1,6 +1,6 @@
 ---
 title: TinaCMS + 11ty
-excerpt: Taking a deep dive into setting up a CMS for my static site with TinaCMS
+description: Taking a deep dive into setting up a CMS for my static site with TinaCMS
 draft: false
 date: 2023-10-17T05:00:00.000Z
 tags:
@@ -41,7 +41,7 @@ This will start the tinacms server and then your custom dev command to serve you
 
 Once your page is running and started, you can browse to [http://localhost:8080/admin](http://localhost:8080/admin) or \<your-dev-server>:\<dev-port>/admin and see something like the following
 
-![Welcome screen of TinaCMS after initial install](/static/images/posts/tinacms.jpg)
+![Welcome screen of TinaCMS after initial install](/assets/images/blog/tinacms.jpg)
 
 ## Deploying your site
 
@@ -188,7 +188,7 @@ The other neat thing you can do with string fields is create a list of items. I 
 
 Here is what this looks like now.
 
-![Screenshot of the final TinaCMS config updates.](/static/images/posts/tinacms-1.jpg)
+![Screenshot of the final TinaCMS config updates.](/assets/images/blog/tinacms-1.jpg)
 
 ## Conclusion
 

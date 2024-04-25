@@ -1,15 +1,14 @@
 ---
 title: "Securing Jekyll with SSL locally"
-excerpt: "Jekyll is a great static site generator for many reasons, but lets encrypt that traffic!"
+description: "Jekyll is a great static site generator for many reasons, but lets encrypt that traffic!"
 tags:
   - jekyll
   - web design
   - 100DaysToOffload
-classes: wide
-image: /images/posts/ssl.jpg
+date: 2023-01-11
 ---
 
-![SSL header](/static/images/posts/ssl.jpg)
+![SSL header](/assets/images/blog/ssl.jpg)
 
 Jekyll is a great static site generator for many reasons, but lets encrypt that traffic!
 
@@ -40,13 +39,13 @@ bundle exec jekyll serve --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.cr
 
 You see something like the following:
 
-![SSL header](/static/images/posts/jekyll-ssl.png)
+![SSL header](/assets/images/blog/jekyll-ssl.png)
 
 There is a known issue where the SSL files need to be local to the Jekyll site folder. You can read more about that [here](https://github.com/jekyll/jekyll/issues/5046). If you like this approach and build many sites, you can have this certificate in one location and create a `symlink` as well.
 
 Now you can browse to `https://127.0.0.1` or `https://localhost`. You might see a self-signed certificate issue, and since this is what we know about we can accept and continue to the site.
 
-![SSL browser warning](/static/images/posts/browser-warning.png)
+![SSL browser warning](/assets/images/blog/browser-warning.png)
 
 ## Summary
 

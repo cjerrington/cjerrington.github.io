@@ -1,17 +1,15 @@
 ---
 title: "Quick tips on Linux aliases"
-excerpt: "Working in the terminal there are great commands you can use, but what about the long ones or frequently used commands; how can you save those for repetitive tasks?"
+description: "Working in the terminal there are great commands you can use, but what about the long ones or frequently used commands; how can you save those for repetitive tasks?"
 tags:
   - linux
   - shell
   - 100DaysToOffload
-classes: wide
-image: /images/posts/coding.jpg
+image: './src/assets/images/blog/coding.jpg'
+date: 2023-01-18
 ---
 
 Working in the terminal there are great commands you can use, but what about the long ones or frequently used commands; how can you save those for repetitive tasks?
-
-<!--more-->
 
 ## What are aliases
 
@@ -19,7 +17,7 @@ All linux systems have a profile you can put many commands in there. These can b
 
 Take `ls` for examle, default output is to display the contents of the folder with certain information or format. You can add `ls -l` to use a long listing format instead. If this is your prefered style you can alias `ls` to actually be `ls -l`.
 
-{% highlight shell %}
+{% highlight "shell" %}
 alias ls='ls -l'
 {% endhighlight %}
 
@@ -27,7 +25,7 @@ alias ls='ls -l'
 
 Okay, so where are do you put this? There is a hidden file called `.bash_aliases` and this lives in your home directoy. Most dot files are hidden files on your system so you may not see them from you file explorer window. To get started open a terminal and run:
 
-{% highlight shell %}
+{% highlight "shell" %}
 nano ~/.bash_alias
 {% endhighlight %}
 
@@ -37,13 +35,13 @@ Add the alias in the format above and follow the prompt in `nano` to save and cl
 
 While working in both Windows and Linux based systems a common one to add has been:
 
-{% highlight shell %}
+{% highlight "shell" %}
 alias cls=clear
 {% endhighlight %}
 
 Your aliases can even be functions that you make as well. Another simple one when creating directories is then you have to `cd` into them. If you make a new function you can do just that! The following takes input after the new `mkd` command to be the folder name, then change directories into it.
 
-{% highlight shell %}
+{% highlight "shell" %}
 
 # make directory and then cd to it
 
@@ -55,7 +53,7 @@ mkd () {
 
 What I just learned that is a game chaner, is you can alias a bash script. This does have its purpose and reason, but could come with some security concerns for a few as well. I made a `git-summary.sh` file and wanted to always have access to it from my terminal. To do this, we need to `source` our script, which is a facy way of telling the terminal of additional code.
 
-{% highlight shell %}
+{% highlight "shell" %}
 alias gstatus="source ~/git-summary.sh"
 {% endhighlight %}
 

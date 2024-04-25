@@ -1,17 +1,15 @@
 ---
 title: "Netlify hosting and redirects"
-excerpt: "Did you know that Netlify allows for you to have a configuration file to tell it how to deploy your project?"
+description: "Did you know that Netlify allows for you to have a configuration file to tell it how to deploy your project?"
 tags:
   - netlify
   - web design
   - 100DaysToOffload
-classes: wide
-image: /images/posts/netlify.jpg
+date: 2023-01-07
+image: './src/assets/images/blog/netlify.jpg'
 ---
 
 Did you know that [Netlify](https://netlify.com) allows for you to have a configuration file to tell it how to deploy your project?
-
-<!--more-->
 
 There is a special [`netlify.toml`](https://docs.netlify.com/configure-builds/file-based-configuration/#sample-netlify-toml-file) file that can be used for many settings you can configure when deploying your site. I want to focus on the redirects in this post specifically.
 
@@ -21,7 +19,7 @@ I recently moved to Netlify for hosting instead of [GitHub Pages](https://pages.
 
 I found this post on [Moving your Jekyll site to Netfify](https://www.netlify.com/blog/2017/05/11/migrating-your-jekyll-site-to-netlify/), and Netlify makes this easy as well straight from your dashboard when making a new project with them.
 
-Once the site was built, I could go to [cjerrington.netlify.app](https://cjerrington.netlify.app) and (once DNS was update) [claytonerrington.com](https://claytonerrington.com), but just like [www.claytonerrington.com](https://www.claytonerrington.com) forwards to the APEX domain, I wanted the `*.netlify.app` to auto redirect which it does not from the website configurations.
+Once the site was built, I could go to [cjerrington.netlify.app](https://cjerrington.netlify.app) and (once DNS was update) [claytonerrington.com](https://claytonerrington.com), but just l-ike [www.claytonerrington.com](https://www.claytonerrington.com) forwards to the APEX domain, I wanted the `*.netlify.app` to auto redirect which it does not from the website -configurations.
 
 Thus comes in the redirects:
 

@@ -1,6 +1,6 @@
 ---
 title: Expanding URLs in Powershell
-excerpt: Using the HTTP Headers to find the final resting spot for a URI.
+description: Using the HTTP Headers to find the final resting spot for a URI.
 draft: false
 date: 2023-12-20T06:00:00.000Z
 tags:

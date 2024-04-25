@@ -1,17 +1,18 @@
 ---
 title: Getting Into Cron Jobs
-excerpt: A quick overview of Cron Jobs to get started and how to manage the tasks
+description: A quick overview of Cron Jobs to get started and how to manage the tasks
 tags: 
   - linux
   - shell
   - 100DaysToOffload
+date: 2023-03-29
 ---
 
 On a unix-like operating system you have a command line tool to manage scheduled tasks called `cron`. This is similar to what Windows has, Task Scheduler. With `cron` you can schedule any command line command and also bash or shell scripts, and these tasks can run periodically at fixed times, dates or intervals. `Cron` jobs can be used for a general purpose like a repetitive task or performing system updates.
 
 So `cron` is the name of the command but each command is stored in a cron table or **crontab**. These cron tables store each command either by user and also a system-wide file as well. Each file has a unique structure that sets up the schedule and the command to run as well.
 
-{% highlight shell %}
+{% highlight "shell" %}
 15 14 1 * * echo hello world
 {% endhighlight %}
 
@@ -19,7 +20,7 @@ So `cron` is the name of the command but each command is stored in a cron table 
 
 So what does that cron line actually do? Well, at 14:15 on day-of-month 1 run echo hello world. Okay, lets look at how to read that.
 
-{% highlight shell %}
+{% highlight "shell" %}
 
 # ┌───────────── minute (0 - 59)
 # │ ┌───────────── hour (0 - 23)
@@ -41,7 +42,7 @@ Cron can get complicated and add intersections and unions of the schedule. This 
 
 To schedule a simple backup script to run each night at 8 PM you could do the following:
 
-{% highlight shell %}
+{% highlight "shell" %}
 0 20 * * * /home/username/Desktop/backup.sh
 {% endhighlight %}
 
@@ -51,7 +52,7 @@ Within my `backup.sh` file, are the commands and normal backup scenario logic. T
 
 I spoke of `crontab` earlier but this is the command line interface to basically `vi` into the `cron` jobs and edit them and see what is happening on your system.
 
-{% highlight shell%}
+{% highlight "shell" %}
 usage: crontab [-u user] file
  crontab [ -u user ] [ -i ] { -e | -l | -r }
   (default operation is replace, per 1003.2)
@@ -67,7 +68,7 @@ Running `cron` is a system service you can check the status, start, stop, and re
 
 On Ubuntu and other Debian-based systems:
 
-{% highlight shell %}
+{% highlight "shell" %}
 service cron status
 service cron stop
 service cron start
@@ -77,7 +78,7 @@ service cron start
 
 When creating cron jobs, it is always best to have a way to check that the schedule you entered actually makes sense. With the advanced cron jobs it gets real literal. Take the following, At 05:05 on day-of-month 4 and on Wednesday. So at 05:05 when the day of the month is the 4th and its a Wednesday do something... This can be complicated to find out why you job did not run when expected.
 
-{% highlight shell %}
+{% highlight "shell" %}
 5 5 4 * 3 /home/username/Desktop/backup.sh
 {% endhighlight %}
 
@@ -85,7 +86,7 @@ To help with this, I found a site called [crontab.guru](https://crontab.guru), a
 
 There are also some additional character notations that help with adjusting schedules on additional intervals.
 
-{% highlight shell %}
+{% highlight "shell" %}
 */30 * * * * echo "this will happen every half hour"
 {% endhighlight %}
 

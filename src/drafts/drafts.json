@@ -1,5 +1,5 @@
 {
-  "layout": "layouts/post.njk",
-  "tags": ["drafts"],
-  "permalink": "/drafts/{{ page.fileSlug }}/"
+    "layout": "post",
+    "tags": "draft",
+    "permalink": "/blog/draft/{{ title | slugify }}/index.html"
 }

@@ -1,7 +1,7 @@
 ---
 _schema: default
 title: Manage AWS Instances
-excerpt: Using the AWS CLI to manage your AWS EC2 Instances in a quick and easy way
+description: Using the AWS CLI to manage your AWS EC2 Instances in a quick and easy way
 tags:
   - 100DaysToOffload
   - cloud
@@ -18,13 +18,13 @@ There was a time I needed to start a server, but logging into the AWS Console, n
 
 Quickly I found the `aws ec2 start-instances` was the way to go. The problem was I wanted to specify a server name for it to start, and needed the instance id. I found a way to get the instance id from the tag Name and the Value of a server.
 
-{% highlight shell %}
+{% highlight "shell" %}
 (aws ec2 describe-instances --filters "Name=tag:Name,Values=ServerHostName)" --query "Reservations[].Instances[].InstanceId" --profile default --output text --region us-east-1)
 {% endhighlight %}
 
 This query would describe the instance given the server name and query the JSON output for the InstanceID and output it as text. From here I could then start an EC2 instance
 
-{% highlight shell %}
+{% highlight "shell" %}
 aws ec2 start-instances --instance-ids i-XXXXXXXXXXXX --profile default --output text --region us-east-1
 {% endhighlight %}
 
@@ -36,14 +36,14 @@ First I needed to gather the available profiles from the `~/.aws/config` file th
 
 While using the CLI I noticed the session token would timeout just like the web console does. For this I also made a wrapper function around the aws call to query the Account information. If your token is still active the length will be 14 and if not, I had it pass along the `aws sso login --profile` command to refresh our token automatically.
 
-{% highlight shell %}
+{% highlight "shell" %}
 # the call to check if your session is still active or not
 (aws sts get-caller-identity --query "Account" --profile $chosenProfile | Select-Object Length).Length
 {% endhighlight %}
 
 To begin, I wanted to test if my session is active for my profile and if so, proceed. If not, my `Select-AWSProfile` function will proceed with the `aws sso login --profile`.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 # Read the profiles and send user to select the one they want
 if ($null -eq $chosenProfile) {
     $chosenProfile = Select-AWSProfile
@@ -82,7 +82,7 @@ I used the same logic as before but was able to query the JSON for the right fun
 
 Underlying AWS CLI in the wrapper functions:
 
-{% highlight shell %}
+{% highlight "shell" %}
 # Getting the Server Name from the Instance ID
 aws ec2 describe-instances --instance-id $instanceID --profile $chosenProfile --query "Reservations[].Instances[].Tags[?Key=='Name'].Value" --output text --region $region
 
@@ -94,7 +94,7 @@ aws ec2 describe-instances --filters "Name=tag:Name,Values=$($ServerName)" --que
 
 I've placed the code on my public snippets and you can add this to your profile as well. If you need to create one, you can follow along [here](https://claytonerrington.com/blog/create-powershell-profile/). Once you have your profile, just dot source the file into our profile.
 
-{% highlight shell %}
+{% highlight "shell" %}
 # previous profile items
 . C:\path\to\Manage-AWSServers.ps1
 {% endhighlight %}

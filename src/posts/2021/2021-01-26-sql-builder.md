@@ -1,10 +1,10 @@
 ---
 title: "SQL Builder"
-excerpt: "Simple C# app to build SQL Attach Scripts."
+description: "Simple C# app to build SQL Attach Scripts."
 tags: 
   - c#
   - projects
-classes: wide
+date: 2021-01-26
 ---
 
 Simple C# app to build SQL Attach Scripts.

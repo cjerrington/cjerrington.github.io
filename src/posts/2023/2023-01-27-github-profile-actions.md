@@ -1,10 +1,11 @@
 ---
 title: "GitHub profile with actions"
-excerpt: "GitHub has a few hidden features for a user profile repository and how to add some GitHub Actions to them"
+description: "GitHub has a few hidden features for a user profile repository and how to add some GitHub Actions to them"
 tags:
   - git
   - automation
   - 100DaysToOffload
+date: 2023-01-27
 ---
 
 For some time now Github.com has allowed users to setup and manage their [GitHub profile](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile). This always includes a photo, pinned repositories, and a few other features. Just like with GitHub pages you created a repository `username.github.io` and this was a special place to create a website that got published and hosted by GitHub, there is a special one you can make for just `username`. Mine is [cjerrington](https://github.com/cjerrington).
@@ -17,13 +18,13 @@ This was a neat feature and wanted to add it to my profile. One way way to this 
 
 Once you've made your new `username` repository, lets make it a node based project.
 
-{% highlight shell %}
+{% highlight "shell" %}
 npm init
 {% endhighlight %}
 
 Go through the prompts and have the main entry point be the `index.js` file. Now lets install a few dependencies.
 
-{% highlight shell %}
+{% highlight "shell" %}
 npm i markdown-it markdown-it-emoji prettier rss-parser --save-dev
 {% endhighlight %}
 
@@ -31,7 +32,7 @@ Now we can begin editing our `index.js` file.
 
 We can then setup a few constants and setup what we want our layout to be. I have a few async functions to build the new README.md file that takes the constants and renders some RSS feeds. Here is a small simple starter process of what I've done.
 
-{% highlight js %}
+{% highlight "js" %}
 const md = require("markdown-it")({
   html: true, // Enable HTML tags in source
   breaks: true, // Convert '\n' in paragraphs into <br>
@@ -61,7 +62,7 @@ const fs = require("fs");
 
 Once the page is ready to be built we just run the following and it will run our `index.js` file and create a new README.md file.
 
-{% highlight shell %}
+{% highlight "shell" %}
 npm run start
 {% endhighlight %}
 
@@ -69,7 +70,7 @@ npm run start
 
 So now that we can generate our README.md file that becomes the "web style" content on our profile page, we can setup a GitHub Action to run this on a schedule. Create a subfolder called `.github` and a subfolder there called `workflows`. Inside workflows, a new file called `build.yml`. We can now tell the action to use Node to run our package run statement, then add it to git, and commit if there are changes to the file. The `schedule` at the top takes a cron job format. 
 
-{% highlight yaml %}
+{% highlight "yaml" %}
 name: Build README
 
 on:

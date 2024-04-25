@@ -1,6 +1,6 @@
 ---
 title: 'Mobile writing, part 2'
-excerpt: >-
+description: >-
   After a first attempt at mobile blogging, I found a process that works better
   for my work flow. 
 draft: false

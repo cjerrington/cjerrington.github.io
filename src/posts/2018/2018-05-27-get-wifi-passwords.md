@@ -1,10 +1,10 @@
 ---
 title: Viewing Wifi Passwords
-excerpt: "Do you have friends coming over and you forgot you wifi password? You can get that from the system"
+description: "Do you have friends coming over and you forgot you wifi password? You can get that from the system"
 tags:
   - windows
   - powershell
-classes: wide
+date: 2018-05-27
 ---
 
 Did you forget your WiFi passwords and wish you could retrieve them? Or know what wireless networks you've connected to? With PowerShell we can do that pretty easily.

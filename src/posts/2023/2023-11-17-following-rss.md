@@ -1,6 +1,6 @@
 ---
 title: Do you follow RSS?
-excerpt: >-
+description: >-
   Lately following RSS not only blogs, but also from other sources has been
   helpful
 draft: false

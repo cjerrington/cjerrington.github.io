@@ -1,10 +1,11 @@
 ---
 title: Select-Object with PowerShell
-excerpt: A quick glance at a small over-looked tool PowerShell has available to us
+description: A quick glance at a small over-looked tool PowerShell has available to us
 tags: 
   - coding
   - powershell
   - 100DaysToOffload
+daet: 2023-02-25
 ---
 
 Recently I was reading on social media a post where someone asked, "What is your favorite PowerShell command?". I saw many responses like `Get-Help`, `Get-ChildItem`, `Out-GridView`. One of my favorites is [Select-Object](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-7.3) since so many PowerShell commandlets return an object to display the data.
@@ -13,7 +14,7 @@ For example, when running `Get-ChildItem` you get some default output of the obj
 
 Try it out, `Get-ChildItem | Select-Object *`. The `*` will select all all items and show them in the console. I'll select the README.md for my website
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\git\cjerrington.github.io\README.md
 PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\git\cjerrington.github.io
 PSChildName         : README.md
@@ -63,7 +64,7 @@ When doing certain commands with PowerShell it is best to use the FullName, and 
 
 Beyond selecting all properties, you can select what you need too.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $files = Get-ChildItem | Select-Object Name,FullName
 
 Write-Host $files
@@ -75,7 +76,7 @@ README.md C:\git\cjerrington.github.io\README.md
 
 As you can see now, we have just what we might need in our `$files` object. With this though, we won't have other attributes like `Extension`. The other fun item with selecting data, is wrapping it around some parenthesis.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $files = (Get-ChildItem).Name
 
 Write-Host $files

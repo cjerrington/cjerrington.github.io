@@ -1,9 +1,10 @@
 ---
 title: Command Line vs GUI Windows programs
-excerpt: A quick review of some command line apps versus a windowed applications
+description: A quick review of some command line apps versus a windowed applications
 tags: 
   - 100DaysToOffload
   - coding
+date: 2023-02-18
 ---
 
 When I started writing some basic scripts for my company, I went right to PowerShell and got the job done. Part of that reasoning was the environment we needed to run them on was Windows server operating systems from 2008 R2 all the way to the latest 2022. Each of these servers have PowerShell and was a common process to write what we needed that would always work. PowerShell script is still a text file that is easily edited and run in a command line without needing to always install extra components.

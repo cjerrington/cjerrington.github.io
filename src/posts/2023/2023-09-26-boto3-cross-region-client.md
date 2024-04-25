@@ -1,6 +1,6 @@
 ---
 title: Boto3 cross regions for AWS Lambda Functions
-excerpt: Using Python and boto3 for AWS management across regions
+description: Using Python and boto3 for AWS management across regions
 tags: 
   - aws
   - cloud
@@ -15,7 +15,7 @@ Part of the problem is once the drive gets into an alarm state there was a 1% ch
 
 Using the [Python SDK](https://aws.amazon.com/sdk-for-python/) and [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) is the best route to go I've found when working with Lambda functions. We can get all the alarms that are in an alarm state and then do something to them.
 
-{% highlight python %}
+{% highlight "python" %}
 import boto3
 
 client = boto3.client('cloudwatch')
@@ -34,7 +34,7 @@ The `response` will print all the alarms in the `StateValue` we need: OK, ALARM,
 
 Now to change the state of the alarm we can use the `set_alarm_state` function and change the `StateValue`
 
-{% highlight python %}
+{% highlight "python" %}
 for alarm in response['MetricAlarms']:
   inAlarm = alarm['AlarmName']
 
@@ -52,7 +52,7 @@ There is no print response that gets returned to our session so we need to check
 
 When running this from my workstation you need to update your `credentials` file and then run it against each region if you have them setup. To get around this, I setup a list and looped the list of regions then our processing of the alarm states. The `client` can accept a `region_name` variable and gather the proper details in additional regions.
 
-{% highlight python %}
+{% highlight "python" %}
 import boto3
 
 regions = ["us-east-1", "us-east-2", "us-west-2"]

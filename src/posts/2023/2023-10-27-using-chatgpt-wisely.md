@@ -1,6 +1,6 @@
 ---
 title: Using ChatGPT wisely
-excerpt: A conversation about the proper use of ChatGPT and programming
+description: A conversation about the proper use of ChatGPT and programming
 draft: false
 date: 2023-10-27T05:00:00.000Z
 tags:

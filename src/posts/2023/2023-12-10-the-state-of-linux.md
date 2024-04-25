@@ -1,6 +1,6 @@
 ---
 title: The state of Linux
-excerpt: >-
+description: >-
   The other day I was doing some normal tasks on my Linux laptop and saw why new
   users think Linux is hard. 
 draft: false

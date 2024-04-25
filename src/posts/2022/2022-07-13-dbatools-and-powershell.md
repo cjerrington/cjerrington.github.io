@@ -1,15 +1,13 @@
 ---
 title: "dbatools and PowerShell"
-excerpt: "How using dbatools has speed up my SQL processing with PowerShell."
+description: "How using dbatools has speed up my SQL processing with PowerShell."
 tags:
   - powershell
   - sql
-classes: wide
+date: 2022-07-13
 ---
 
 PowerShell is great to use with a Microsoft SQL server. There are plenty of ways to work with a SQL server from [Microsoft's SQL module](https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver16), by calling the underlying [.NET classes](https://www.delftstack.com/howto/powershell/running-sql-queries-in-powershell/), but recently I found [dbatools](https://dbatools.io)!
-
-<!--more-->
 
 What is the best way to describe dbatools? Let's take it straight from their [webpage](https://dbatools.io/getting-started/): dbatools is a free PowerShell module with over 500 SQL Server administration, best practice and migration commands included.
 

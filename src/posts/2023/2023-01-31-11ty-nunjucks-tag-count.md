@@ -1,6 +1,6 @@
 ---
 title: "11ty, nunjucks, tag counts"
-excerpt: "Using nunjucks to get the count of the posts for a tag."
+description: "Using nunjucks to get the count of the posts for a tag."
 tags:
   - 11ty
   - web design
@@ -11,7 +11,7 @@ As I write more for the [100DaysToOffload](/100DaysToOffload/), I like to post o
 
 On my tags page, it uses an eleventy filter of the collection of all posts, and adds this information to the collection. Then on the tags page do a for loop to loop through all the tags and post counts with [Nunjucks](https://mozilla.github.io/nunjucks/). 
 
-{% highlight js %}
+{% highlight "js" %}
 config.addCollection("tagList", collection => {
     const tagsObject = {}
     collection.getAll().forEach(item => {
@@ -37,7 +37,7 @@ config.addCollection("tagList", collection => {
 
 This is great, but I have a simpler collection of the posts by tags using the `collectionApi.getFilteredByTag()` filter.
 
-{% highlight js %}
+{% highlight "js" %}
 // Get only content that matches a tag
 config.addCollection("offload", function(collectionApi) {
   return collectionApi.getFilteredByTag("100DaysToOffload").reverse();
@@ -46,7 +46,7 @@ config.addCollection("offload", function(collectionApi) {
 
 So now on my page specificly for the 100DaysToOffload, we can do a for loop to display just the posts in this collection. 
 
-{% highlight js %}
+{% highlight "js" %}
 {% for post in collections.offload %}
   {{ post.data.title }}
 {% endfor %}
@@ -58,7 +58,7 @@ This solution does not have a built in way to get the tag count. So I found two 
 
 Using the full tags collection. For this to work, we need to loop over all the tags, and if we find the tag we want, pull out the tagCount that is defined in our collection.
 
-{% highlight html %}
+{% highlight "html" %}
 <h1>100 Days To Offload
   {% for tag in collections.tagList %}
     {% if tag.tagName === "100DaysToOffload" %}
@@ -74,7 +74,7 @@ Depending on how many tags you have you'd still have to loop over all of them to
 
 The second method uses a variable and a loop as well to increase a count, then output that count. 
 
-{% highlight html %}
+{% highlight "html" %}
 <h1>100 Days To Offload
   {% set postCount = 0 %}
   {% for post in collections.offload %}

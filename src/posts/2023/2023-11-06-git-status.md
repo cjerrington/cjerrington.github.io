@@ -1,6 +1,6 @@
 ---
 title: Git Status
-excerpt: Quick way to get the status of multiple repositories at a time
+description: Quick way to get the status of multiple repositories at a time
 draft: false
 date: 2023-11-06T06:00:00.000Z
 tags:

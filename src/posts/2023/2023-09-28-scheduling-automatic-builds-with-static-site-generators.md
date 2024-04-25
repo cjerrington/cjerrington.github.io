@@ -1,6 +1,6 @@
 ---
 title: Scheduling Automatic Builds with Static Site Generators
-excerpt: Having a static site is great, but there could be times where you need to build your site on a schedule.
+description: Having a static site is great, but there could be times where you need to build your site on a schedule.
 tags:
   - 11ty
   - automation
@@ -27,7 +27,7 @@ I do host my website in a [repository](https://github.com/cjerrington/cjerringto
 
 To get started, create a file called `nightly-build.yml` in a folder at the root of your repository `.github\workflows`. This is a special folder GitHub uses for other things like issue templates, funding Information, dependabot, and more. In that file we'll configure the name of the workflow, the schedule, and the job to run.
 
-{% highlight yml %}
+{% highlight "yml" %}
 # This action triggers the build hook
 name: Schedule Build & Deploy Hooks
 

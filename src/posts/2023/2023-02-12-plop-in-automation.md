@@ -1,10 +1,11 @@
 ---
 title: Plop in Automation
-excerpt: How I use npm to automate the inner workings of my website and within other projects
+description: How I use npm to automate the inner workings of my website and within other projects
 tags: 
   - javascript
   - automation
   - 100DaysToOffload
+date: 2023-02-12
 ---
 
 My blog now is powered by 11ty, as previously [mentioned](/blog/11ty-redesign), and this runs within the NodeJS environment as well. Each node project comes with a `package.json` file and this holds the information for the node packages, scripts or processes to run, and a few more items. 
@@ -17,7 +18,7 @@ After installing Plop we create a `plopfile.js` and can start generating some qu
 
 A sample plop file
 
-{% highlight javascript %}
+{% highlight "javascript" %}
 export default function (plop) {
     // controller generator
     plop.setGenerator('controller', {
@@ -38,10 +39,12 @@ export default function (plop) {
 
 This will as a question, you answer and then create a new file based on a template. You can take a look at my [plop file](https://github.com/cjerrington/cjerrington.github.io/blob/master/plopfile.js) I am using to see the full process. Now I have a [template file](https://github.com/cjerrington/cjerrington.github.io/blob/master/drafts.md.hbs) that is pretty straight forward as well. 
 
-{% highlight javascript %}
+{% highlight "javascript" %}
+
+{% raw %}
 ---
 title: {{titleCase title}}
-excerpt: {{description}}
+description: {{description}}
 tags: 
 {{#each category}}
   - {{this}}
@@ -50,11 +53,13 @@ tags:
 ---
 
 {{description}}
+{% endraw %}
 {% endhighlight %}
+
 
 One of the neat things plop can do is have a mulitple choice prompts. I am using them to add the tags to my blog so I don't have to write them by hand all the time. To add to the automation, I need a way to get the tags previously used. Node to the rescue here with a simple directory search on my build folder's tag directory.
 
-{% highlight javascript %}
+{% highlight "javascript" %}
 function getDirectories(path) {
   return fs.readdirSync(path).filter(function (file) {
     return fs.statSync(path+'/'+file).isDirectory();
@@ -75,6 +80,6 @@ const tags = getDirectories("./build/tags")
 
 ## Putting it all together
 
-![plop in use](/static/images/posts/plop-automation.PNG)
+![plop in use](/assets/images/blog/plop-automation.PNG)
 
 I have some other helpful scripts as well! One to clean my build directory to have a fresh start every once in a while, and also a git process too. Some automation can be fully autonomous, some is just helpful when doing the repetitive tasks, and others can simplify a few processes as well. 

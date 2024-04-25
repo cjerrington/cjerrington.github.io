@@ -1,16 +1,14 @@
 ---
 title: "How to check for Jellyfin updates"
-excerpt: As with many software there are updates to them. Jellyfin seems to not have a great way to check for updates and install automatically. However, you can use the built-in API to help with that."
+description: As with many software there are updates to them. Jellyfin seems to not have a great way to check for updates and install automatically. However, you can use the built-in API to help with that."
 tags:
   - powershell
   - python
   - media server
-classes: wide
+date: 2022-12-23
 ---
 
 As with many software there are updates to them. [Jellyfin](https://jellyfin.org/) seems to not have a great way to check for updates and install automatically. However, you can use the built-in API to help with that. 
-
-<!--more-->
 
 [Jellyfin](https://jellyfin.org/) comes with an API it uses internally, but also has a public portal as well that gives some useful information. Start by going to `http://localhost:8096/System/Info/Public` if you have the default settings running for your server. This will give you a [JSON](https://www.json.org/json-en.html) response of some basic settings like: `LocalAddress`, `ServerName`, `Version`, `ProductName`, `OperatingSystem`, `Id`, and if the Startup Wizard has been completed. 
 

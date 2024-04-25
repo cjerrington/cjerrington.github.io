@@ -1,6 +1,6 @@
 ---
 title: Backing up the Cloud
-excerpt: Even your cloud data should have a backup
+description: Even your cloud data should have a backup
 draft: false
 date: 2023-12-12T06:00:00.000Z
 tags:

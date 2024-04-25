@@ -1,0 +1,90 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "layout",
+          "name": "layout",
+          "type": "string"
+        },
+        {
+          "title": "pagination",
+          "name": "pagination",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "data",
+              "name": "data",
+              "type": "string"
+            },
+            {
+              "title": "size",
+              "name": "size",
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "title": "permalink",
+          "name": "permalink",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "11ty",
+  "frontMatter.preview.host": "http://localhost:8080",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "pages",
+      "path": "[[workspace]]/src/pages"
+    },
+    {
+      "title": "posts",
+      "path": "[[workspace]]/src/posts"
+    }
+  ],
+  "frontMatter.git.enabled": true,
+  "frontMatter.framework.startCommand": "npm run start"
+}

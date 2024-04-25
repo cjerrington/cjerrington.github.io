@@ -1,8 +1,9 @@
 ---
 title: Extron Certifications
-excerpt: "Getting a few certifications from Extron in the Audio Visual education realm."
+description: "Getting a few certifications from Extron in the Audio Visual education realm."
 tags:
   - other
+date: 2016-05-29
 ---
 
 Working with IT Help Central and [Classroom Technology Services](http://www.depts.ttu.edu/ithelpcentral/cts/), for a year now I have had some great opportunities.

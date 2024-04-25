@@ -1,7 +1,8 @@
 ---
 title: Archive
 description: All of my posts in one place, by year and month
-layout: layouts/page.njk
+permalink: /archive/index.html
+layout: page.njk
 ---
 
 <p>All my blog posts & notes, chronologically ordered from now back in time.
@@ -9,7 +10,7 @@ layout: layouts/page.njk
 	<ol class="diary">
 	{% for year in diary() %}
 		<li>
-			<div><h2 id="{{ year.title }}">{{ year.title }}</h2></div>
+			<div><h id="{{ year.title }}">{{ year.title }}</h2></div>
 
 			<ol>
 			{% for month in year.months %}

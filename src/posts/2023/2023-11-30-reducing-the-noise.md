@@ -1,6 +1,6 @@
 ---
 title: Reducing the noise
-excerpt: >-
+description: >-
   Over the last few months I’ve noticed more how many notifications, pop-ups,
   and other things that take my focus away from what I’m working on.
 draft: false

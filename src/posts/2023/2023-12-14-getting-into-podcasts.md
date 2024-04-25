@@ -1,6 +1,6 @@
 ---
 title: Getting into Podcasts
-excerpt: >-
+description: >-
   This year I've listened to more podcasts than before, and the end of year
   review
 draft: false

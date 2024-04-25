@@ -1,6 +1,6 @@
 ---
 title: What is in Your Headers?
-excerpt: Understanding the Headers your web server returns
+description: Understanding the Headers your web server returns
 tags: 
   - web design
   - 100DaysToOffload

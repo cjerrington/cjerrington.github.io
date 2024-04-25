@@ -1,15 +1,10 @@
 ---
 title: Projects
 description: Small sampling of projects I've worked on and want to highlight
-layout: layouts/page.njk
+layout: page
 hideTagsList: true
-eleventyNavigation:
-  key: Projects
-  order: 5
-size: wide
+permalink: /projects/index.html
 ---
-
-### Projects I have created
 
 Project | Description
 --------|------------

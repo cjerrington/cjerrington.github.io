@@ -1,6 +1,6 @@
 ---
 title: Updating Codeberg Pages Static Sites
-excerpt: >-
+description: >-
   While the Codeberg CI is still in beta, I found another way to publish my
   static files for hosting
 draft: false

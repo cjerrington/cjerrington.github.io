@@ -1,9 +1,10 @@
 ---
 title: "Adding a basic search to a static site"
-excerpt: "A simple solution to having a search feature on a static website"
+description: "A simple solution to having a search feature on a static website"
 tags:
   - web design
   - 100DaysToOffload
+date: 2023-01-30
 ---
 
 Having a search feature typically requires a database or server side backend to help with the data query. Lets take a quick look at how we can add a simple search to a static website. Somehow we need a system to know about the content on your website so the user can search it. With static files we can query then, so how would this work? 
@@ -13,8 +14,8 @@ I'll assume you are using a static site generator like Jekyll, 11ty, Hugo, the l
 ## search index
 
 Our search index will be a json file that has our title, excerpt, tags, and special keywords. 
-
-{% highlight json %}
+{% raw %} 
+```json"
 ---
 permalink: "/search.json"
 ---
@@ -33,13 +34,14 @@ permalink: "/search.json"
     {%- endif -%}
   {%- endfor %}
 ]
-{% endhighlight %}
+```
+{% endraw %} 
 
 ## search page
 
 Add the following to your page template for your search page
 
-{% highlight html %}
+{% highlight "html" %}
 Enter text below to begin your search
 <input type="text" id="search" autocomplete="off" placeholder="Search..." />
 <div id="results"></div>
@@ -50,7 +52,7 @@ Enter text below to begin your search
 
 The part that does the work is in the `search.js` file. It reads the search index for the content the user enters in the input box. For each match it'll append a link to the HTML the post title and excerpt. 
 
-{% highlight js %}
+{% highlight "js" %}
 (async () => {
   document.getElementById('search').addEventListener('keyup', (event) => {
     const searchString = event.target.value.toLowerCase()

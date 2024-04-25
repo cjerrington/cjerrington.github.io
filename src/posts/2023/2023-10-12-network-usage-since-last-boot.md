@@ -1,6 +1,6 @@
 ---
 title: Network Usage Since Last Boot
-excerpt: How to get the download and upload bandwidth since last boot on Linux
+description: How to get the download and upload bandwidth since last boot on Linux
 tags: 
   - linux
   - snippets
@@ -15,7 +15,7 @@ The other day I saw someone ask on social media if there was a way to know how m
 
 On Linux machines, what is nice is many things are stored on the system you just have to know where to look. This information was stored in the following file: `/proc/net/dev`. So what all is in this file? This is part of the kernel to provide [historical text interface](https://www.kernel.org/doc/html/latest/networking/statistics.html#procfs) to the list of interfaces and other statistics.
 
-{% highlight shell %}
+{% highlight "shell" %}
 cat /proc/net/dev
 
 Inter-|   Receive                                                |  Transmit
@@ -26,7 +26,7 @@ Inter-|   Receive                                                |  Transmit
 
 Once we read the file we can see a list of all the network adapters and the history that is kept of the amount of bytes, packets, etc through the interface. What we don't need is the loop back device which is `lo: `. We can use `grep -v "lo: "` and this will get the lines not like the loopback interface. Next, we only want the data that is downloaded, and sorted to get the information we want.
 
-{% highlight shell %}
+{% highlight "shell" %}
 cat /proc/net/dev | grep -v "lo:" | awk '{print $2}' | sort -n | tail -1
 
 2102736856
@@ -36,7 +36,7 @@ This is the number of bytes that have been downloaded. So we need to do some mat
 
 Knowing this we can write a little query in `bash` to get the total received and uploaded bytes since the last boot of the machine.
 
-{% highlight bash %}
+{% highlight "bash" %}
 total_bytes_received=$(cat /proc/net/dev | grep -v "lo:" | awk '{print $2}' | sort -n | tail -1)
 total_bytes_uploaded=$(cat /proc/net/dev | grep -v "lo:" | awk '{print $10}' | sort -n | tail -1)
 
@@ -54,7 +54,7 @@ echo "Total uploaded since last boot: $total_mb_uploaded MB / $total_gb_uploaded
 
 I purposely kept the math separate between the kilobytes to gigabytes for the moments you want to check and you haven't gotten to a GB of downloaded data, we don't have a 0 value. Running the full script should show you something like the following.
 
-{% highlight shell %}
+{% highlight "shell" %}
 Total received since last boot: 2005 MB / 2 GB
 Total uploaded since last boot: 1081 MB / 1 GB
 {% endhighlight %}

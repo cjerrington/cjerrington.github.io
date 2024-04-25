@@ -1,6 +1,6 @@
 ---
 title: Ubuntu's change with Python support
-excerpt: Discussing Python package manager PIP and recent changes Ubuntu has taken
+description: Discussing Python package manager PIP and recent changes Ubuntu has taken
 tags:
   - python
   - linux
@@ -39,13 +39,13 @@ According to [Debian.org](https://wiki.debian.org/Python), their website states,
 
 Take Ubuntu for example, you can count the number of packages that depend on Python, not counting the python specific packages. This number will be pretty large.
 
-{% highlight shell %}
+{% highlight "shell" %}
 apt-cache rdepends python3 | grep -v python | wc -l
 {% endhighlight %}
 
 Ubuntu has a package for `ubuntu-minimal` that depends on `python3`. That being said, it would be hard to run the rest of the OS without it. Ubuntu's `unattended-upgrades` is also written in Python. The description of `ubuntu-minimal` says it as well:
 
-{% highlight text %}
+{% highlight "text" %}
 This package depends on all of the packages in the Ubuntu minimal system, that is a functional command-line system with the following capabilities:
 
 - Boot
@@ -65,7 +65,7 @@ Virtual environments do have a great place when working with specific versions o
 
 What I don't like though is any package will need to be installed in a virtual environment. There is a way to install the module system wide as well:
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ # To install crytography do this
 $ apt install python3-cryptography
 

@@ -1,6 +1,6 @@
 ---
 title: 'Write fast, deploy, update'
-excerpt: >-
+description: >-
   Working fast has its benefits, and sometimes you just have to get started then
   you can update your process
 draft: false

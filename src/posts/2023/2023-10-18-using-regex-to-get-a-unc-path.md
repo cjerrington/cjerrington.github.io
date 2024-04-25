@@ -1,6 +1,6 @@
 ---
 title: Regex a UNC path
-excerpt: While working with files and paths I needed a way to extract a UNC path.
+description: While working with files and paths I needed a way to extract a UNC path.
 draft: false
 date: 2023-10-18T00:00:00.000Z
 tags:

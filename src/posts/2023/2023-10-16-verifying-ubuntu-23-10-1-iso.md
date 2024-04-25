@@ -1,6 +1,6 @@
 ---
 title: Verifying Ubuntu 23.10.1 ISO
-excerpt: How to verify the latest download of Ubuntu on Windows
+description: How to verify the latest download of Ubuntu on Windows
 tags: 
   - windows
   - 100DaysToOffload

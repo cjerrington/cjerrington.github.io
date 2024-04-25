@@ -1,0 +1,85 @@
+---
+font: "'Red Hat Display', Ubuntu" # These get created in development, you must have the font installed on your system.
+background: '#343434'
+text: '#FBFBFB'
+colors: ['#002233', '#0066FF', '#b1364e', '#9a3044']
+siteUrl: 'claytonerrington.com'
+pagination:
+  data: collections.posts
+  size: 1
+  alias: post
+permalink: '/assets/og-images/{{ post.data.title | slugify }}-preview.svg'
+eleventyExcludeFromCollections: true
+---
+<svg
+    width="1200"
+    height="630"
+    viewBox="0 0 1200 630"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+		{% set titleInLines = post.data.title | splitlines(22) %}
+		{% set numberOfLines = titleInLines.length %}
+		{% if numberOfLines == 1 %}
+		{% set verticalStartingPoint = 340 %}
+		{% elseif numberOfLines == 2 %}
+		{% set verticalStartingPoint = 290 %}
+		{% elseif numberOfLines == 3 %}
+		{% set verticalStartingPoint = 250 %}
+		{% elseif numberOfLines == 4 %}
+		{% set verticalStartingPoint = 210 %}
+		{% elseif numberOfLines == 5 %}
+		{% set verticalStartingPoint = 170 %}
+		{% endif %}
+
+		<!-- SVG background, generate your own on: https://app.haikei.app/ or  https://pattern.monster/ -->
+		<svg id="visual" viewBox="0 0 1200 630" width="1200" height="630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+			<rect x="0" y="0" width="1200" height="630" fill="#002233"></rect>
+			<path d="M0 443L50 440.2C100 437.3 200 431.7 300 434.2C400 436.7 500 447.3 600 449.2C700 451 800 444 900 440.5C1000 437 1100 437 1150 437L1200 437L1200 631L1150 631C1100 631 1000 631 900 631C800 631 700 631 600 631C500 631 400 631 300 631C200 631 100 631 50 631L0 631Z" fill="#0066FF" stroke-linecap="round" stroke-linejoin="miter"></path>
+		</svg>
+
+		<!-- if you need to darken or lighten your bg -->
+		<rect id="bg" width="100%" height="100%" opacity="0.1" fill="{{ background }}"/>
+		<rect id="name-bg" width="100%" height="42px" fill="{{ background }}" transform="translate(150,550)" />
+
+		<!-- date -->
+		<text
+			font-family="{{ font }}, sans-serif"
+			font-size="24"
+			font-weight="900"
+			fill="{{ text }}"
+			letter-spacing="-1"
+		>
+			<tspan x="160" y="{{ verticalStartingPoint - 120 }}">
+				{{ post.date | formatDate('MM / DD / YYYY') }}
+			</tspan>
+		</text>
+
+		<!-- title -->
+		<text
+			id="text"
+			font-family="{{ font }}, sans-serif"
+			font-size="80"
+			font-weight="900"
+			fill="{{ text }}"
+			letter-spacing="-3"
+		>
+			{% for line in titleInLines %}
+			<tspan x="160" y="{{ verticalStartingPoint - 20 + loop.index0 * 85 }}">
+				{{ line }}
+			</tspan>
+			{% endfor %}
+		</text>
+
+		<!-- sitename / url -->
+		<text
+		font-family="{{ font }}, sans-serif"
+			font-size="24"
+			font-weight="500"
+			fill="{{ text }}"
+			letter-spacing="-0.5"
+		>
+			<tspan x="160" y="580">{{ meta.siteName }} — {{ siteUrl }}</tspan>
+		</text>
+</svg>

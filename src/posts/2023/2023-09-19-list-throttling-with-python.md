@@ -1,6 +1,6 @@
 ---
 title: List Throttling with Python
-excerpt: How to break up and chunk a large list in Python and process it
+description: How to break up and chunk a large list in Python and process it
 tags: 
   - aws
   - coding
@@ -15,7 +15,7 @@ However, I really did need to make a bulk request. Some of the AWS services you 
 
 To get started we need a simple list and process through that list.
 
-{% highlight python %}
+{% highlight "python" %}
 emails = [
   "another.user1@domain.com",
   "another.user2@domain.com",
@@ -36,7 +36,7 @@ The `range()` function returns a sequence of numbers, starting from 0 by default
 
 ## Range Syntax
 
-{% highlight python %}
+{% highlight "python" %}
 range(start, stop, step)
 {% endhighlight %}
 
@@ -54,7 +54,7 @@ The `step` parameter tells Python where to start in the list and in what increme
 
 So the following will process the even numbers in a list
 
-{% highlight python %}
+{% highlight "python" %}
 x = range(0, 20, 2)
 
 for n in x:
@@ -78,7 +78,7 @@ Taking this idea we can use the `step` and an additional `for` loop to adjust wh
 
 First we'll need our list:
 
-{% highlight python %}
+{% highlight "python" %}
 emails = [
   "another.user1@domain.com",
   "another.user2@domain.com",
@@ -97,7 +97,7 @@ emails = [
 
 We will have a simple function that is called to process the list.
 
-{% highlight python %}
+{% highlight "python" %}
 def process_list(emails):
     for email in emails:
         print(email)
@@ -105,7 +105,7 @@ def process_list(emails):
 
 The next part that does the chucks is a `for` loop with a combination with a `range()` function. We will then be able to slice our list and choose a range in the list to parse.
 
-{% highlight python %}
+{% highlight "python" %}
 threshold = 5
 waitTime = 1
 
@@ -119,7 +119,7 @@ We want to start at 0, the start of our list, then stop at the total or length o
 
 The `{i+1}-{i+threshold}` humanizes our numbers when it runs the output, since the list starts at 0 naturally in programming.
 
-{% highlight text %}
+{% highlight "text" %}
 Processing block: 1-5
 another.user1@domain.com
 another.user2@domain.com
@@ -156,7 +156,7 @@ As we can see the print statement shows us at what place in the list we are proc
 
 If we change our `threshold` to 3, we can see the changes as well.
 
-{% highlight text %}
+{% highlight "text" %}
 Processing block: 1-3
 another.user1@domain.com
 another.user2@domain.com

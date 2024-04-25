@@ -1,6 +1,6 @@
 ---
 title: Taking A Screenshot In Python
-excerpt: Quick demonstration of how to take a screenshot using Python
+description: Quick demonstration of how to take a screenshot using Python
 tags: 
   - python
   - 100DaysToOffload

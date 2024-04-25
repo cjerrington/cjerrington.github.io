@@ -1,6 +1,6 @@
 ---
 title: Changing Git config URL
-excerpt: >-
+description: >-
   How to change you git url to change your connection method to the remote
   source for a local repository
 draft: false

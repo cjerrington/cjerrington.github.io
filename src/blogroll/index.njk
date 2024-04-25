@@ -1,27 +1,29 @@
 ---
 title: Blogroll
 description: Blogroll
-layout: layouts/page.njk
+layout: page
 hideTagsList: true
 "eleventyExcludeFromCollections": true
 ---
 <p><small>Last updated: {{ helpers.buildTime() }} UTC</small></p>
-<div class="card-grid">
+<article class="region blog" style="--region-space-top: var(--space-xl-2xl)">
+  <div class="wrapper flow prose">
     {% for blog in blogData %}
     <div class="card">
-        <h3 class="card__title">
-            <img alt="icon for {{ blog.name }}" class="blogroll" src="{{ blog.favicon }}" width="16px" height="16px" loading="lazy" decoding="async" /> 
-            <a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a>
-            <i><small class="card__description">{{ blog.cleansedUrl }}</small></i>
+        <h3 style="font-size:var(--size-step-2)">
+            <img alt="icon for {{ blog.name }}" src="{{ blog.favicon }}" width="32px" height="32px" loading="lazy" decoding="async" /> 
+            <a href="{{ blog.url }}" class="no-indicator" target="_blank">{{ blog.name }}</a>
+            <i><small style="font-size:var(--size-step-0)">{{ blog.cleansedUrl }}</small></i>
         </h3>
         {% if blog.latestPost and blog.latestPost.title %}
         <p class="latest-post">
             <b>Latest post:</b>
-            <a href="{{ blog.latestPost.url }}" target="_blank">
+            <a href="{{ blog.latestPost.url }}" class="no-indicator" target="_blank">
                 {{ blog.latestPost.title }}
             </a>
         </p>
         {% endif %} 
     </div> 
     {% endfor %} 
-</div>
+  </div>
+</article>

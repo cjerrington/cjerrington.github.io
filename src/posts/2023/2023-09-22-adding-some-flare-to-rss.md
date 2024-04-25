@@ -1,6 +1,6 @@
 ---
 title: Adding some flare to RSS
-excerpt: RSS is still a great way to subscribe to content, so why not add some style to it?
+description: RSS is still a great way to subscribe to content, so why not add some style to it?
 tags: 
   - web design
   - 100DaysToOffload
@@ -13,11 +13,11 @@ I came across [Derek Kay's](https://fosstodon.org/web/@darekkay) blog post on [s
 
 So how do we style RSS? Well let's look before we do anything.
 
-![Style before](/static/images/posts/rss-style/style-before.jpg)
+![Style before](/assets/images/blog/rss-style/style-before.jpg)
 
 Not very pretty right? Since an RSS feed is XML, there is a style sheet you can add called XSL(T). This allows you to add the instructions in the XML of the file how to style the output in the browser.
 
-{% highlight xml %}
+{% highlight "xml" %}
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom"
@@ -30,7 +30,7 @@ The `xml-stylesheet` is the key here and uses the `href` to specify the path to 
 
 Since I am using 11ty for my site, I had to save my file as `rss-style.xsl.njk`. I know can also have 11ty build my file with site details and not manual updates.
 
-{% highlight xml %}
+{% highlight "xml" %}
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:atom="http://www.w3.org/2005/Atom">

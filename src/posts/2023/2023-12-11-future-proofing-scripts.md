@@ -1,6 +1,6 @@
 ---
 title: Future proofing scripts
-excerpt: >-
+description: >-
   Writing for a problem now, but in a way to easily solve the problem for the
   future. 
 draft: false

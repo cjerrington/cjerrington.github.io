@@ -1,6 +1,6 @@
 ---
 title: Hosting FreshRSS on Fly.io
-excerpt: Self hosting FreshRSS with Fly.io for free
+description: Self hosting FreshRSS with Fly.io for free
 tags: 
   - docker
   - selfhost
@@ -26,7 +26,7 @@ RSS is a great way to follow websites that publish content via blog posts, new a
 
 Sample fly.toml file
 
-{% highlight toml %}
+{% highlight "toml" %}
 app = "freshrss" # Change this, should be unique
 kill_signal = "SIGINT"
 kill_timeout = 5
@@ -77,7 +77,7 @@ processes = []
 
 Updating is still pretty easy as well. When I saw how to do this, FreshRSS was on version 1.20.1. Looking at the [latest release](https://github.com/FreshRSS/FreshRSS/releases/latest) on GitHub, it is now at 1.21.0. We just need to update one line in our `fly.toml` file and re-launch the app `fly launch`. This will download the specified version, rebuild the container, and redeploy the application.
 
-{% highlight toml %}
+{% highlight "toml" %}
 [build]
   image = "freshrss/freshrss:1.21.0"
 {% endhighlight %}

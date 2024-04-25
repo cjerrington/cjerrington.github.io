@@ -1,9 +1,8 @@
 ---
 title: "Python Random Password"
 date: 2020-04-28
-excerpt: "Creating a password generator with Python the simple way"
+description: "Creating a password generator with Python the simple way"
 tags: python
-classes: wide
 ---
 
 ## Setting up the basics

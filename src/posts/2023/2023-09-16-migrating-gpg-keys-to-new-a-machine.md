@@ -1,7 +1,7 @@
 ---
 _schema: default
 title: Migrating GPG keys to a new machine
-excerpt: How to migrate your GPG keys to a new machine
+description: How to migrate your GPG keys to a new machine
 tags: 
     - 100DaysToOffload
     - shell
@@ -14,7 +14,7 @@ Sure, I could get my GPG public key from [Keyoxide](https://keyoxide.org/22A8777
 
 First we need to list our keys.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ gpg --list-secret-keys --keyid-format LONG
 
 --------------------------------
@@ -28,13 +28,13 @@ The key identifier we will need is after the key size `ed25519`.
 
 Now that we know the key ID, we can export the public key.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ gpg --export -a [your key] > gpg-pub.asc
 {% endhighlight %}
 
 Next we can export the secret keys that include your sub keys for signing and encryption. That way on the new machine I can continue to sign things, mostly git commits.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ gpg --export-secret-keys -a [your key] > gpg-sc.asc
 {% endhighlight %}
 
@@ -42,13 +42,13 @@ The `-a` is short for `-armor` which will ASCII-armor the output file in a forma
 
 I then copied these to a safe media for moving them to the new machine. Once on the new machine we can import the key files on the new machine. During the export and import you will be asked for the encryption password for the key to export and reimport the keys.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ gpg --import gpg-*.asc
 {% endhighlight %}
 
 Now your key is imported, but you might want to change the trust level of your own key. This will drop you to the gpg prompt and you can choose your trust level and confirmation.
 
-{% highlight shell %}
+{% highlight "shell" %}
 $ gpg --edit-key [your key]
 
 gpg> trust

@@ -1,6 +1,6 @@
 ---
 title: The Collection
-excerpt: 'Growing up I had a few collections, and this weekend I pulled one out'
+description: 'Growing up I had a few collections, and this weekend I pulled one out'
 draft: false
 date: 2023-12-18T00:00:00.000Z
 tags:
@@ -20,19 +20,19 @@ I’ve passed on collecting many of the newer quarters after this initial period
 Not only do I have the national quarters, but a few gold and silver dollars, Franklin half dollars, coins and currency from a few foreign countries. I'm not sure how I obtained a few of these, but it is amazing to look at the detail put into the coin mints and paper currency as well.
 
 US Franklin 50 Cent Coin
-![Franklin 50 Cent Coin](/static/images/posts/coins/IMG_4487.webp)
+![Franklin 50 Cent Coin](/assets/images/blog/coins/IMG_4487.webp)
 
 US Gold Dollar Coins
-![US Gold Dollar Coins](/static/images/posts/coins/IMG_4488.webp)
+![US Gold Dollar Coins](/assets/images/blog/coins/IMG_4488.webp)
 
 US Silver Dollar Coins
-![US Silver Dollar Coins](/static/images/posts/coins/IMG_4489.webp)
+![US Silver Dollar Coins](/assets/images/blog/coins/IMG_4489.webp)
 
 Random coins: Euros, Canadian, Guatemalan, Mexican Pesos, India Rupees
-![Random coins: Euros, Canadian, Guatemalan, Mexican Pesos, India Rupees](/static/images/posts/coins/IMG_4491.webp)
+![Random coins: Euros, Canadian, Guatemalan, Mexican Pesos, India Rupees](/assets/images/blog/coins/IMG_4491.webp)
 
 Older bills from Guatemala and Mexico
-![Older bills from Guatemala and Mexico](/static/images/posts/coins/IMG_4490.webp)
+![Older bills from Guatemala and Mexico](/assets/images/blog/coins/IMG_4490.webp)
 
 I've always wondered how other countries have adopted the use of their dollar coins. The US Gold and Silver Dollar coins are not in circulation on the masses, but appears that the $10 Peso is used regularly and accepted at the same value as a $10 paper bill. I do know that when the 1979 Silver Dollar was introduced, the US Mint was hopeful that people would adopt the coin, and was almost immediately rejected by the public.
 

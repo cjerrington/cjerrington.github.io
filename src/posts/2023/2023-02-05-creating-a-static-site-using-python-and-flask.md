@@ -1,10 +1,11 @@
 ---
 title: "Creating a static site using Python and Flask"
-excerpt: "Using Flask as a static site generator for a simple website"
+description: "Using Flask as a static site generator for a simple website"
 tags: 
   - python
   - web design
   - 100DaysToOffload
+date: 2023-02-05
 ---
 
 In today's time there seems like there are static site generators that are a dime a dozen. What if you like Python and building sites with Flask. Using Flask as a static site generator for a simple website was a decision I did for a real simple website for an organization. This decision was made because I was learning Python for desktop scripts, and it is quite versatile for many application uses. I had the site on a Jekyll template initially, and the conversion to a Flask app was a way to learn Flask in the processes.
@@ -13,7 +14,7 @@ In today's time there seems like there are static site generators that are a dim
 
 So how do we start with Flask to begin with? You will need to install [Flask](https://flask.palletsprojects.com/en/2.2.x/) with pip and it is supported on many versions of [Python](https://www.python.org/). Let's begin with a simple Flask app.
 
-{% highlight python %}
+{% highlight "python" %}
 from flask import Flask
 
 app = Flask(__name__)
@@ -25,7 +26,7 @@ def hello_world():
 
 With this we can now go to a web browser and see the new paragraph with `Hello, World!`. To run the development server, and the browse to [http://127.0.0.1:5000/](http://127.0.0.1:5000/):
 
-{% highlight shell %}
+{% highlight "shell" %}
 python -m flask run
 {% endhighlight %}
 
@@ -37,13 +38,13 @@ When you run the development server of Flask, you are interacting with the app i
 
 First install [Frozen Flask](https://pythonhosted.org/Frozen-Flask/) with pip.
 
-{% highlight shell %}
+{% highlight "shell" %}
 pip install Frozen-Flask
 {% endhighlight %}
 
 Now we need a `freeze.py` file. This is used to create the static build site, and later used when hosting on Netlify for example.
 
-{% highlight python %}
+{% highlight "python" %}
 from flask_frozen import Freezer
 from app import app
 
@@ -59,7 +60,7 @@ When running the `freeze.py` file with python or python3, it will create a build
 
 You can use Netlify to host your Python Flask app and the static files. Hook up your new site to a GitHub repository for example and under your build settings you need to set the Build command and Publish Directory.
 
-![Netlify build settings](/static/images/posts/netlify-build-flask.png)
+![Netlify build settings](/assets/images/blog/netlify-build-flask.png)
 
 Some tricks that help build your site correctly are setting some [Python build variables](https://docs.netlify.com/configure-builds/manage-dependencies/#python) in your repository with a `runtime.txt` file to specify a Python version. You will also need to save our Pyhton dependencies to our `requirements.txt` file. When the build process on Netlify looks for these additional environment files and runs them accordingly.
 

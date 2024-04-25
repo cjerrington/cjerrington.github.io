@@ -1,9 +1,10 @@
 ---
 title: Using Cloudflare Workers to Get Visitor Information
-excerpt: How to setup a Cloudflare worker to get certain information about the users connection
+description: How to setup a Cloudflare worker to get certain information about the users connection
 tags: 
   - web design
   - 100DaysToOffload
+date: 2023-02-26
 ---
 
 A little while ago I saw a blog post from [adamsdesk.com](https://www.adamsdesk.com/posts/get-public-ip-address-identme/) that talks about how to get the public IP address using [ident.me](https://ident.me/). There are plenty of reasons to know your external IP address and plenty of sites out there to get this information.
@@ -21,7 +22,7 @@ You can setup your worker in the dashboard and it will give you a default *.work
 
 Then for my worker, I added an event listener that will return a JSON object to the browser.
 
-{% highlight js %}
+{% highlight "js" %}
 addEventListener("fetch", event => {
   const data = {
     Colo: event.request.cf.colo,

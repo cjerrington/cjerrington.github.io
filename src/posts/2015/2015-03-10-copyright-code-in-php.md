@@ -1,9 +1,10 @@
 ---
 title: "Copyright Code in PHP"
-excerpt: "How to add a copyright statment on your PHP pages."
+description: "How to add a copyright statment on your PHP pages."
 tags:
   - php
   - coding
+date: 2015-03-10
 ---
 
 When making websites many want a copyright year date in their footer. I wrote a simple PHP copyright function that simply gets the year and then calculates if the year given is the current year or not.

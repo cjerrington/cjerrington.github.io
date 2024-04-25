@@ -1,6 +1,6 @@
 ---
 title: Simple HTTP Server
-excerpt: Setting up a simple web server with PowerShell
+description: Setting up a simple web server with PowerShell
 draft: false
 date: 2023-10-24T00:00:00.000Z
 tags:

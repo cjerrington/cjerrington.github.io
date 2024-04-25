@@ -1,6 +1,6 @@
 ---
 title: Console Speech API, Part 2
-excerpt: Continuation of the Console Speech with a simple game.
+description: Continuation of the Console Speech with a simple game.
 tags: 
   - powershell
   - 100DaysToOffload
@@ -8,7 +8,7 @@ tags:
 
 In my last post, [Console Speech API and Beeps](https://claytonerrington.com/blog/console-speech-api-and-beeps/), I talked about the text to speech .NET assembly and how to get your computer to talk to you. After some searching I remembered I wrote a game in PowerShell similar to my [Python](https://claytonerrington.com/blog/python-alphbet-game/) based game. This was a simple way to help teach children letters and the keyboard.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Add-Type -AssemblyName System.Speech
 $Speech = New-Object System.Speech.Synthesis.SpeechSynthesizer
 $Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.ToCharArray() -as [string[]]

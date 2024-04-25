@@ -1,12 +1,13 @@
 ---
 title: Using the Codeberg CI
-excerpt: Using Codeberg CI to build 11ty based static sites to push to Codeberg Pages
+description: Using Codeberg CI to build 11ty based static sites to push to Codeberg Pages
 tags: 
   - automation
   - coding
   - git
   - javascript
   - 100DaysToOffload
+date: 2023-03-11
 ---
 
 In this post we will help walk you through how to build a [NodeJS](https://nodejs.org/en/) and [11ty](https://www.11ty.dev/) (eleventy) website on [Codeberg Pages](https://codeberg.page/).

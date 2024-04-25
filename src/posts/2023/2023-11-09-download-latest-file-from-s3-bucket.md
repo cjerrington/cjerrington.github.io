@@ -1,6 +1,6 @@
 ---
 title: Download latest file from a S3 Bucket
-excerpt: Using the AWS S3 CLI to download the latest file from a S3 bucket
+description: Using the AWS S3 CLI to download the latest file from a S3 bucket
 draft: false
 date: 2023-11-09T00:00:00.000Z
 tags:

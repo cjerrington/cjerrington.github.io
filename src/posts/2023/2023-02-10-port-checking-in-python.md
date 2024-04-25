@@ -1,9 +1,10 @@
 ---
 title: "Port Checking in Python"
-excerpt: "Using Python and Sockets to check for port connections on local and remotes hosts"
+description: "Using Python and Sockets to check for port connections on local and remotes hosts"
 tags: 
   - python
-  - 100DaysToOffload    
+  - 100DaysToOffload
+date: 2023-02-10 
 ---
 
 Python's [Sockets](https://docs.python.org/3/library/socket.html) library allows us to make connections to other hosts and we can use this to establish new sockets for our scripts or check if they are open on remote hosts.
@@ -12,7 +13,7 @@ With platforms like [Octopus](https://octopus.com/) for software delivery, we ne
 
 Today we will focus on the class itself and how to setup the hosts. You can take a look at Python's built in [logging](https://docs.python.org/3/library/logging.html) function if you'd like as well.
 
-{% highlight python %}
+{% highlight "python" %}
 import socket, time, logging
 from colorama import init, Fore
 
@@ -65,13 +66,13 @@ In the class we call checkHost() to connect to the host and port and return if i
 
 To begin we need to create a new instance of the class to check port 443 on google.com.
 
-{% highlight python %}
+{% highlight "python" %}
 google = PortCheck("google.com", 443)
 {% endhighlight %}
 
 The variable, google, will now have our class attributes. To make sure we can call google.domain or google.port and this will return google.com and 443 respectfully in this case. To run the work, we call
 
-{% highlight python %}
+{% highlight "python" %}
 google.portReturn()
 {% endhighlight %}
 
@@ -79,7 +80,7 @@ Once called the class will run the portReturn function that checks our host and 
 
 Now, lets add a few more hosts.
 
-{% highlight python %}
+{% highlight "python" %}
 # Setup hosts and ports
 google = PortCheck("google.com", 443)
 facebook = PortCheck("facebook.com", 443)
@@ -97,7 +98,7 @@ badhost.portReturn()
 
 We have now create 5 instances of our PortCheck class each with it's own information, then running the checks. Once complete we should see something like the following.
 
-![](/static/images/posts/python-socket-connection.png)
+![](/assets/images/blog/python-socket-connection.png)
 
 I have used [colorama](https://pypi.org/project/colorama/) to help with a visual on showing the status results in OPEN and CLOSED.
 

@@ -1,6 +1,6 @@
 ---
 title: Posting from my phone
-excerpt: 'In my last post, I tried to write from my phone, and it didn''t turn out well. '
+description: 'In my last post, I tried to write from my phone, and it didn''t turn out well. '
 draft: false
 date: 2023-11-08T06:00:00.000Z
 tags:

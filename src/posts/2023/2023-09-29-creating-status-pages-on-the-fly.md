@@ -1,6 +1,6 @@
 ---
 title: Creating Status Pages on the Fly
-excerpt: Monitoring uptime and status pages on Fly.io with Kuma
+description: Monitoring uptime and status pages on Fly.io with Kuma
 tags: 
   - docker
   - selfhost
@@ -21,7 +21,7 @@ To get started, we create a `fly.toml` file with our instructions, and then when
 
 You will be given a url on their `https://myapp.fly.dev`, but you can change this later if you'd like using their certificates and dns updates.
 
-{% highlight toml %}
+{% highlight "toml" %}
 # fly.toml file generated for mykuma
 
 # Change to your subdomain you'd like your app to live at

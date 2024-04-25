@@ -1,6 +1,6 @@
 ---
 title: Building a Blogroll with 11ty
-excerpt: How I created a blogroll with 11ty based off of Ben Myers solution
+description: How I created a blogroll with 11ty based off of Ben Myers solution
 tags: 
   - 11ty
   - 100DaysToOffload
@@ -28,7 +28,7 @@ The `index.njk` template was a great outline, but my site uses a `<div>` system 
 
 This has solution makes use of Zach's [IndieWeb Avatar service](https://www.11ty.dev/docs/services/indieweb-avatar/) which I thought was pretty neat! You provide the API an `encodedURIComponent` and it finds the sites favicon for us, and adds it to the blogroll members' card.
 
-{% highlight js %}
+{% highlight "js" %}
 const encodedBlogUrl = encodeURIComponent(blog.url);
 const src = `https://v1.indieweb-avatar.11ty.dev/${encodedBlogUrl}/`;
 {% endhighlight %}

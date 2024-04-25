@@ -1,9 +1,10 @@
 ---
 title: Intro to Pickleball
-excerpt: Initial thoughts on playing Pickleball for the first time 
+description: Initial thoughts on playing Pickleball for the first time 
 tags: 
   - personal
   - 100DaysToOffload
+date: 2023-03-26
 ---
 
 This weekend I got the chance to play Pickleball. It was a fun game with a unique twist of some other common games too. Playing it was like tennis, racquet ball, and ping pong all had a brain child and out came Pickleball. 

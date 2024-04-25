@@ -1,6 +1,6 @@
 ---
 title: Wordle Analytics - November 2023
-excerpt: The letter distribution for the Wordle for October 2023
+description: The letter distribution for the Wordle for October 2023
 tags: 
   - gaming
   - wordle

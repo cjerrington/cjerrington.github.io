@@ -1,14 +1,12 @@
 ---
 title: "New Year's Resolution for 2023"
-excerpt: "What to expect with the New Year upon us? More posts!"
+description: "What to expect with the New Year upon us? More posts!"
 tags:
   - 100DaysToOffload
-classes: wide
+date: 2022-12-28
 ---
 
 What to expect with the New Year upon us? More posts! 
-
-<!--more-->
 
 Since [Twitter has been bought by Elon Musk](https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk), many folks were concerned what the social giant would turn in to. Some left, other's stayed, and others moved to a decentralized social platform, [Mastodon](https://joinmastodon.org/). I have been on [mstdn.social](https://mstdn.social/about) for a little while now and find the activity I post about to get more tracktion and involvement from like folks, than I did on Twitter. You can find me as [@cjerrington](https://mstdn.social/@cjerrington).
 

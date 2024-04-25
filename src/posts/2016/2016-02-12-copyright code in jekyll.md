@@ -1,11 +1,11 @@
 ---
 title: Copyright Code in Jekyll
-excerpt: "How to add a copyright statment in your Jekyll sites."
+description: "How to add a copyright statment in your Jekyll sites."
 tags:
   - coding
   - jekyll  
   - web design
-classes: wide
+date: 2016-02-12
 ---
 
 In a previous [post](/blog/Copyright-Code-in-PHP/) I talked about how to create your copyright date in PHP. Some time ago, I found a way to do the same thing in Jekyll.

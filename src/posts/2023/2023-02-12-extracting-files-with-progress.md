@@ -1,9 +1,10 @@
 ---
 title: Extracting Files with Progress
-excerpt: Working with zip files in Python to show a progress bar while it is doing the extraction.
+description: Working with zip files in Python to show a progress bar while it is doing the extraction.
 tags: 
   - python
   - 100DaysToOffload
+date: 2023-02-12
 ---
 
 While working on a deployment script, one of the tasks I needed was to extract a zip file and then edit some files. I was working on this in Python and could easily use the `ZipFile` module, but I like to show some progress to the end users so they know something is happening.
@@ -12,7 +13,7 @@ We will be using `zipfile`, `os`, and `tqdm` to extract the files today. In the 
 
 To being lets see the simple way to extract files with the `zipfile` module.
 
-{% highlight python %}
+{% highlight "python" %}
 from zipfile import ZipFile
 
 filetoextract = "zip_10MB.zip"
@@ -26,7 +27,7 @@ Next we need to add the progress bar as this will just flash on the screen until
 
 In a simple example we can show how `tqdm` can be used. We will count to 10 and for the loop part of the loop, sleep 1 second. Otherwise it'll complete so fast you wont see the progress. For almost any for loop we can plug in the `tqdm` module to add some progress.
 
-{% highlight python %}
+{% highlight "python" %}
 import time
 from tqdm import tqdm
 
@@ -36,7 +37,7 @@ for i in tqdm(range(10), desc="Sleeping"):
 
 Back to our file extraction example we will update our `with` statement and loop over each file.
 
-{% highlight python %}
+{% highlight "python" %}
  with ZipFile(filetoextract,"r") as zip_ref:
      for file in tqdm(iterable=zip_ref.namelist(), total=len(zip_ref.namelist())):
           zip_ref.extract(member=file)

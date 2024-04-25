@@ -1,9 +1,10 @@
 ---
 title: How I Missed Gaming
-excerpt: I've gotten back into a few video games and I have missed video games and wanted to write about it
+description: I've gotten back into a few video games and I have missed video games and wanted to write about it
 tags: 
   - gaming
   - 100DaysToOffload
+date: 2023-03-02
 ---
 
 For as long as I can remember, I have played video games. Growing up I had some form of Nintendo device: GameBoy Pocket, GameBoy Color, GameBoy Advanced SP, GameCube, and finally Wii. 
@@ -15,7 +16,7 @@ This was fun while it lasted, but there's some newer games out too.
 
 Fast forward and we got a Nintendo Switch for the family. Of course had to get Mario Kart 8, and Sports. I love the flexibility the Switch has for the handheld, table, and docked mode. Brings the best of both worlds and makes playing games fun again. 
 
-![Zelda: Breath of the Wild on Nintendo Switch](/static/images/posts/gaming/zelda1.JPG)
+![Zelda: Breath of the Wild on Nintendo Switch](/assets/images/blog/gaming/zelda1.JPG)
 
 The game that brought me back more was The Legend of Zelda: Breath of the Wild. I know I'm late to the party, but it was on a super sale the other weekend and haven't put it down since. 
 
@@ -23,4 +24,4 @@ Gaming brings the whole family together for the night with fun and laughter too.
 
 What games do you enjoy playing? Try something new and have some fun!
 
-![Zelda: Breath of the Wild on Nintendo Switch](/static/images/posts/gaming/zelda2.JPG)
+![Zelda: Breath of the Wild on Nintendo Switch](/assets/images/blog/gaming/zelda2.JPG)

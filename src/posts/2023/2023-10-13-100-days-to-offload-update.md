@@ -1,6 +1,6 @@
 ---
 title: 100 Days to Offload Update
-excerpt: Quick update to the 100 Days to Offload Challenge
+description: Quick update to the 100 Days to Offload Challenge
 tags: 
   - personal
   - 100DaysToOffload
@@ -10,7 +10,7 @@ date: 2023-10-13
 
 Welcome to the 59th post! When I started this challenge earlier this year, it was a way to motivate me to share my thoughts and some coding experience along the way.
 
-I began writing about the things I’ve done to help myself and others. A few years ago, I started a website called [Useful Scripting Network](https://usefulscripting.network/), to share good examples and explain the code and what it does. After a while I was wanting to share the thoughts there along with my blog. I do have some [analytics](blog/the-good-side-of-analytics-umami-vercel/) on my website just to know what content is being read and what people like reading. I do have some pretty [popular posts](https://analytics.claytonerrington.com/share/9FNL88ifrvc1v0EY/claytonerrington.com) that always get hundreds of views a month, and it’s kinda cool.
+I began writing about the things I’ve done to help myself and others. A few years ago, I started a website called [Useful Scripting Network](https://usefulscripting.network/), to share good examples and explain the code and what it does. After a while I was wanting to share the thoughts there along with my blog. I do have some [analytics](/blog/the-good-side-of-analytics-umami-and-vercel/) on my website just to know what content is being read and what people like reading. I do have some pretty [popular posts](https://analytics.claytonerrington.com/share/9FNL88ifrvc1v0EY/claytonerrington.com) that always get hundreds of views a month, and it’s kinda cool.
 
 - [File dialog with PowerShell](/blog/file-dialog-with-powershell)
 - [PowerShell GUI with WPF](/blog/powershell-gui-with-wpf)

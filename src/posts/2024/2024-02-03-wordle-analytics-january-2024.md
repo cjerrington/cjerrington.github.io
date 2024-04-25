@@ -1,6 +1,6 @@
 ---
 title: Wordle Analytics - January 2024
-excerpt: The letter distribution for the Wordle for January 2024
+description: The letter distribution for the Wordle for January 2024
 tags: 
   - gaming
   - wordle

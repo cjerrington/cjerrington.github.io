@@ -1,6 +1,6 @@
 ---
 title: Powershell GUI with WPF
-excerpt: Sample way to make a GUI with Powershell and Visual Studio for Windows WPF applications
+description: Sample way to make a GUI with Powershell and Visual Studio for Windows WPF applications
 tags: 
   - coding
   - powershell
@@ -22,7 +22,7 @@ To get started we'll need a few things:
 
 After installng Microsoft Visual Studio, create a new WPF Application (.NET Framework) project. Then proceed with naming and saving your project. 
 
-![Creating a new project](/static/images/posts/psgui/NewProject.PNG)
+![Creating a new project](/assets/images/blog/psgui/NewProject.PNG)
 
 Now when we first see our new project window we can use the toolbar, which is defaulted to the left of the screen, to add our form elements and drag them around the window to place them where we want. 
 
@@ -30,7 +30,7 @@ Now when we first see our new project window we can use the toolbar, which is de
 
 For the example here I have a simple System Information window I am making. 
 
-![Full project screenshot](/static/images/posts/psgui/FullDesign.PNG)
+![Full project screenshot](/assets/images/blog/psgui/FullDesign.PNG)
 
 As you can see I have added a few labels and a text box area. The labels on the left I will leave as our identifying labels and the ones on the right will have the values added to them later. 
 
@@ -40,20 +40,20 @@ It will be okay to leave the default text of "label" here as it will be updated 
 
 Now that we have our design we need to build out our Powershell to load the XMAL code. Create a new Powershell file and add the `PresentationFramework` .NET assembly to the script so we can interact with the WPF object later.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Add-Type -AssemblyName PresentationFramework
 {% endhighlight %}
 
 Next we need to know where the XMAL file that contains the XML based layout of our GUI. This will be the `MainWindow.xaml` file of our project. 
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 # where is the XAML file?
 $xamlFile = "MainWindow.xaml"
 {% endhighlight %}
 
 Once the file is found the script will need to import the contents, parse the xaml and begin other .NET assembly imports as needed. 
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 #create window
 $inputXML = Get-Content $xamlFile -Raw
 $inputXML = $inputXML -replace 'mc:Ignorable="d"', '' -replace "x:N", 'N' -replace '^<Win.*', '<Window'
@@ -72,7 +72,7 @@ catch {
 
 After the imports are successful, we can generate the Powershell based variables based off the `Name` or `x:Name` attributes in the WPF applciation. The Variable will be named as `var_<control name>`.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 #Create variables based on form control names.
 #Variable will be named as 'var_<control name>'
 
@@ -91,7 +91,7 @@ Get-Variable var_*
 
 The `Get-Variable var_*` will then outpu to the screen the name of the variables it found in the XAML that we can now use in our Powershell script to modify and add context to. Only the labels with the `Name` attributes are found so we don't need to worry about the display labels being changed on the runtime.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 Name                           Value
 ----                           -----
 var_inpt_diskInfo              System.Windows.Controls.TextBox
@@ -102,13 +102,13 @@ var_lbl_Ram                    System.Windows.Controls.Label: Label
 
 Lastly, we need to tell Powershell to show the window for us. 
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 $Null = $window.ShowDialog()
 {% endhighlight %}
 
 You can now run the Powershell script and see the basics of what we created. 
 
-![Full project screenshot](/static/images/posts/psgui/FirstRun.PNG)
+![Full project screenshot](/assets/images/blog/psgui/FirstRun.PNG)
 
 ## Updating our GUI
 
@@ -116,7 +116,7 @@ Now that we have confirmed the variables we can use in our Powershell script let
 
 For updating our GUI elements we will use the same methods as we would for a C# application. For the labels we have today, we will use `.Content` to update the values. The `TextBox` does not have a `.Content` but rather than `.Text`. This example we will need to tell Powershell to make a string of the object we will create with the `Get-Volume` command. Other times you should be able to pass along plain text and have it render in the `TextBox`.
 
-{% highlight powershell %}
+{% highlight "powershell" %}
 # Do Work
 $totalRam = [Math]::Round((Get-CimInstance -Class win32_computersystem).TotalPhysicalMemory/1Gb)   
 $totalCPU = (Get-CimInstance –ClassName Win32_Processor).NumberOfLogicalProcessors
@@ -138,7 +138,7 @@ $var_inpt_diskInfo.Text = $Diskmgmt | Out-String
 
 Now that we have our simple script to know about the window elements and Powershell has imported and rendered things, we can now run the script and see the final result! 
 
-![Full project screenshot](/static/images/posts/psgui/FinalRun.PNG)
+![Full project screenshot](/assets/images/blog/psgui/FinalRun.PNG)
 
 This was a simple way to add a GUI using WPF to your Powershell scripts. There are many more and complex things you can do with these as well once you include buttons, checkboxes, and other GUI elemnts. Fun items like OnChange events are real powerful and fun to work with. 
 

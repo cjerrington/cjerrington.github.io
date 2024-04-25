@@ -1,0 +1,18 @@
+---
+title: Drafts
+description: draft
+layout: page
+eleventyExcludeFromCollections: true
+---
+
+<article class="region blog" style="--region-space-top: var(--space-xl-2xl)">
+  <div class="wrapper flow prose">
+    {% for item in collections.draft %}
+    <div class="card">
+        <h3 style="font-size:var(--size-step-2)">
+            <a href="{{ item.url }}" class="no-indicator" target="_blank">{{ item.data.title }}</a>
+        </h3>
+    </div> 
+    {% endfor %} 
+  </div>
+</article>

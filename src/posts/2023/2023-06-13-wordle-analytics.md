@@ -1,6 +1,6 @@
 ---
 title: Wordle Analytics
-excerpt: A review of the most common letters in the Wordle game
+description: A review of the most common letters in the Wordle game
 tags: 
   - coding
   - gaming
@@ -13,7 +13,7 @@ I have been playing the Wordle for 289 times according to the stats the game giv
 
 Recently I found the Wordle not only provides your guess distribution, but shows you if you could be the bot. This goes through a random sample of words and the guess distirbution of your guesses until you reach the final answer and how close you might be to others to get the "fastest" solution. Having this kind of result if fun when we have hard words and seeing how one guess leads you to the solution, and possible words to reach that goal.
 
-![Wordle Analytics](/static/images/posts/wordle-analytics.png)
+![Wordle Analytics](/assets/images/blog/wordle-analytics.png)
 
 What I was interested in was the letter distribution over the month, then talley it up at the end of the month and year. I choose to use Python to help work with the kind of data sample I have. I was able to find a few sites that keep track of the previous answers for a historical reference probably for friends and family to recall what the word was since it refreshes each day.
 
@@ -48,7 +48,7 @@ So how does the Wordle stack up with this?
 
 I thought sorting the results by the order of the alphabet would be the most appropriate when figuring out which letters might not be used. How does this get calculated? Python has a collections module and from there the data processing begins.
 
-{% highlight python %}
+{% highlight "python" %}
 def main(wordledate):
   # the main function to process the words used in the wordle by date files
   
@@ -75,4 +75,4 @@ def main(wordledate):
 
 I was thinking of posting these kinds of results on my website and also online over time. Follow along for more and we'll see how this changes from month to month!
 
-![Wordle Analytics](/static/images/posts/wordle-stats.png)
+![Wordle Analytics](/assets/images/blog/wordle-stats.png)
