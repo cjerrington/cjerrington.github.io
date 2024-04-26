@@ -2,6 +2,7 @@ node_modules/
 .vscode
 _site/
 build/
+dist/
 ssl/
 # Local Netlify folder
 .netlify

@@ -1,6 +1,7 @@
 ---
 title: Powershell GUI with WPF
 description: Sample way to make a GUI with Powershell and Visual Studio for Windows WPF applications
+date: 2023-05-29
 tags: 
   - coding
   - powershell
