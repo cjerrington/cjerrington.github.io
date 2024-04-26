@@ -16,7 +16,7 @@ I have taken a look at the past few days of tasks and either was not sure how or
 
 We have the following example of data to start with, a card with its winning numbers and my played numbers.
 
-```
+```text
 Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
 Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
 Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
@@ -64,6 +64,6 @@ print(result)
 
 ## Part 2
 
-It took me awhile on the first part, and understanding of what was needed in part 2, that I'll stick with just the one star for the day and if I have time go back to part 2. 
+It took me awhile on the first part, and understanding of what was needed in part 2, that I'll stick with just the one star for the day and if I have time go back to part 2.
 
-Still fun to try what you can and tag along in a coding challenge. 
+Still fun to try what you can and tag along in a coding challenge.

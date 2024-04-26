@@ -1,8 +1,8 @@
 ---
 title: My Linux Journey
-description: 'Everyone has a journey, here''s mine'
+description: Everyone has a journey, here's mine
 draft: false
-date: '2023-10-20T00:00:00.000Z'
+date: 2023-10-20T00:00:00.000Z
 tags:
   - linux
   - 100DaysToOffload

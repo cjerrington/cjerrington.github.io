@@ -1,6 +1,7 @@
 ---
 _schema: default
 title: Installing Node.js on Fedora
+date: 2023-09-15
 description: How to properly install Node.js on Fedora 38
 tags: 
     - 100DaysToOffload

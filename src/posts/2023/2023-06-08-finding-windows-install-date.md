@@ -1,5 +1,6 @@
 ---
 title: Finding your Windows Install Date
+date: 2023-06-08
 description: Did you ever need to find when you installed your operating system? Check out the many ways to check your system.
 tags: 
   - powershell
@@ -38,7 +39,7 @@ Get-Date -UnixTimeSeconds $installdate
 
 ## Using systeminfo
 
-Windows has had the `systeminfo` command that has always been in the operating system that is gathers a bunch of information that is beneficial for many reasons. You can run the following either in Powershell or command promt and the pipe command we can then `find` and serach for the text we want from the output. 
+Windows has had the `systeminfo` command that has always been in the operating system that is gathers a bunch of information that is beneficial for many reasons. You can run the following either in Powershell or command promt and the pipe command we can then `find` and search for the text we want from the output.
 
 {% highlight "shell" %}
 systeminfo | find "Install Date"

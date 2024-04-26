@@ -1,5 +1,6 @@
 ---
 title: Boto3 cross regions for AWS Lambda Functions
+date: 2023-09-26
 description: Using Python and boto3 for AWS management across regions
 tags: 
   - aws

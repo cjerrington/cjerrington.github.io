@@ -1,5 +1,6 @@
 ---
 title: Building a Blogroll with 11ty
+date: 2023-09-24
 description: How I created a blogroll with 11ty based off of Ben Myers solution
 tags: 
   - 11ty
@@ -37,4 +38,4 @@ const src = `https://v1.indieweb-avatar.11ty.dev/${encodedBlogUrl}/`;
 
 You can see the files specifically used for the blogroll creation in this [git commit fc18ed5](https://github.com/cjerrington/cjerrington.github.io/commit/fc18ed51f714f024081b6d9846a1872310e17c7c). Check out my [blogroll](/blogroll) to see some of the sites that I follow and read too. I'd like to create one for podcasts as well. 
 
-If you'd like to be addded let me know! There are a few more to add for sure.
+If you'd like to be added let me know! There are a few more to add for sure.

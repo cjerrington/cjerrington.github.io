@@ -9,7 +9,7 @@ draft: false
 date: 2023-10-03
 ---
 
-I needed a quick way to create a test file of various sizes and filenames. This was handy when needing to create test files for a certain file manipulation script and didn't want to use real files in the process, or have files of various sizes. Today, I'd like to share this snippet wtih you. 
+I needed a quick way to create a test file of various sizes and filenames. This was handy when needing to create test files for a certain file manipulation script and didn't want to use real files in the process, or have files of various sizes. Today, I'd like to share this snippet wtih you.
 
 {% highlight "powershell" %}
 function Create-TestFile {
@@ -57,7 +57,6 @@ What is great about this is the ability to set the `filepath`, `filename`, and t
 Create-TestFile -filePath "C:\TEMP" -fileSize 1000MB
 
 Created the following temp file:
-
 
 FullName      : C:\TEMP\yeu0hhbb.iw4
 DirectoryName : C:\TEMP

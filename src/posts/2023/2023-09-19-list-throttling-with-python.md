@@ -1,5 +1,6 @@
 ---
 title: List Throttling with Python
+date: 2023-09-19
 description: How to break up and chunk a large list in Python and process it
 tags: 
   - aws
@@ -40,7 +41,7 @@ The `range()` function returns a sequence of numbers, starting from 0 by default
 range(start, stop, step)
 {% endhighlight %}
 
-## Range Paramerters
+## Range Parameters
 
 Parameter | Description |
 ---|---|

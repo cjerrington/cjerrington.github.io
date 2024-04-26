@@ -1,6 +1,7 @@
 ---
 _schema: default
 title: Migrating GPG keys to a new machine
+date: 2023-09-16
 description: How to migrate your GPG keys to a new machine
 tags: 
     - 100DaysToOffload
@@ -62,7 +63,7 @@ Please decide how far you trust this user to correctly verify other users' keys
   5 = I trust ultimately
   m = back to the main menu
 
-Your decision? 
+Your decision?
 
 gpg> save
 {% endhighlight %}

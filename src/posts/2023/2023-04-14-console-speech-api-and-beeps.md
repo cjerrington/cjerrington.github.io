@@ -4,6 +4,7 @@ description: How to make your computer talk with you using the .NET Speech assem
 tags: 
   - powershell
   - 100DaysToOffload
+date: 2023-04-14
 ---
 
 I remember when Windows 95 had the command prompt text to speech and would sit and have Microsoft Sam talk and tell jokes. Text to speech is not a new thing and actually quite common and useful. It can help with the visual impaired, part of a script used for directions, and just for fun!

@@ -84,7 +84,7 @@ https://download.microsoft.com/download/6/2/6/626e40a7-449e-418d-9726-33b523a1e3
 SSMS-Setup-ENU.exe
 ```
 
-The output currently returns the filename of the file, but we can also see the AbsoluteUri is echoed to the termainal as well for verification, $fUri.AbsoluteUri. I could update the return of the Expand-Url with a [PSCustomObject](/blog/using-pscustomobjects/).
+The output currently returns the filename of the file, but we can also see the AbsoluteUri is echoed to the terminal as well for verification, $fUri.AbsoluteUri. I could update the return of the Expand-Url with a [PSCustomObject](/blog/using-pscustomobjects/).
 
 ```powershell
 function Expand-URL{

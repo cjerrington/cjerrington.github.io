@@ -1,5 +1,6 @@
 ---
 title: Ubuntu's change with Python support
+date: 2023-05-02
 description: Discussing Python package manager PIP and recent changes Ubuntu has taken
 tags:
   - python
@@ -23,7 +24,7 @@ From the abstract of the PEP itself says it best:
 
 > It also standardizes an interpretation of the `sysconfig` schemes so that, if a Python-specific package manager is about to install a package in an interpreter-wide context, it can do so in a manner that will avoid conflicting with the external package manager and reduces the risk of breaking software shipped by the external package manager.>
 
-On many Linux distributions like: Ubuntu, Fedora, and Linux Mint, Python has a huge part of how the operating system functions and operates. For many years Python 2.7 was the only supported version of Python since so many Linux distributions still relied on it on the OS level. More Python development has improved in [Python 3.11](https://www.python.org/downloads/) now. 
+On many Linux distributions like: Ubuntu, Fedora, and Linux Mint, Python has a huge part of how the operating system functions and operates. For many years Python 2.7 was the only supported version of Python since so many Linux distributions still relied on it on the OS level. More Python development has improved in [Python 3.11](https://www.python.org/downloads/) now.
 
 What makes Python great is the user community that has such a great input on how the language evolves. Many PEPs have been introduced and the community helps pitch in ideas and ways to adopt them.
 

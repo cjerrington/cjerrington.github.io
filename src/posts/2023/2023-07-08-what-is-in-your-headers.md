@@ -1,5 +1,6 @@
 ---
 title: What is in Your Headers?
+date: 2023-07-08
 description: Understanding the Headers your web server returns
 tags: 
   - web design

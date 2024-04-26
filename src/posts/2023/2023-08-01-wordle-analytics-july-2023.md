@@ -1,5 +1,6 @@
 ---
 title: Wordle Analytics - July 2023
+date: 2023-08-01
 description: The letter distribution for the Wordle for July 2023.
 tags: 
   - wordle

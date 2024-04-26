@@ -18,8 +18,8 @@ Currently users need early adopter access to Codeberg's CI environment based on 
 
 This process will make use of the following
 
-- Source repo to contain the source code 
-- Destination repo that will be used to serve the pages 
+- Source repo to contain the source code
+- Destination repo that will be used to serve the pages
 - Codeberg CI (early access)
 - Secrets within the CI
 

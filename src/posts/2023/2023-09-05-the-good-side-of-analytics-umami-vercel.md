@@ -1,6 +1,7 @@
 ---
 _schema: default
 title: The Good Side of Analytics - Umami & Vercel
+date: 2023-09-05
 description: The term analytics has gotten a bad name recently, but not all of it is bad.
 tags:
   - 100DaysToOffload
@@ -45,8 +46,8 @@ After creating the database in step 4, I would clone your forked repository of t
 Then run:
 
 {% highlight "shell" %}
-yarn install 
-yarn build 
+yarn install
+yarn build
 {% endhighlight %}
 
 This will create the database and ensure the connection is made. Then once the database build is complete, run your deployment to Vercel and build the app front end. This will create the basic `<deploy-id>.vercel.app` domain. You can leave it here if you'd like.

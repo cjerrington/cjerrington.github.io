@@ -1,6 +1,7 @@
 ---
 _schema: default
 title: CloudCannon + Eleventy
+date: 2023-09-06
 description: Getting CloudCannon setup with your Eleventy project is easier than you think
 tags: 
   - 100DaysToOffload
@@ -73,7 +74,7 @@ Template file that is used for a new post
 ---
 title: ""
 description: ""
-tags: 
+tags:
 draft: true
 ---
 {% endhighlight %}

@@ -1,5 +1,6 @@
 ---
 title: Mapping the internet
+date: 2023-06-28
 description: How to map out the IP trace of a domain with PowerShell and IP Geo Location services
 tags: 
   - powershell

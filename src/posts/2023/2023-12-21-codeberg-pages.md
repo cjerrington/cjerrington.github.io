@@ -71,7 +71,7 @@ Since Woodpecker is using a source repository, it is already downloading the sou
 
 Codeberg has a default user Pages repository, which is a default repository for each user. However, each repository can have its own pages branch for that project's static hosted files.
 
-According to [Codeberg Pages,]() I set up a CNAME and added a `.domains` file in my pages branch. After some time to allow for Codeberg to set up the static pages route and issues an SSL certificate, the web page worked!
+According to [Codeberg Pages](https://codeberg.page/) I set up a CNAME and added a `.domains` file in my pages branch. After some time to allow for Codeberg to set up the static pages route and issues an SSL certificate, the web page worked!
 
 ```powershell
 $ Resolve-DnsName -Name dadjokes.claytonerrington.com | Select Name,Type,NameHost,IPAddress

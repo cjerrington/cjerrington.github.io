@@ -1,6 +1,7 @@
 ---
 _schema: default
 title: Manage AWS Instances
+date: 2023-08-31
 description: Using the AWS CLI to manage your AWS EC2 Instances in a quick and easy way
 tags:
   - 100DaysToOffload

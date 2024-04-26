@@ -5,11 +5,12 @@ tags:
   - 11ty
   - web design
   - 100DaysToOffload
+date: 2023-01-31
 ---
 
-As I write more for the [100DaysToOffload](/100DaysToOffload/), I like to post on my social media the post number. I also made this page for myself to review the posts I've written, and post counts. Initially I did not have this added on this page, but it is on my [tags](/tags/) page where I list the tag and the number of posts in it. 
+As I write more for the [100DaysToOffload](/100DaysToOffload/), I like to post on my social media the post number. I also made this page for myself to review the posts I've written, and post counts. Initially I did not have this added on this page, but it is on my [tags](/tags/) page where I list the tag and the number of posts in it.
 
-On my tags page, it uses an eleventy filter of the collection of all posts, and adds this information to the collection. Then on the tags page do a for loop to loop through all the tags and post counts with [Nunjucks](https://mozilla.github.io/nunjucks/). 
+On my tags page, it uses an eleventy filter of the collection of all posts, and adds this information to the collection. Then on the tags page do a for loop to loop through all the tags and post counts with [Nunjucks](https://mozilla.github.io/nunjucks/).
 
 {% highlight "js" %}
 config.addCollection("tagList", collection => {
@@ -44,7 +45,7 @@ config.addCollection("offload", function(collectionApi) {
 });
 {% endhighlight %}
 
-So now on my page specificly for the 100DaysToOffload, we can do a for loop to display just the posts in this collection. 
+So now on my page specificly for the 100DaysToOffload, we can do a for loop to display just the posts in this collection.
 
 {% highlight "js" %}
 {% for post in collections.offload %}
@@ -52,7 +53,7 @@ So now on my page specificly for the 100DaysToOffload, we can do a for loop to d
 {% endfor %}
 {% endhighlight %}
 
-This solution does not have a built in way to get the tag count. So I found two solutions that work in this situatution. 
+This solution does not have a built in way to get the tag count. So I found two solutions that work in this situation.
 
 ## Solution 1
 

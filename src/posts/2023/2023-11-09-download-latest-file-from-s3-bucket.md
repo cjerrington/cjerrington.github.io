@@ -11,14 +11,14 @@ size: wide
 ---
 
 
-AWS S3 is a great way to store files and since SQL 2022 allows you to send your backups straight to S3. 
+AWS S3 is a great way to store files and since SQL 2022 allows you to send your backups straight to S3.
 
 * [Microsoft Documentation](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage?view=sql-server-ver16)
 * [AWS Documentation](https://aws.amazon.com/blogs/modernizing-with-aws/backup-sql-server-to-amazon-s3/)
 
-What I was looking into was a way to download the latest SQL backup from S3 while using the [Ola Hallengren SQL Maintenance Solutions](https://ola.hallengren.com/sql-server-backup.html) but needed to implement the changes in the currently waiting [pull request #714](https://github.com/olahallengren/sql-server-maintenance-solution/pull/714). 
+What I was looking into was a way to download the latest SQL backup from S3 while using the [Ola Hallengren SQL Maintenance Solutions](https://ola.hallengren.com/sql-server-backup.html) but needed to implement the changes in the currently waiting [pull request #714](https://github.com/olahallengren/sql-server-maintenance-solution/pull/714).
 
-Next, I could use the AWS CLI to [list](https://docs.aws.amazon.com/cli/latest/reference/s3/) the files for the S3 bucket. The Ola maintenance plans create a set of subfolders and a good structure to create an array of our databases loop through them. 
+Next, I could use the AWS CLI to [list](https://docs.aws.amazon.com/cli/latest/reference/s3/) the files for the S3 bucket. The Ola maintenance plans create a set of subfolders and a good structure to create an array of our databases loop through them.
 
 I set up the base path including the database name in the path, then what I noticed is the aws s3 ls command outputs a text based result, and does not take the additional outputs like json or table. With the result, we can actually sort the output and then select the last result. After I was able to get the last result, I can build the full path of the file to then run aws s3 cp  process to download the files to the system.
 

@@ -1,5 +1,6 @@
 ---
 title: Scheduling Automatic Builds with Static Site Generators
+date: 2023-09-28
 description: Having a static site is great, but there could be times where you need to build your site on a schedule.
 tags:
   - 11ty
@@ -70,7 +71,7 @@ Resources:
 
 - [Github Action Quickstart](https://docs.github.com/en/actions/quickstart)
 - [Netlify Build Hooks](https://docs.netlify.com/configure-builds/build-hooks/)
-- [Vervel Deploy Hooks](https://vercel.com/docs/concepts/git/deploy-hooks)
+- [Vercel Deploy Hooks](https://vercel.com/docs/concepts/git/deploy-hooks)
 - [Render Deploy Hooks](https://render.com/docs/deploy-hooks)
 - [Free cron schedule editor](https://crontab.guru/#0_9_*_*_*)
 - [Getting into cron jobs](/blog/getting-into-cron-jobs/)

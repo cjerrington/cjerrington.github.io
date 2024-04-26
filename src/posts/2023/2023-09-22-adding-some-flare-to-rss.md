@@ -1,5 +1,6 @@
 ---
 title: Adding some flare to RSS
+date: 2023-09-22
 description: RSS is still a great way to subscribe to content, so why not add some style to it?
 tags: 
   - web design

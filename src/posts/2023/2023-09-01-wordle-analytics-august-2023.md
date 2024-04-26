@@ -1,6 +1,7 @@
 ---
 _schema: default
 title: Wordle Analytics - August 2023
+date: 2023-09-01
 description: The letter distribution for the Wordle for August 2023.
 tags: 
   - 100DaysToOffload

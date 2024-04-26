@@ -125,7 +125,7 @@ The status symbols are as followed:
 
 From here I can see that my blog repo has locally modified files and also has files I can pull from the remote as well. My website repository has untracked files that are needing to be added to git to then be synced with the remote repository. Once the `git add filename.txt` is done, the `?` will change to `+` since now the files are added to git.
 
-I went a step further and added CmdletBinding to the script since I would like to add this to my [profile ](/blog/create-powershell-profile/)and be able to specify a specific folder as well as the multiple directories.
+I went a step further and added CmdletBinding to the script since I would like to add this to my [profile](/blog/create-powershell-profile/)and be able to specify a specific folder as well as the multiple directories.
 
 ```powershell
 [CmdletBinding()]

@@ -9,9 +9,9 @@ tags:
   - windows
 ---
 
-Not too long ago, I was working on a report of some data from some logon scripts. Part of what we were needing was the server name a logon script had in it to map a network drive. It was easy enough to get all the batch files and then read the file for the contents. 
+Not too long ago, I was working on a report of some data from some logon scripts. Part of what we were needing was the server name a logon script had in it to map a network drive. It was easy enough to get all the batch files and then read the file for the contents.
 
-I was able to use Select-String and specify a pattern to use against the file. Then for each match we can set that to a new variable and have just the UNC path. 
+I was able to use Select-String and specify a pattern to use against the file. Then for each match we can set that to a new variable and have just the UNC path.
 
 First, we need a file UNC path to look for. We'll use the following.
 
@@ -25,7 +25,7 @@ Next we need to use Select-String and use a pattern, and regex in our case today
 $pattern = '\\\\[a-zA-Z0-9\.\-_]{1,}(\\[a-zA-Z0-9\-_]{1,}){1,}[\$]{0,1}'
 ```
 
-This pattern looks for the double backslashes, anything a-z, A-Z, and 0-9. Also allowing the . for a fully qualified hostname in the path, and finally the \ in the path. 
+This pattern looks for the double backslashes, anything a-z, A-Z, and 0-9. Also allowing the . for a fully qualified hostname in the path, and finally the \ in the path.
 
 Now we need to put it all together.
 

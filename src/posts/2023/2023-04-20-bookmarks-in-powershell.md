@@ -1,5 +1,6 @@
 ---
 title: Bookmarks in PowerShell
+date: 2023-04-20
 description: Setting bookmark locations within the PowerShell console and quickly move into them
 tags: 
   - automation

@@ -54,6 +54,14 @@ Some visitors may find it nice to see there is limited JavaScript on the website
 
 My RSS readers may also find that I was able to update the [Reply by email](/blog/adding-reply-by-email/) in the RSS content now.
 
+One other item I really wanted was to do a quick dead link check. It's been a while since I've wrote some of the posts and to ensure with all the changes, my internal and external links continue to work. Recently I seen where good URLs don't change and [this project](https://4042302.org/) is a good example. While Vercel uas a `_redirects` or `vercel.json` you can have a few setup, I didn't want my entire structure to change.
+
+With the help of a little Python I could write up a quick `deadlinks.py` script and was able to ensure all the links on my pages are still resolvable. Feel free to use this as well, it gets the job done.
+
+During this process I was able to do some spell check and fix those errors.
+
 ## Things still needed
 
 I have used the search feature of my website myself a lot. Nothing like reading your own posts to work on your next project. I could reuse the [search process](/blog/adding-a-basic-search/) I had, but might look at a few additional [search methods](https://11tybundle.dev/categories/search/).
+
+I've looked at many pages to ensure I have a complete build, but need to look at each page to make sure there's no other odd rendered posts.

@@ -8,7 +8,7 @@ draft: false
 date: 2023-10-16
 ---
 
-After downloading the latest [Ubuntu Desktop 23.10.1](https://ubuntu.com/download/desktop) we want to verify the ISO for it's authenticity. On the "Thank you page" there is a link to [verify your download](https://ubuntu.com/download/desktop/thank-you?version=23.10.1&architecture=amd64#), but only has instructions to verify on a Linux OS. For Windows, the assume you're already using WSL, and do dont directly show you where the checksum file is to download for the verification.
+After downloading the latest [Ubuntu Desktop 23.10.1](https://ubuntu.com/download/desktop) we want to verify the ISO for it's authenticity. On the "Thank you page" there is a link to [verify your download](https://ubuntu.com/download/desktop/thank-you?version=23.10.1&architecture=amd64#), but only has instructions to verify on a Linux OS. For Windows, the assume you're already using WSL, and do don't directly show you where the checksum file is to download for the verification.
 
 On a Linux machine you can run the following:
 

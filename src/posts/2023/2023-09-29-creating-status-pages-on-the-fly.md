@@ -1,5 +1,6 @@
 ---
 title: Creating Status Pages on the Fly
+date: 2023-09-29
 description: Monitoring uptime and status pages on Fly.io with Kuma
 tags: 
   - docker
@@ -11,7 +12,7 @@ size: wide
 
 Monitoring uptime and status pages on Fly.io with Kuma. Earlier this year I wanted to get more knowledge of Docker, and I have made some good progress on that goal.
 
-From my previous posts on [Docker](/tags/docker), I've gotten a good understanding of Docker and a few applications running that I use regularly. One of the issues I had was how to acess my applications from outside my home network. Some of the applications I was okay with being private at home, but how do I host a Docker application to access it when I'm not there? Introducing [Fly.io](https://fly.io)!
+From my previous posts on [Docker](/tags/docker), I've gotten a good understanding of Docker and a few applications running that I use regularly. One of the issues I had was how to access my applications from outside my home network. Some of the applications I was okay with being private at home, but how do I host a Docker application to access it when I'm not there? Introducing [Fly.io](https://fly.io)!
 
 ## Getting started
 

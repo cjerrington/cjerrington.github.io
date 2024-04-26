@@ -1,5 +1,6 @@
 ---
 title: Wordle Analytics
+date: 2023-06-13
 description: A review of the most common letters in the Wordle game
 tags: 
   - coding
@@ -11,7 +12,7 @@ tags:
 
 I have been playing the Wordle for 289 times according to the stats the game gives you along with your guess distribution. The Wordle is a game from the [NY Times](https://www.nytimes.com/games/wordle/index.html). This is a game I share with some people and also post to my [social media](https://mstdn.social/tags/Wordle) as well as a way to compare and compete in a way with friends, family, and others around you.
 
-Recently I found the Wordle not only provides your guess distribution, but shows you if you could be the bot. This goes through a random sample of words and the guess distirbution of your guesses until you reach the final answer and how close you might be to others to get the "fastest" solution. Having this kind of result if fun when we have hard words and seeing how one guess leads you to the solution, and possible words to reach that goal.
+Recently I found the Wordle not only provides your guess distribution, but shows you if you could be the bot. This goes through a random sample of words and the guess distribution of your guesses until you reach the final answer and how close you might be to others to get the "fastest" solution. Having this kind of result if fun when we have hard words and seeing how one guess leads you to the solution, and possible words to reach that goal.
 
 ![Wordle Analytics](/assets/images/blog/wordle-analytics.png)
 
@@ -64,7 +65,7 @@ def main(wordledate):
   total = sum(collection.values())
 
   # calculate the date and update based on the leading 0 of the file/month name
-  mydate = datetime.strptime(wordledate, "% | m").strftime("% | B") 
+  mydate = datetime.strptime(wordledate, "% | m").strftime("% | B")
   print(f"For the month of {mydate}, {len(collection)} letters used of the alphabet")
 
   # Loop over the items in the collection and calculate the percent
