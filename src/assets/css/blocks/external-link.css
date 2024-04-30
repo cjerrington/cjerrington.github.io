@@ -1,13 +1,13 @@
 article
   [href^='http']:not([href*='localhost:8080']):not(
-    [href*='eleventy-excellent.netlify.app']
+    [href*='claytonerrington.com']
   ):not(.button) {
   padding-inline-end: 0.8em;
 }
 
 article
   [href^='http']:not([href*='localhost:8080']):not(
-    [href*='eleventy-excellent.netlify.app']
+    [href*='claytonerrington.com']
   ):not(.no-indicator)::after {
   position: absolute;
   display: inline-block;

@@ -1,7 +1,7 @@
 ---
 title: Website redesign and update
 description: Same website, new design
-date: 2024-04-26T06:00:00.000Z
+date: 2024-04-29 
 tags:
   - web design
 ---
@@ -18,7 +18,39 @@ One of the things I looked at was how to move my rendering from just markdown fo
 
 Since the Eleventy rendering of my `codeblocks` is different in markdown from nunjucks I needed to find a way to edit the 100+ posts I have written over the years. Also, this template used `description` where I used `excerpt` previously. This could have been changed in the `post.njk` template, but if I wanted to update anything later on from Lene, this would cause a problem again.
 
-Good thing my Linux terminal made this easy for me. I needed to edit every file and update the code blocks.
+Good thing the Linux terminal made this easy for me. I needed to edit every file and update the code blocks. First, I used `grep` to get the output of the types of coding blocks I used. 
+
+{% raw %}
+
+```shell
+grep -h "{% highlight" ./* | sort -u
+```
+
+{% endraw %}
+
+That gave me the following, then I could update each file with one command. 
+
+{% raw %}
+
+```text 
+{% highlight bash %}
+{% highlight batch %}
+{% highlight html %}
+{% highlight javascript %}
+{% highlight js %}
+{% highlight powershell %}
+{% highlight python %}
+{% highlight shell %}
+{% highlight text %}
+{% highlight toml %}
+{% highlight xml %}
+{% highlight yaml %}
+{% highlight yml %}
+```
+
+{% endraw %}
+
+Now I needed to change each of these: 
 
 {% raw %}
 
@@ -32,11 +64,17 @@ Good thing my Linux terminal made this easy for me. I needed to edit every file 
 
 {% endraw %}
 
-Yes, needed to add `"` around the language of the highlight tag. I was able to make use of the `find` and `sed` command to look for all files in the directory to do a find and replace. Since most of my posts had a code block, I needed a quick and easy way to update these.
+Yes, needed to add `"` around the language of the highlight tag. I was able to make use of the `find` and `sed` command to look for all files in the directory to do a find and replace. Since most of my posts had a code block, I needed a quick and easy way to update these. I used this same process to mass update a few other items about the way the blog posts were written.
+
+{% raw %}
 
 ```shell
-find . 
+find ./ -type f -exec sed -i 's/{% highlight bash %}/{% highlight "bash" %}/gI' {} \; 
+
+find ./ -type f -exec sed -i 's/excerpt:/description:/gI' {} \; 
 ```
+
+{% endraw %}
 
 ## Some improvements
 
@@ -65,3 +103,16 @@ During this process I was able to do some spell check and fix those errors.
 I have used the search feature of my website myself a lot. Nothing like reading your own posts to work on your next project. I could reuse the [search process](/blog/adding-a-basic-search/) I had, but might look at a few additional [search methods](https://11tybundle.dev/categories/search/).
 
 I've looked at many pages to ensure I have a complete build, but need to look at each page to make sure there's no other odd rendered posts.
+
+My RSS feed should remain the same, but I'd like to [format my RSS feed](/blog/adding-some-flare-to-rss/) again in the browser view. 
+
+### Closing Thoughts
+
+I've enjoyed using Eleventy as it has been able to take a variety of things thrown at it in different ways and still be able to create great pages.
+
+Other honorable mentions:
+
+- [11ty](https://www.11ty.dev/) - 11ty website
+- [11ty Dev Bundle](https://11tybundle.dev/) - Big book of 11ty resources
+- [Excellent Eleventy](https://eleventy-excellent.netlify.app/) - Starter website template
+- [Bliss](https://eleventy-bliss.lkmt.us/) - Starter website template
