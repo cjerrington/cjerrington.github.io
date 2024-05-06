@@ -9,7 +9,11 @@
     >
       {% include "svg/star.svg" %}
       <span>{{ meta.siteName }}</span>
+      {% if meta.env == 'dev' %}
+      [DEV]
+      {% endif %}
     </a>
+    
     {% include "partials/main-nav.njk" %}
   </div>
 </header>

@@ -28,8 +28,10 @@
       {{ jsthemetoggle | jsmin | safe }}
     </script>
 
+    {% if meta.env == 'production' -%}
     <script defer src="https://analytics.claytonerrington.com/script.js" data-website-id="12846363-c5b7-49de-9b4b-7c922b693225"></script>
-    
+    {%- endif %}
+
     <!--  inline base schema -->
     {% include "schemas/base-schema.njk" %}
 

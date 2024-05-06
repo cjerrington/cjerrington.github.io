@@ -2,6 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   url: process.env.URL || 'https://claytonerrington.com',
+  env: process.env.NODE_ENV,
   siteName: 'Clayton Errington',
   siteDescription:
     'Specialized web designer and software developer',
