@@ -63,7 +63,7 @@
     "prettier-plugin-jinja-template": "^1.4.0",
     "rimraf": "^5.0.0",
     "rss-parser": "^3.13.0",
-    "sanitize-html": "^2.7.2",
+    "sanitize-html": "^2.13.0",
     "slugify": "^1.6.5"
   }
 }
