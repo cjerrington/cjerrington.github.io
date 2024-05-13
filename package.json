@@ -36,7 +36,7 @@
     "@toycode/markdown-it-class": "^1.2.4",
     "autoprefixer": "^10.4.13",
     "clean-css": "^5.3.3",
-    "cssnano": "^6.0.0",
+    "cssnano": "^7.0.1",
     "dayjs": "^1.11.11",
     "dotenv": "^16.4.5",
     "esbuild": "^0.20.2",
