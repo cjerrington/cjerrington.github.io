@@ -61,7 +61,7 @@
     "postcss-import-ext-glob": "^2.0.1",
     "postcss-js": "^4.0.0",
     "prettier-plugin-jinja-template": "^1.4.0",
-    "rimraf": "^5.0.0",
+    "rimraf": "^5.0.7",
     "rss-parser": "^3.13.0",
     "sanitize-html": "^2.13.0",
     "slugify": "^1.6.5"
