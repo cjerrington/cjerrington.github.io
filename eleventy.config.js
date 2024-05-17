@@ -116,7 +116,7 @@ module.exports = eleventyConfig => {
     collection.getFilteredByTag("100DaysToOffload").forEach(item => {
       if (!item.data.tags) return;
       item.data.tags
-        .filter(tag => !['post', 'all'].includes(tag))
+        .filter(tag => !['posts', 'all'].includes(tag))
         .forEach(tag => {
           if(typeof tagsObject[tag] === 'undefined') {
             tagsObject[tag] = 1
