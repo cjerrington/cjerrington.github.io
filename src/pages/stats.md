@@ -5,7 +5,7 @@ description: Website Stats
 layout: page
 ---
 
-## Total Blog Stats from last {{ 2024-2015 }} years
+## Blog Stats from last {{ currentYear - 2015 }} years
 
 There are {{ collections.posts.length }} posts of all time across {{ collections.tagList2023.length }} tags
 
@@ -15,4 +15,4 @@ There are {{ collections.posts.length }} posts of all time across {{ collections
 {% endfor %}
 </ul>
 
-{% postGraph collections.posts, { sort: 'desc' }  %}  
+{% postGraph collections.posts, { sort: 'desc' }  %}

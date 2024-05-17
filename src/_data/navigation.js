@@ -29,6 +29,10 @@ module.exports = {
     {
       text: 'Proofs',
       url: 'https://keyoxide.org/22a87774a7342fe3df25e15d08528e69b3b9ca3e'
+    },
+    {
+      text: 'Stats',
+      url: '/stats/'
     }
   ]
 };
