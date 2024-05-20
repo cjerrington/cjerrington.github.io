@@ -34,7 +34,7 @@
   "devDependencies": {
     "@csstools/postcss-relative-color-syntax": "^2.0.16",
     "@toycode/markdown-it-class": "^1.2.4",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.19",
     "clean-css": "^5.3.3",
     "cssnano": "^7.0.1",
     "dayjs": "^1.11.11",
