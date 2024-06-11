@@ -1,5 +1,5 @@
 {
-  "layout": "post",
+  "layout": "poems",
   "tags": "poems",
   "permalink": "/poems/{{ page.fileSlug }}/index.html"
 }
