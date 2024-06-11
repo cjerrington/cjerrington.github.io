@@ -14,11 +14,9 @@ module.exports = async function () {
           "username": `${process.env.UMAMI_ANALYTICS_USER}`,
           "password": `${process.env.UMAMI_ANALYTICS_PASS}`
         })
-      })
-      .then( ( response) => { 
+    }).then( ( response) => { 
         return response.json();
-      }).then(function(data){
-        
+    }).then(function(data){
         //do something awesome that makes the world a better place
         return data.token
     });
@@ -30,8 +28,8 @@ module.exports = async function () {
 
 	/* This returns a promise */
 	return EleventyFetch(url, {
-		duration: "1d", // save for 1 day
-		type: "json", // we’ll parse JSON for you
+        duration: "1d", // save for 1 day
+        type: "json", // we’ll parse JSON for you
         fetchOptions: {
             headers: { Authorization: `Bearer ${token}` },
         }
