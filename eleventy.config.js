@@ -21,7 +21,8 @@ const {
   stripHtml,
   minifyCss,
   minifyJs,
-  splitlines
+  splitlines,
+  limit
 } = require('./config/filters/index.js');
 
 const _ = require("lodash");
@@ -70,8 +71,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('stripHtml', stripHtml);
   //eleventyConfig.addFilter('slugify', slugifyString);
   eleventyConfig.addFilter('splitlines', splitlines);
-
   eleventyConfig.addFilter('cssmin', minifyCss);
+
   eleventyConfig.addNunjucksAsyncFilter('jsmin', minifyJs);
 
   eleventyConfig.addFilter('toJson', JSON.stringify);
@@ -80,6 +81,10 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('keys', Object.keys);
   eleventyConfig.addFilter('values', Object.values);
   eleventyConfig.addFilter('entries', Object.entries);
+
+  eleventyConfig.addFilter("limit", function (arr, limit) {
+    return arr.slice(0, limit);
+  });
 
   // 	--------------------- Custom shortcodes ---------------------
   eleventyConfig.addNunjucksAsyncShortcode('eleventyImage', imageShortcode);
