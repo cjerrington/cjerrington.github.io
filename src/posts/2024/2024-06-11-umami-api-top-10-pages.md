@@ -10,7 +10,7 @@ tags:
 
 Recently I added a [Stats](/stats) page, and wanted to add a few more interesting facts. This last change was to add the top 10 most popular posts from the last month.
 
-To get started, I wanted to use [Eleventy Fetch](https://www.11ty.dev/docs/plugins/fetch/) since this is a built-in and can cache the results for us. Since [migrating](http://localhost:8080/blog/the-good-side-of-analytics-umami-vercel/) to Umami, I've enjoyed some of the analytics again. Every once in a while it's nice to see which blog posts people are reading the most. It helps me enjoy writing and sharing my thoughts and solutions on my website.
+To get started, I wanted to use [Eleventy Fetch](https://www.11ty.dev/docs/plugins/fetch/) since this is a built-in and can cache the results for us. Since [migrating](/blog/the-good-side-of-analytics-umami-vercel/) to Umami, I've enjoyed some of the analytics again. Every once in a while it's nice to see which blog posts people are reading the most. It helps me enjoy writing and sharing my thoughts and solutions on my website.
 
 Umami has some decent [documentation](https://umami.is/docs/api) and we need to [authenticate](https://umami.is/docs/api/authentication) first, then you can get website stats and more. When I was looking at what was available, the [Website stats](https://umami.is/docs/api/website-stats#get-/api/websites/:websiteid/metrics) was what I was looking for.
 
