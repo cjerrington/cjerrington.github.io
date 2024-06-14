@@ -1,21 +1,139 @@
 {
   "fields": [
     {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "title",
+      "label": "tiitle",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Frontmatter",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "description",
+      "label": "description",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Frontmatter",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "date",
+      "default": null,
+      "icon": "calendar",
+      "key": "date",
+      "label": "Date and Time",
+      "options": {
+        "outputFormat": "iso",
+        "removable": false,
+        "showTime": false,
+        "defaultToNow": true,
+        "useAsUpdatedAt": false,
+        "only": null
+      },
+      "tab": "Frontmatter",
+      "validation": {
+        "max": null,
+        "min": null,
+        "required": false,
+        "unit": "date",
+        "isString": true
+      },
+      "value": null,
+      "version": 2,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "tags",
+      "default": null,
+      "icon": "tags",
+      "key": "tags",
+      "label": "Tags",
+      "localised": false,
+      "options": {
+        "allowUnsuggested": true,
+        "autocompleteModel": []
+      },
+      "tab": "Frontmatter",
+      "validation": {
+        "max": null,
+        "min": null,
+        "unit": "tags"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
       "type": "rich text",
       "default": null,
       "icon": "text",
-      "key": "layout",
-      "label": "Layout",
+      "key": "content",
+      "label": "Rich Text",
       "localised": false,
       "options": {
-        "outputFormat": "html",
+        "outputFormat": "markdown",
         "blockFormats": [
           "blockquote",
           "heading",
           "hr",
           "orderedList",
           "unorderedList",
-          "image"
+          "image",
+          "codeBlock"
         ],
         "inlineFormats": [
           "em",
@@ -40,9 +158,12 @@
           "html",
           "css",
           "javascript",
-          "markdown"
+          "markdown",
+          "python",
+          "shell",
+          "powershell"
         ],
-        "allowRaw": false,
+        "allowRaw": true,
         "urlTemplate": "",
         "urlSuffix": "",
         "linkOptions": [
@@ -51,7 +172,7 @@
           "allowInternal"
         ]
       },
-      "tab": "ungrouped",
+      "tab": "Content",
       "validation": {
         "enforceMinMax": true,
         "max": null,
@@ -63,67 +184,6 @@
       },
       "value": null,
       "version": 1,
-      "visibility": {
-        "hidden": false,
-        "showByValue": {
-          "field": null
-        }
-      }
-    },
-    {
-      "type": "text",
-      "default": null,
-      "icon": "text-input",
-      "key": "tags",
-      "label": "Tags",
-      "localised": false,
-      "options": {
-        "wrapping": true,
-        "multiline": false
-      },
-      "tab": "ungrouped",
-      "validation": {
-        "enforceMinMax": true,
-        "max": null,
-        "min": null,
-        "regex": null,
-        "regexError": null,
-        "required": false,
-        "unit": "length"
-      },
-      "value": null,
-      "version": 1,
-      "visibility": {
-        "hidden": false,
-        "showByValue": {
-          "field": null
-        }
-      }
-    },
-    {
-      "type": "file",
-      "default": null,
-      "icon": "attachment",
-      "key": "permalink",
-      "label": "Permalink",
-      "localised": false,
-      "options": {
-        "removable": false,
-        "allowUpload": false,
-        "root": null,
-        "filetypes": [
-          "pdf",
-          "zip"
-        ]
-      },
-      "tab": "ungrouped",
-      "validation": {
-        "max": null,
-        "required": false,
-        "unit": "filesize (MB)"
-      },
-      "value": null,
-      "version": 2,
       "visibility": {
         "hidden": false,
         "showByValue": {
@@ -134,7 +194,11 @@
   ],
   "tabs": [
     {
-      "label": "ungrouped",
+      "label": "Frontmatter",
+      "groupAs": null
+    },
+    {
+      "label": "Content",
       "groupAs": null
     }
   ]

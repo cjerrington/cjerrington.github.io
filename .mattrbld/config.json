@@ -13,6 +13,16 @@
           "path": "/.mattrbld/collections/collectionsposts.json"
         }
       }
+    },
+    {
+      "icon": "document",
+      "label": "Blog Posts",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/blog-posts.json"
+        }
+      }
     }
   ],
   "slugifyOptions": {

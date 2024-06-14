@@ -7,13 +7,13 @@
   "schemas": [
     "/.mattrbld/schemas/schemaposts.json"
   ],
-  "linkable": true,
+  "linkable": false,
   "maxSize": null,
   "permissions": {
-    "owner": [
+    "everybody": [
       "everything"
     ]
   },
   "type": "md",
-  "urlTemplate": "/bog/:title/index.html"
+  "urlTemplate": ""
 }
