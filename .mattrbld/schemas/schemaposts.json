@@ -99,7 +99,7 @@
       "label": "Tags",
       "localised": false,
       "options": {
-        "allowUnsuggested": false,
+        "allowUnsuggested": true,
         "autocompleteModel": []
       },
       "tab": "Frontmatter",
