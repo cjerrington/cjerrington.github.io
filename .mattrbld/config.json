@@ -6,16 +6,6 @@
   "sidebar": [
     {
       "icon": "document",
-      "label": "Posts",
-      "target": {
-        "name": "Project.Collection",
-        "params": {
-          "path": "/.mattrbld/collections/collectionsposts.json"
-        }
-      }
-    },
-    {
-      "icon": "document",
       "label": "Blog Posts",
       "target": {
         "name": "Project.Collection",
