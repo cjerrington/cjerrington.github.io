@@ -15,5 +15,5 @@
     ]
   },
   "type": "md",
-  "urlTemplate": "/bog/:title/index.html"
+  "urlTemplate": ""
 }
