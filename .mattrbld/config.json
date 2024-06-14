@@ -3,7 +3,13 @@
   "brandColors": [],
   "corsProxy": "/corsprox",
   "name": "cjerrington.github.io",
-  "sidebar": [],
+  "sidebar": [
+    {
+      "icon": null,
+      "label": "Posts",
+      "target": null
+    }
+  ],
   "slugifyOptions": {
     "lowercase": true
   },
