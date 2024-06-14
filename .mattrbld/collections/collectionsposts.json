@@ -1,6 +1,6 @@
 {
-  "allowedTypes": null,
-  "dir": null,
+  "allowedTypes": [],
+  "dir": "/src/posts/2024",
   "disableComments": false,
   "disablePreview": false,
   "draftByDefault": false,
@@ -14,6 +14,6 @@
       "everything"
     ]
   },
-  "type": "json",
+  "type": "md",
   "urlTemplate": ""
 }

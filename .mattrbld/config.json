@@ -5,9 +5,14 @@
   "name": "cjerrington.github.io",
   "sidebar": [
     {
-      "icon": null,
+      "icon": "document",
       "label": "Posts",
-      "target": null
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/collectionsposts.json"
+        }
+      }
     }
   ],
   "slugifyOptions": {
