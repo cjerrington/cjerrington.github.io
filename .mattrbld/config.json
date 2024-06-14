@@ -1,0 +1,26 @@
+{
+  "autoquotes": null,
+  "brandColors": [],
+  "corsProxy": "/corsprox",
+  "name": "cjerrington.github.io",
+  "sidebar": [],
+  "slugifyOptions": {
+    "lowercase": true
+  },
+  "customRoles": [],
+  "draftsDir": null,
+  "previewUrl": null,
+  "languages": [],
+  "media": {
+    "advanced": false,
+    "customFields": null,
+    "dir": "/src/assets",
+    "maxSize": null,
+    "outputPath": "build",
+    "permissions": {
+      "owner": [
+        "everything"
+      ]
+    }
+  }
+}
