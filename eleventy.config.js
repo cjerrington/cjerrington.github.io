@@ -27,6 +27,8 @@ const {
 
 const _ = require("lodash");
 const postGraph = require('@rknightuk/eleventy-plugin-post-graph')
+const readingTime = require('eleventy-plugin-reading-time');
+const readerBar = require('eleventy-plugin-reader-bar')
 
 // module import shortcodes
 const {imageShortcode, includeRaw, liteYoutube} = require('./config/shortcodes/index.js');
@@ -153,6 +155,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(bundlerPlugin);
   eleventyConfig.setLibrary('md', markdownLib);
   eleventyConfig.addPlugin(postGraph)
+  eleventyConfig.addPlugin(readingTime);
+  eleventyConfig.addPlugin(readerBar)
 
   // Add support for YAML data files with .yaml extension
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
