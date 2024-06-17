@@ -1,5 +1,5 @@
 ---
-permalink: /vercel.json
+permalink: ../vercel.json
 eleventyExcludeFromCollections: true
 excludeFromSitemap: true
 ---
@@ -28,14 +28,31 @@ excludeFromSitemap: true
     
       {%- if page.url and page.data.redirectFrom -%}
         {%- for oldUrl in page.data.redirectFrom %}
+        {%- if loop.first %}
+        ,{
+          "source":  "{{ oldUrl }}",
+          "destination": "{{ page.url }}"
+        },
+        {%- endif %}
+
+        {%- if loop.last %}
         {
           "source":  "{{ oldUrl }}",
           "destination": "{{ page.url }}"
         }
-        {%- if oldUrl === page.data.redirectFrom.at(-1) -%}
-        {%- else -%}
-        ,
+        {% else %}
+        ,{
+          "source":  "{{ oldUrl }}",
+          "destination": "{{ page.url }}"
+        }
         {%- endif %}
+        {%- if oldUrl === page.data.redirectFrom.at(-1) -%}
+          {%- else -%}
+          
+            
+        {%- endif %}
+
+
         {%- endfor -%}
       {%- endif -%}
     {%- endfor %}
