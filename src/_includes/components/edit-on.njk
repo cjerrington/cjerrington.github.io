@@ -3,9 +3,11 @@
   <p class="text-step-min-1">
     Reply via <a href="mailto:blog@claytonerrington.com?subject=RE: {{ title }}">email</a> | 
     {{ meta[page.lang].blog.githubEdit }}
-    <a
-      href="{{ pkg.repository.url | url | replace('.git', '/tree/main/') }}{{ page.inputPath }}"
-      >{{ meta.viewRepo.infoText }}</a
-    >.
+    
+    <a 
+      href="https://github.com/{{ pkg.repository.name | url }}/blob/master/{{ page.inputPath }}"
+    >
+      {{ meta.viewRepo.infoText }}
+    </a>
   </p>
 {% endif %}
