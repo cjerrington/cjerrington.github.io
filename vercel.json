@@ -19,14 +19,5 @@
           "source": "/net-check",
           "destination": "https://cjerrington.github.io/net-check/"
         }
-        ,{
-          "source":  "/optionally-another-old-route/",
-          "destination": "/blog/mattrbld-cms/"
-        },
-        {
-          "source":  "/optionally-another-old-route/",
-          "destination": "/blog/mattrbld-cms/"
-        }
-        
     ]
 }
