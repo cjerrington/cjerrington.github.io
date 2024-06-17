@@ -1,0 +1,37 @@
+{
+  "autoquotes": null,
+  "brandColors": [],
+  "corsProxy": "/corsprox",
+  "name": "cjerrington.github.io",
+  "sidebar": [
+    {
+      "icon": "document",
+      "label": "Blog Posts",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/blog-posts.json"
+        }
+      }
+    }
+  ],
+  "slugifyOptions": {
+    "lowercase": true
+  },
+  "customRoles": [],
+  "draftsDir": null,
+  "previewUrl": null,
+  "languages": [],
+  "media": {
+    "advanced": false,
+    "customFields": null,
+    "dir": "/src/assets",
+    "maxSize": null,
+    "outputPath": "build",
+    "permissions": {
+      "owner": [
+        "everything"
+      ]
+    }
+  }
+}
