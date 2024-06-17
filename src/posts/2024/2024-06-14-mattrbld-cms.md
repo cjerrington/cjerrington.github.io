@@ -5,7 +5,6 @@ date: '2024-06-14'
 tags:
   - automation
 ___mb_schema: /.mattrbld/schemas/schemaposts.json
-redirectFrom: ['/optionally-another-old-route/']
 ---
 
 This is a test post from a new CMS called [Mattrbld](https://mattrbld.com/).
