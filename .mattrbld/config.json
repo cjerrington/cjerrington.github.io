@@ -19,7 +19,7 @@
     "lowercase": true
   },
   "customRoles": [],
-  "draftsDir": null,
+  "draftsDir": "/.mattrbld/drafts",
   "previewUrl": null,
   "languages": [],
   "media": {
