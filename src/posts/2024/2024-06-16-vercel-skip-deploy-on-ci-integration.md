@@ -32,6 +32,16 @@ git log -1 --pretty=oneline --abbrev-commit | grep -w "\[skip deploy\]" && exit 
 
 This command reads the commit message that was just used, and if `[skip deploy]` is in the commit message it will exit with a status of 0. If `[skip deploy]` is not found, we exit with a status code of 1, so the new build is needed.
 
+Vercel even has a special system [Environment Variable](https://vercel.com/docs/projects/environment-variables/system-environment-variables) for `VERCEL_GIT_COMMIT_MESSAGE` so we should be able to use this as well instead of calling `git` directly.
+
+> Vercel provides a set of Environment Variables that are automatically populated by the System, such as the URL of the Deployment or the name of the Git branch deployed.
+
+> To expose them to your Deployments, make sure Automatically expose System Environment Variables is checked in your Project Settings.
+
+```shell
+$VERCEL_GIT_COMMIT_MESSAGE | grep -w "\[skip deploy\]" && exit 0 || exit 1
+```
+
 ## Committing changes
 
 Now, when I am adding files to my remote repository and do not want to trigger a rebuild, I can add `[skip deploy]` and the rest of my message of the commit, so I know what also happened in the commit.
