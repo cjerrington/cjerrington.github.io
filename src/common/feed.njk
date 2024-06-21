@@ -20,7 +20,7 @@ excludeFromSitemap: true
   %}
   <entry>
     <title>{{ post.data.title }}</title>
-    <link href="{{ absolutePostUrl }}" />
+    <link href="{{ absolutePostUrl }}?utm_source=rss" />
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content
