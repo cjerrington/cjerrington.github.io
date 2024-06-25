@@ -1,6 +1,6 @@
 ---
 title: Showing Omnivore links as Bookmarks
-description: 'How to setup a [skip ci] process on Vercel and their CI integration'
+description: 'Saving links to Omnivore and using labels to display those as bookmarks on my website'
 date: 2024-06-25 16:34:40
 tags:
   - vercel
