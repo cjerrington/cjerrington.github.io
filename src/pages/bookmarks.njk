@@ -1,0 +1,31 @@
+---
+title: Bookmarks
+description: Things found around the web, I'd like to share with you.
+permalink: /bookmarks/index.html
+layout: page
+---
+
+<p>A list of things I've found around the web and bookmarked for you and I to read later.</p>
+
+{% if reading | length %}
+  <ul class="blogcards | grid" role="list" data-rows="masonry" data-layout="50-50">
+    {% for item in reading %}
+      {% for label in item.labels %}
+        {% set mylabel = label | values %}
+        {% if 'bookmarks' in mylabel %}
+          <li class="card">
+          <div class="flow">
+            <h2>
+              <a href="{{ item.url }}" class="no-indicator">{{ item.title }}</a>
+            </h2>
+
+            <p>{{ item.description }}</p>
+          </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No data :(</p>
+{% endif%}
