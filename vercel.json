@@ -12,12 +12,20 @@
     ],
     "redirects": [
         {
-          "source": "/view-source",
+          "source": "http://claytonerrington.com/view-source",
           "destination": "https://github.com/cjerrington/cjerrington.github.io"
         },
         {
-          "source": "/net-check",
+          "source": "http://claytonerrington.com/net-check",
           "destination": "https://cjerrington.github.io/net-check/"
+        },
+        {
+          "source": "/blog/2023-11-2-installing-nodejs-on-pop!_os/",
+          "destination": "http://claytonerrington.com/blog/installing-nodejs-on-pop!_os/"
+        },
+        {
+          "source": "http://claytonerrington.com/blog/2023-11-2-installing-nodejs-on-pop!_os/",
+          "destination": "http://claytonerrington.com/blog/installing-nodejs-on-pop!_os/"
         }
     ]
 }

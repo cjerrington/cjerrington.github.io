@@ -13,10 +13,16 @@ layout: page
         <th>Views</th>
     </tr>
     {%- for item in analytics | limit(10) -%}
-        <tr>
-            <td><a href="{{- item.x -}}">{{- item.x -}}</a></td>
-            <td>{{- item.y -}}</td>
-        </tr>
+        {%- if "/blog/" in item.x -%}
+            {%- if item.x == "/blog/" -%}
+                {# do nothing... #}
+            {%- else -%}
+            <tr>
+                <td><a href="{{- item.x -}}">{{- item.x | replace("/blog/", "") | replace("-"," ") | replace("/","") -}}</a></td>
+                <td>{{- item.y -}}</td>
+            </tr>
+            {%- endif -%}
+        {%- endif -%}
     {%- endfor -%}
 </table>
 
@@ -28,10 +34,14 @@ layout: page
         <th>Views</th>
     </tr>
     {%- for item in analyticsyearly | limit(10) -%}
-        <tr>
-            <td><a href="{{- item.x -}}">{{- item.x -}}</a></td>
-            <td>{{- item.y -}}</td>
-        </tr>
+        {%- if item.x == "/" -%}
+                {# do nothing... #}
+            {%- else -%}
+            <tr>
+                <td><a href="{{- item.x -}}">{{- item.x | replace("/blog/", "") | replace("-"," ") | replace("/","") -}}</a></td>
+                <td>{{- item.y -}}</td>
+            </tr>
+            {%- endif -%}
     {%- endfor -%}
 </table>
 
