@@ -4,7 +4,6 @@ description: How to import PowerShell modules and specifying a minimum version
 date: '2024-08-19T15:45:52'
 tags:
   - powershell
-  - automation
   - windows
 ___mb_schema: /.mattrbld/schemas/schemaposts.json
 ---
