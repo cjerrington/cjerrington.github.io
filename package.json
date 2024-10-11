@@ -35,23 +35,23 @@
     "eleventy-plugin-reader-bar": "^0.2.1",
     "eleventy-plugin-reading-time": "^0.0.1",
     "node-fetch": "^3.3.2",
-    "tailwindcss": "^3.4.10"
+    "tailwindcss": "^3.4.13"
   },
   "devDependencies": {
     "@csstools/postcss-relative-color-syntax": "^2.0.19",
     "@toycode/markdown-it-class": "^1.2.4",
     "autoprefixer": "^10.4.20",
     "clean-css": "^5.3.3",
-    "cssnano": "^7.0.5",
+    "cssnano": "^7.0.6",
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.5",
-    "esbuild": "^0.23.1",
+    "esbuild": "^0.24.0",
     "html-minifier-terser": "^7.2.0",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "markdown-it": "^14.1.0",
     "markdown-it-abbr": "^2.0.0",
-    "markdown-it-anchor": "^9.1.0",
+    "markdown-it-anchor": "^9.2.0",
     "markdown-it-eleventy-img": "^0.10.2",
     "markdown-it-emoji": "^3.0.0",
     "markdown-it-footnote": "^4.0.0",
@@ -61,7 +61,7 @@
     "netlify-plugin-cache": "^1.0.3",
     "normalize-url": "^6.1.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
     "postcss-import-ext-glob": "^2.1.1",
@@ -69,7 +69,7 @@
     "prettier-plugin-jinja-template": "^1.5.0",
     "rimraf": "^6.0.1",
     "rss-parser": "^3.13.0",
-    "sanitize-html": "^2.13.0",
+    "sanitize-html": "^2.13.1",
     "slugify": "^1.6.6"
   }
 }
