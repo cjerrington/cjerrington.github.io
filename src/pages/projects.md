@@ -9,7 +9,7 @@ permalink: /projects/index.html
 Project | Description
 --------|------------
 [Static.Quest](https://static.quest/) | A web ring focused to list all the amazing static websites
-[Bookmarks for PowerShell](https://codeberg.org/cjerrington/Bookmarks) | A simple bookmark system for powershell to set shortcuts to quickly change directories while using the prompt
+[Bookmarks](https://codeberg.org/cjerrington/Bookmarks) | A simple bookmark system for PowerShell and Bash to set shortcuts to quickly change directories while using the prompt
 [SQLBuilder](https://github.com/cjerrington/SQLBuilder/blob/main/README.md) | Simple SQL Attach Script Generator
 [net-check](https://claytonerrington.com/net-check/) | NodeJS & Electron application to check the status of remote ports if a connection can be made
 [Wakey](https://github.com/cjerrington/wakey) | Simple Python app to keep a computer awake
