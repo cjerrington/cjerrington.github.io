@@ -11,11 +11,11 @@ date: 2023-01-29
 
 *<p style="background:var(--color-tertiary); padding:5px; text-align:center;">On 10/13/2024 MineTest changed their name to [Luanti](https://blog.minetest.net/2024/10/13/Introducing-Our-New-Name/)</p>*
 
-I have been playing ~~Minetest~~ [Luaniti](https://www.minetest.net/) off and on for the past few months. It is easy to set up, play and enjoy. Even the kids love playing, and have seen it talked about anywhere from [education](https://blog.tcea.org/build-block-worlds-with-minetest/) to enthusiasts. It's a great alternative for anyone.
+I have been playing ~~Minetest~~ [Luanti](https://www.minetest.net/) off and on for the past few months. It is easy to set up, play and enjoy. Even the kids love playing, and have seen it talked about anywhere from [education](https://blog.tcea.org/build-block-worlds-with-minetest/) to enthusiasts. It's a great alternative for anyone.
 
 What's nice is the download client is both a server and a client to connect to other servers. This makes the game great as a portable game too.
 
-Recently I wanted to try out docker and since there's a container for everything, I built a ~~Minetest~~ Luaniti server. This was easy to set up and start playing.
+Recently I wanted to try out docker and since there's a container for everything, I built a ~~Minetest~~ Luanti server. This was easy to set up and start playing.
 
 First you'll need to install [docker](https://docs.docker.com/engine/install/) then crate your `docker-compose.yml`
 
@@ -40,7 +40,7 @@ services:
     restart: unless-stopped
 ```
 
-This docker file will create a container for ~~Minetest~~ Luaniti mapping your local path for game data to the container location. It'll create a new world called minetest and bind to the port 30000. Next update your volume paths for the data folder, we'll need this in a little bit. Now run docker compose to pull the image and create the server. While that is working download your client so we can connect here in a moment.
+This docker file will create a container for ~~Minetest~~ Luanti mapping your local path for game data to the container location. It'll create a new world called minetest and bind to the port 30000. Next update your volume paths for the data folder, we'll need this in a little bit. Now run docker compose to pull the image and create the server. While that is working download your client so we can connect here in a moment.
 
 ```shell
 docker compose up -d
