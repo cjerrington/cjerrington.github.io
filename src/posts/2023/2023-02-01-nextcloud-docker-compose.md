@@ -8,7 +8,7 @@ tags:
 date: 2023-02-01
 ---
 
-For the longest time I was intimidated by Docker. I have been fairly familiar with virtual machines, linux environments, desktops; it's been my job for most of my career. Working in the terminal was not an issue, I really don't know what the issue was. Finally I decided to use some dedicated hardware to experiment with Docker more. Recently I built a [minetest server](/blog/dockerize-minetest/), and that went well.
+For the longest time I was intimidated by Docker. I have been fairly familiar with virtual machines, linux environments, desktops; it's been my job for most of my career. Working in the terminal was not an issue, I really don't know what the issue was. Finally I decided to use some dedicated hardware to experiment with Docker more. Recently I built a ~~MineTest Server~~ [Luanti server](/blog/dockerize-luanti/), and that went well.
 
 I've installed Nextcloud before and installed an operating system, Ubuntu Server, and all the required components: PHP, nginx/apache, mariaDB, Nextcloud. Did the configuration, and it worked well for quite a while. One day there was an update, so I went ahead and started in, and.... crash.... Nextcloud was stuck at step 5. I Googled the issue, did the suggestions, and nothing worked. It was lost... Luckily, I had setup my VM to have an OS drive and a data drive. This was setup initially when I setup the server. Glad I did!
 

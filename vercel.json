@@ -16,16 +16,20 @@
           "destination": "https://github.com/cjerrington/cjerrington.github.io"
         },
         {
+          "source": "/blog/dockerize-minetest/",
+          "destination": "https://claytonerrington.com/blog/dockerize-luanti/"
+        },
+        {
           "source": "/net-check",
           "destination": "https://cjerrington.github.io/net-check/"
         },
         {
           "source": "/blog/2023-11-2-installing-nodejs-on-pop!_os/",
-          "destination": "http://claytonerrington.com/blog/installing-nodejs-on-pop!_os/"
+          "destination": "https://claytonerrington.com/blog/installing-nodejs-on-pop!_os/"
         },
         {
           "source": "/blog/2023-11-2-installing-nodejs-on-pop!_os",
-          "destination": "http://claytonerrington.com/blog/installing-nodejs-on-pop!_os/"
+          "destination": "https://claytonerrington.com/blog/installing-nodejs-on-pop!_os/"
         }
     ]
 }
