@@ -36,7 +36,7 @@
     "eleventy-plugin-reader-bar": "^0.2.1",
     "eleventy-plugin-reading-time": "^0.0.1",
     "node-fetch": "^3.3.2",
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.14"
   },
   "devDependencies": {
     "@csstools/postcss-relative-color-syntax": "^2.0.19",
