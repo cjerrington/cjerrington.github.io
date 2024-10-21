@@ -43,7 +43,7 @@ const {svgToJpeg} = require('./config/events/index.js');
 
 // plugins
 
-const {EleventyRenderPlugin} = require('@11ty/eleventy');
+//const {EleventyRenderPlugin} = require('@11ty/eleventy');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
 const bundlerPlugin = require('@11ty/eleventy-plugin-bundle');
@@ -148,7 +148,7 @@ module.exports = eleventyConfig => {
   }
 
   // 	--------------------- Plugins ---------------------
-  eleventyConfig.addPlugin(EleventyRenderPlugin);
+  //eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(inclusiveLangPlugin);

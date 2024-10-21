@@ -18,12 +18,12 @@ You can also **hide the number fields** between the previous and next buttons by
 
 ```js
 blog: {
-	// other adjustments
-	paginationLabel: 'Blog',
-	paginationPage: 'Page',
-	paginationPrevious: 'Previous',
-	paginationNext: 'Next',
-	paginationNumbers: true
+    // other adjustments
+    paginationLabel: 'Blog',
+    paginationPage: 'Page',
+    paginationPrevious: 'Previous',
+    paginationNext: 'Next',
+    paginationNumbers: true
 }
 ```
 

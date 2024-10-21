@@ -55,6 +55,7 @@ You might want to add yourself as an admin to the server. To do this, on the hos
 Now you can restart your Minetest container and you'll be an admin! Minetest has many plugins for building, animals, and much more.
 
 Some of my favorite mods:
+
 - Animalia
 - Bike
 - Creatura
