@@ -1,6 +1,6 @@
 ---
 title: Upgrading 11ty to v3
-description: The easy of upgrading 11ty to the latest version
+description: The ease of upgrading 11ty to the latest version
 date: '2024-10-21'
 tags:
   - web dev
