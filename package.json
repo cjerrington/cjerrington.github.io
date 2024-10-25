@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-fetch": "^4.0.1",
+    "@11ty/eleventy-fetch": "5.0.0-beta.2",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-bundle": "^1.0.4",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
@@ -35,7 +35,6 @@
     "@umami/node": "^0.4.0",
     "eleventy-plugin-reader-bar": "^0.2.1",
     "eleventy-plugin-reading-time": "^0.0.1",
-    "node-fetch": "^3.3.2",
     "tailwindcss": "^3.4.13"
   },
   "devDependencies": {
