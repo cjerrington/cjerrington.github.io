@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-fetch": "5.0.0-beta.2",
+    "@11ty/eleventy-fetch": "5.0.1",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-bundle": "^1.0.4",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
@@ -35,7 +35,7 @@
     "@umami/node": "^0.4.0",
     "eleventy-plugin-reader-bar": "^0.2.1",
     "eleventy-plugin-reading-time": "^0.0.1",
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.15"
   },
   "devDependencies": {
     "@csstools/postcss-relative-color-syntax": "^2.0.19",
@@ -61,7 +61,7 @@
     "netlify-plugin-cache": "^1.0.3",
     "normalize-url": "^6.1.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
     "postcss-import-ext-glob": "^2.1.1",
