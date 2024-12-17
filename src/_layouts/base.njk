@@ -94,9 +94,15 @@
 
     <!-- everything else: meta tags, icons, open graph etc.  -->
     {% include "partials/meta-info.njk" %}
+
+    
+
   </head>
 
   <body class="{{ layout }}">
+    <script type="module" src="/assets/scripts/snow-fall.js"></script>
+    <!-- Add snow to the page -->
+    <snow-fall></snow-fall>
     <div class="reader-bar-start">
     {% include "partials/header.njk" %}
 

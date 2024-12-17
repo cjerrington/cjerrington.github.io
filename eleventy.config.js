@@ -172,6 +172,8 @@ module.exports = eleventyConfig => {
     'src/assets/images/favicon/*': '/'
   });
 
+  eleventyConfig.addPassthroughCopy({'node_modules\@zachleat\snow-fall\snow-fall.js': 'snow-fall.js'});
+
   // 	--------------------- general config -----------------------
   return {
     // Pre-process *.md, *.html and global data files files with: (default: `liquid`)
