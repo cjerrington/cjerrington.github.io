@@ -30,6 +30,10 @@
         {
           "source": "/blog/2023-11-2-installing-nodejs-on-pop!_os",
           "destination": "https://claytonerrington.com/blog/installing-nodejs-on-pop!_os/"
+        },
+        {
+          "source": "/blog/reviwing-2024/",
+          "destination": "https://claytonerrington.com//blog/reviewing-2024/"
         }
     ]
 }
