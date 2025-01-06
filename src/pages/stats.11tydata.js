@@ -7,7 +7,7 @@ module.exports = {
     */
 	eleventyComputed: {
 		currentYear: function (data) {
-			return new Date(data.date || data.page.date).getFullYear();
+			return new Date().getFullYear();
 		},
 		/* More cool stuff! */
 	},

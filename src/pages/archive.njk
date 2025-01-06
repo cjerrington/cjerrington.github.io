@@ -5,25 +5,29 @@ permalink: /archive/index.html
 layout: page.njk
 ---
 
-<p>All my blog posts & notes, chronologically ordered from now back in time.
+<p>All my blog posts &amp; notes, chronologically ordered from now back in time for the last {{ diary().length }} yaers.
 <div class="post-listing">
-	<ol class="diary">
+
 	{% for year in diary() %}
-		<li>
-			<div><h id="{{ year.title }}">{{ year.title }}</h2></div>
-
-			<ol>
+		<details>
+			<summary>
+			<h2 id="{{ year.title }}">{{ year.title }} {{ year.length }}</h2>	
+			</summary>		
 			{% for month in year.months %}
-				<div><h3>{{ month.title }}</h3></div>
-
-				<ol class="diaryEntries">
+				
+				{% if month.entries.length  > 0 %}
+				<h3>{{ month.title }} <small>({{ month.entries.length }} posts)</small></h3>
+				
+				
+				<ul class="diaryEntries">
 				{% for entry in month.entries %}
-					<li class="{{ entry.type }}"><a href="{{ entry.url }}">{{ entry.title }}</a> {% if entry.publication %} for {{ entry.publication }}{% endif %}</li>
+					<li class="{{ entry.type }}"><a href="{{ entry.url }}">{{ entry.title }}</a> {% if entry.date %} {{ month.title }} {{ entry.date }}{% endif %}</li>
 				{% endfor %}
-				</ol>
+				</ul>
+				{% endif %}
+				
 			{% endfor %}
-			</ol>
-		</li>
+		</details>
 	{% endfor %}
-	</ol>
+	</ul>
 </div>
