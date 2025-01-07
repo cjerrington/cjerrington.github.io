@@ -60,7 +60,7 @@ module.exports = function(plop) {
           {
             type: "add",
             path: `src/posts/${year}/${shortDate}-{{dashCase title}}.md`,
-            templateFile: "drafts.md.hbs",
+            templateFile: "config/templates/drafts.md.hbs",
           },
         ],
       })
