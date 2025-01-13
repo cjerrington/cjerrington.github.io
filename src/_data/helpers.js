@@ -51,5 +51,21 @@ module.exports = {
   buildTime() { 
     const today = new Date().toLocaleString();
     return today;
+  },
+
+  snowfall(){
+    const today = new Date();
+    let monthNumber = today.getMonth(); // Returns a value between 0 and 11
+
+    // Add 1 to get the month number in the range 1-12
+    monthNumber += 1; 
+
+    // allow "snow" in December and January
+    if (monthNumber === 12 || monthNumber === 1){
+      return true
+    }
+    else{
+      return false
+    }
   }
 };

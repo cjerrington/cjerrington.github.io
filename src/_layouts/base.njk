@@ -100,9 +100,12 @@
   </head>
 
   <body class="{{ layout }}">
+
+    {% if helpers.snowfall() %}
     <script type="module" src="/assets/scripts/snow-fall.js"></script>
     <!-- Add snow to the page -->
     <snow-fall></snow-fall>
+    {% endif %}
     <div class="reader-bar-start">
     {% include "partials/header.njk" %}
 
