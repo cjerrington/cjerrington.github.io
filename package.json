@@ -13,7 +13,9 @@
     "dev:11ty": "eleventy --serve --watch",
     "build:11ty": "npx @11ty/eleventy",
     "start": "run-p envcheck dev:*",
-    "build": "run-s envcheck clean build:*"
+    "build": "run-s envcheck clean build:*",
+    "newpost": "plop --plopfile=plopfile.js",
+    "newimage": "plop --plopfile=the100pics.js"
   },
   "keywords": [],
   "repository": {
