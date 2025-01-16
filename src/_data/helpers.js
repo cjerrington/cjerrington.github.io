@@ -61,7 +61,7 @@ module.exports = {
     monthNumber += 1; 
 
     // allow "snow" in December and January
-    if (monthNumber === 12 || monthNumber === 1){
+    if (monthNumber === 12){
       return true
     }
     else{
