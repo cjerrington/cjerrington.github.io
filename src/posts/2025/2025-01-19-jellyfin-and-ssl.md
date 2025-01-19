@@ -70,3 +70,7 @@ There is not a way to extend an expiration date in a certificate as it is built 
 There is a way to create the certificate with a really long expiration, or not at all.
 
 Using the `-days 365` tells how long the certificate will be valid for. Omitting this from the creation will not have an expiration. It is still good practice to have an expiration date.
+
+## Conclusion
+
+This was a really simple process, and Jellyfin [Networking](https://jellyfin.org/docs/general/networking/) page has a lot more information on the use of SSL and their product.
