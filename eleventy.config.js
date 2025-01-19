@@ -174,6 +174,24 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addPassthroughCopy({'node_modules\@zachleat\snow-fall\snow-fall.js': 'snow-fall.js'});
 
+  eleventyConfig.setServerOptions({
+    module: "@11ty/eleventy-server-browsersync",
+
+    // Default options shown:
+    port: 9080,
+    ignore: ["node_modules"],
+    watch: false,
+    open: true,
+    notify: false,
+    ui: false,
+    ghostMode: false,
+    index: "index.html",
+    https: {
+      key: "ssl/key.pem",
+      cert: "ssl/cert.pem"
+    }
+  })
+
   // 	--------------------- general config -----------------------
   return {
     // Pre-process *.md, *.html and global data files files with: (default: `liquid`)
