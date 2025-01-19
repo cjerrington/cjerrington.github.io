@@ -19,6 +19,7 @@ Many clients and computers look for the secure connection first when doing auto 
 First we will need to install OpenSSL.
 
 1. Create the private key.
+
     ```shell
     openssl req -x509 -newkey rsa:4096 -keyout ./privatekey.pem -out cert.pem \
     -days 365 -nodes -subj '/CN=jellyfin.local'
@@ -26,9 +27,11 @@ First we will need to install OpenSSL.
 
     - The `-subj '/CN=localdnsname.tld'` is the DNS name you've made on your network to use to connect to Jellyfin in a browser like `jellfin.local`
     - You can add more than on domain name if needed if the DNS is different for internal access from external access. Add the `-addtext` switch to the command.
+    
     ```shell
     -addext "subjectAltName = DNS:jellfinexternal.tld,DNS:jellyfin.local"
     ```
+
 2. Jellyfin requires the SSL certificate to be a PFX file that contains the private key and certificate file.
 
     ```shell
@@ -74,3 +77,5 @@ Using the `-days 365` tells how long the certificate will be valid for. Omitting
 ## Conclusion
 
 This was a really simple process, and Jellyfin [Networking](https://jellyfin.org/docs/general/networking/) page has a lot more information on the use of SSL and their product.
+
+Using a self signed certificate does come with it's own issues. The point of a certificate is based on trust that one entity or more can confirm the legitimacy of the certificate. With a self signed certificate, there is not another authority that can vouge for its validity. You might see a potential security warning about the self signed certificate and you may proceed with the warning to the website. While this can be seen as okay for local and development work, the habit of always making these exceptions should be limited. Please always check the SSL certificate warning and information before continuing.
