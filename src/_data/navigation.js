@@ -37,6 +37,10 @@ module.exports = {
     {
       text: 'Stats',
       url: '/stats/'
+    },
+    {
+      text: 'Slashes',
+      url: '/slashes/'
     }
   ]
 };
