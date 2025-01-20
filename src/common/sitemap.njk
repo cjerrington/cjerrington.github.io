@@ -4,8 +4,9 @@ eleventyExcludeFromCollections: true
 excludeFromSitemap: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/sitemap.xsl" type="text/xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in collections.onlyMarkdown %}
+  {% for page in collections.onlyMarkdown | reverse %}
   {% if page.url and page.data.excludeFromSitemap != true %}
 
   {% if page.data.lastUpdated %}{% set lastmod = page.data.lastUpdated %}

@@ -173,14 +173,14 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addPassthroughCopy({'node_modules\@zachleat\snow-fall\snow-fall.js': 'snow-fall.js'});
+  eleventyConfig.addPassthroughCopy({'src/assets/css/styles.css': 'assets/css/styles.css'})
 
   eleventyConfig.setServerOptions({
     module: "@11ty/eleventy-server-browsersync",
 
     // Default options shown:
-    port: 9080,
     ignore: ["node_modules"],
-    watch: false,
+    watch: true,
     open: true,
     notify: false,
     ui: false,
