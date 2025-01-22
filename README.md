@@ -5,6 +5,8 @@
 ![Mastodon Follow](https://img.shields.io/mastodon/follow/108200000569711642?domain=https%3A%2F%2Fmstdn.social&style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/cjerrington?style=social)
 
+# This is now hosted at [Codeberg](https://codeberg.org/cjerrington/personal-website)
+
 This is created with the [11ty](https://www.11ty.dev/), and hosted with [Vercel](https://vercel.com/)
 
 ## Browsing
