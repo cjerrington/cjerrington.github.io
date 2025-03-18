@@ -23,10 +23,9 @@ First you'll need to install [docker](https://docs.docker.com/engine/install/) t
 
 ```highlight yaml
 ---
-version: "2.1"
 services:
   minetest:
-    image: lscr.io/linuxserver/minetest:latest
+    image: lscr.io/linuxserver/luanti:latest
     container_name: minetest
     environment:
       - PUID=1000

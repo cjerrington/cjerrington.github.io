@@ -24,7 +24,7 @@ $ docker rename <container> <container_old>
 $ docker pull <container/version>
 $ # Start your container
 $ docker run
-$ #  docker-compose -d up
+$ # docker-compose up -d
 $ # test container once it starts
 $ docker rm <container_old>
 ```
