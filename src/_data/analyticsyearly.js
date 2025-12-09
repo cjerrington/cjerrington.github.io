@@ -24,7 +24,7 @@ module.exports = async function () {
     const today = new Date().getTime();
     const priorDate = new Date(new Date().setDate(new Date().getDate() - 365));
 
-    let url = `https://${process.env.UMAMI_ANALYTICS_HOST}/api/websites/${process.env.UMAMI_ANALYTICS_WEBSITE_ID}/metrics?startAt=${priorDate.getTime()}&endAt=${today}&type=url`;
+    let url = `https://${process.env.UMAMI_ANALYTICS_HOST}/api/websites/${process.env.UMAMI_ANALYTICS_WEBSITE_ID}/metrics?startAt=${priorDate.getTime()}&endAt=${today}&type=path`;
 
 	/* This returns a promise */
 	return EleventyFetch(url, {
